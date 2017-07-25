@@ -17,6 +17,7 @@
 @interface TDCodeAppModel : TDBaseModel
 
 @property (nonatomic, copy) NSString *TDId;
+@property (nonatomic, copy) NSString *code;
 @property (nonatomic, copy) NSString *level;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *pId;

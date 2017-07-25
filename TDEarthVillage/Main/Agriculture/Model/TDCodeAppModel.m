@@ -11,7 +11,7 @@
 @implementation TDCodeAppModel
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName{
-    return @{ @"TDID" : @"id"
+    return @{ @"TDId" : @"id"
               };
 }
 

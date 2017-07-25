@@ -25,6 +25,10 @@
     NSMutableArray *_arrSelectTypeModel;
     NSMutableArray *_arrSelectFieldModel;
     NSMutableArray *_arrSelectSortModel;
+    
+    TDCodeAppModel *_typeModel;
+    TDCodeAppModel *_fieldModel;
+    TDCodeAppModel *_sortModel;
 }
 
 
@@ -95,7 +99,10 @@
     if(self.refresh.pageIndex == 1){
         [self requestHeaderData];
     }
-    return @{};
+    return @{@"sort":kHankUnNilStr(_sortModel.code),
+             @"productType":kHankUnNilStr(_typeModel.TDId),
+             @"villageId":kHankUnNilStr(_fieldModel.code)
+             };
 }
 
 //返回响应数据
@@ -234,6 +241,7 @@
     
     btn.imageEdgeInsets = UIEdgeInsetsMake(0, btn.titleLabel.mj_textWith, 0, -btn.titleLabel.mj_textWith);
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, -12, 0, 12);
+    [_refresh reload];
 }
 
 #pragma mark - Action
@@ -288,21 +296,25 @@
         TDCodeAppModel *model2 = model1.leafs[idx_2];
         TDCodeAppModel *model3 = model2.leafs[idx_3];
         TDCodeAppModel *model4 = model3.leafs[idx_4];
+        [self getSelectModelWithModel:model4 asView:asView];
         return model4.name;
     }
     if(idx_1 != -1 && idx_2 != -1 && idx_3 != -1 && idx_4 == -1){
         TDCodeAppModel *model1 = [self getArrModelWithTag:asView][idx_1];
         TDCodeAppModel *model2 = model1.leafs[idx_2];
         TDCodeAppModel *model3 = model2.leafs[idx_3];
+        [self getSelectModelWithModel:model3 asView:asView];
         return model3.name;
     }
     if(idx_1 != -1 && idx_2 != -1 && idx_3 == -1 && idx_4 == -1){
         TDCodeAppModel *model1 = [self getArrModelWithTag:asView][idx_1];
         TDCodeAppModel *model2 = model1.leafs[idx_2];
+        [self getSelectModelWithModel:model2 asView:asView];
         return model2.name;
     }
     if(idx_1 != -1 && idx_2 == -1 && idx_3 == -1 && idx_4 == -1){
         TDCodeAppModel *model1 = [self getArrModelWithTag:asView][idx_1];
+        [self getSelectModelWithModel:model1 asView:asView];
         return model1.name;
     }
     return @"";
@@ -317,6 +329,7 @@
     btn3.selected = btn == btn3?btn.selected:NO;
 }
 
+//根据asView的tag 拿到数组
 - (NSMutableArray *)getArrModelWithTag:(HKMultistageFilterMenuView *)asView{
     if(asView.tag == kMenuViewTag){
         return kHankUnArr(_arrSelectTypeModel);
@@ -324,6 +337,20 @@
         return kHankUnArr(_arrSelectFieldModel);
     }else{
         return kHankUnArr(_arrSelectSortModel);
+    }
+}
+
+//根据asView的tag 设置model
+- (void)getSelectModelWithModel:(TDCodeAppModel *)model asView:(HKMultistageFilterMenuView *)asView{
+    if(asView.tag == kMenuViewTag){
+        //种类
+        _typeModel = model;
+    }else if(asView.tag == kMenuViewTag + 1){
+        //产地
+        _fieldModel = model;
+    }else{
+        //排序
+        _sortModel = model;
     }
 }
 

@@ -18,6 +18,7 @@
 @interface TDHomeVC ()<UITableViewDelegate,UITableViewDataSource,RefreshToolDelegate>{
     NSMutableArray *_arrTopManage;
     NSMutableArray *_arrFilter;
+    TDHomeDvilllageModel *_model;
 }
 
 @property (nonatomic, strong)UITableView        *tableView;
@@ -68,7 +69,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             HANKSTRONGSELF
             [strongSelf.headerView setUIWithTopManArrModel:_arrTopManage filterArrModel:_arrFilter selectFilterBlock:^(TDHomeDvilllageModel *model) {
-                NSLog(@"%@",model.name);
+                _model = model;
+                [_refresh reload];
             }];
         });
     });
@@ -81,7 +83,7 @@
             [self requestNetWork];
         }
     }
-    return @{};
+    return @{@"areaId":kHankUnNilStr(_model.code)};
 }
 //返回响应数据
 - (void)handleResponse:(id)data{
