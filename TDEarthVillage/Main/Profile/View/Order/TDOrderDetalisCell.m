@@ -33,7 +33,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTel;
 
 /******************************/
-@property (weak, nonatomic) IBOutlet UILabel *lblStatus;
 
 
 @end
@@ -67,13 +66,11 @@
     _lblAddress.text =  kHankUnNilStr(model.receiptName).length?kHankUnNilStr(model.receiptName):kHankUnNilStr(kCurrentUser.acceptName);
     _lblTel.text = kHankUnNilStr(model.receiptPhone).length?kHankUnNilStr(model.receiptPhone):kHankUnNilStr(kCurrentUser.acceptPhone);
     [self layoutIfNeeded];
-    
-    _lblStatus.text = kHankUnNilStr(@"未知");
 }
 
 + (CGFloat)getCellHeightWithModel:(TDOrderPayModel *)model{
     //除了中间的view高度
-    CGFloat height = 120 +  170 + 30;
+    CGFloat height = 120 +  130 + 30;
     height +=  kMideViewOriHeight +(kTDOrderSubCellHeight * model.arrSubject.count);
     return height;
 }
