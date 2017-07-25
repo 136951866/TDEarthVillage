@@ -30,7 +30,10 @@
 #define USERINFO @"web/app/user/get"
 //修改收货人信息姓名
 #define UPDATENAME @"web/app/duserAddress/updateName"
-
+//修改收货地址
+#define UPDATEADDRESS @"web/app/duserAddress/updateAddress"
+//修改收货地址
+#define UPDATEPHONE @"web/app/duserAddress/updatePhone"
 
 /********************
  资讯

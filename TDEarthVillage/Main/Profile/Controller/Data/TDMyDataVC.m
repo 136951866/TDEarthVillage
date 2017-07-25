@@ -128,11 +128,11 @@
             break;
         case TDMyDataCellPhoneetype:{
             TDModifymyDataVC *modifyVC = [[TDModifymyDataVC alloc]initWithModel:model finishBlock:^(NSString *str) {
-                kCurrentUser.acceptAddress = str;
+                kCurrentUser.acceptPhone = str;
                 [kCurrentUser save];
                 HANKSTRONGSELF
                 NSMutableArray *arrScetion1 = strongSelf->_arrModel[1];
-                [arrScetion1 replaceObjectAtIndex:1 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellPhoneetype content:kHankUnNilStr(str)] ];
+                [arrScetion1 replaceObjectAtIndex:2 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellPhoneetype content:kHankUnNilStr(str)] ];
                 [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:YES];
             }];
             [self.navigationController pushViewController:modifyVC animated:YES];

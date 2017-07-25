@@ -99,11 +99,13 @@
         }
             break;
         case TDMyDataCellAddressetype:{
-            
+            dic[@"address"] = kHankUnNilStr(content);
+            url = [BASEIP stringByAppendingString:UPDATEADDRESS];
         }
             break;
         case TDMyDataCellPhoneetype:{
-            
+            dic[@"phone"] = kHankUnNilStr(content);
+            url = [BASEIP stringByAppendingString:UPDATEPHONE];
         }
             break;
         default:
