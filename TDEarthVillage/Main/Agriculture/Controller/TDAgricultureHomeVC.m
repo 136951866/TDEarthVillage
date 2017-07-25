@@ -315,7 +315,7 @@
     if(idx_1 != -1 && idx_2 == -1 && idx_3 == -1 && idx_4 == -1){
         TDCodeAppModel *model1 = [self getArrModelWithTag:asView][idx_1];
         [self getSelectModelWithModel:model1 asView:asView];
-        return [model1.name isEqualToString:@"全部"]?@"种类":model1.name;;
+        return [model1.name isEqualToString:@"全部"]?(asView.tag == kMenuViewTag?@"种类":@"产地"):model1.name;;
     }
     return @"";
 }

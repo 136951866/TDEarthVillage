@@ -24,6 +24,9 @@ const static CGFloat KTapMoreTag = 2000;
     kHomeDvilllageModelBlock _selectFilterBlock;
     NSMutableArray *_arrLabel;
     
+    UILabel *_lblPre;
+    UILabel *_lblCurrent;
+    
 }
 
 @property (nonatomic, strong) TDHomeFilterTableViewView *filterTabView;
@@ -65,8 +68,11 @@ const static CGFloat KTapMoreTag = 2000;
     [_filterArrModel enumerateObjectsUsingBlock:^(TDHomeDvilllageModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         HANKSTRONGSELF
         UILabel*tagLabel=[[UILabel alloc]initWithFrame:CGRectZero];
-        tagLabel.textColor = kTitleThemeBlack;
-        tagLabel.backgroundColor = kThemeGray;
+        tagLabel.textColor = idx?kTitleThemeBlack:[UIColor whiteColor];
+        tagLabel.backgroundColor = idx?kThemeGray:kThemeBlue;
+        if(!idx){
+            _lblPre = tagLabel;
+        }
         tagLabel.textAlignment = NSTextAlignmentCenter;
         tagLabel.font = [UIFont boldSystemFontOfSize:12];
         tagLabel.text = kHankUnNilStr(obj.name);
@@ -142,7 +148,15 @@ const static CGFloat KTapMoreTag = 2000;
     }else{
         NSInteger index = tap.view.tag - KTapTag;
         TDHomeDvilllageModel *model = _filterArrModel[index];
-//        UILabel *lbl = (UILabel *)tap.view;
+        
+        _lblPre.textColor = kTitleThemeBlack;
+        _lblPre.backgroundColor = kThemeGray;
+        
+        _lblCurrent = (UILabel *)(tap.view);
+        _lblCurrent.textColor = [UIColor whiteColor];
+        _lblCurrent.backgroundColor = kThemeBlue;
+        
+        _lblPre = _lblCurrent;
        kHankCallBlock(_selectFilterBlock,model);
     }
     
