@@ -297,25 +297,25 @@
         TDCodeAppModel *model3 = model2.leafs[idx_3];
         TDCodeAppModel *model4 = model3.leafs[idx_4];
         [self getSelectModelWithModel:model4 asView:asView];
-        return model4.name;
+        return [model4.name isEqualToString:@"全部"]?model3.name:model4.name;
     }
     if(idx_1 != -1 && idx_2 != -1 && idx_3 != -1 && idx_4 == -1){
         TDCodeAppModel *model1 = [self getArrModelWithTag:asView][idx_1];
         TDCodeAppModel *model2 = model1.leafs[idx_2];
         TDCodeAppModel *model3 = model2.leafs[idx_3];
         [self getSelectModelWithModel:model3 asView:asView];
-        return model3.name;
+        return [model3.name isEqualToString:@"全部"]?model2.name:model3.name;
     }
     if(idx_1 != -1 && idx_2 != -1 && idx_3 == -1 && idx_4 == -1){
         TDCodeAppModel *model1 = [self getArrModelWithTag:asView][idx_1];
         TDCodeAppModel *model2 = model1.leafs[idx_2];
         [self getSelectModelWithModel:model2 asView:asView];
-        return model2.name;
+        return [model2.name isEqualToString:@"全部"]?model1.name:model2.name;
     }
     if(idx_1 != -1 && idx_2 == -1 && idx_3 == -1 && idx_4 == -1){
         TDCodeAppModel *model1 = [self getArrModelWithTag:asView][idx_1];
         [self getSelectModelWithModel:model1 asView:asView];
-        return model1.name;
+        return [model1.name isEqualToString:@"全部"]?@"种类":model1.name;;
     }
     return @"";
 }
