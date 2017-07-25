@@ -1,0 +1,1 @@
+../../../HKCategory/HKCategory/Pod/Classes/NSString/NSAttributedString+HankSize.h

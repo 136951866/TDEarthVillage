@@ -1,0 +1,1 @@
+../../../HKCategory/HKCategory/Pod/Classes/NSString/NSString+HankCategory.h

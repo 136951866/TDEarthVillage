@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TDPurchasePopupView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fi1-O1-ff3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="xD8-rF-1tu" appends="YES" id="A26-vL-5CD"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Fi1-O1-ff3" secondAttribute="trailing" id="aHl-7e-fxE"/>
+                <constraint firstAttribute="bottom" secondItem="Fi1-O1-ff3" secondAttribute="bottom" id="kdr-ys-dTc"/>
+                <constraint firstItem="Fi1-O1-ff3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="phA-Ru-AaR"/>
+                <constraint firstItem="Fi1-O1-ff3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rJN-kw-vE3"/>
+            </constraints>
+            <connections>
+                <outlet property="ViewForPurchase" destination="c9F-Av-JOC" id="8FT-IB-zAr"/>
+                <outlet property="lblNum" destination="GKl-QW-xSp" id="edw-NL-n1B"/>
+                <outlet property="viewForMask" destination="Fi1-O1-ff3" id="w6W-hc-1PX"/>
+            </connections>
+        </view>
+        <view contentMode="scaleToFill" id="c9F-Av-JOC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-zE-OuT">
+                    <rect key="frame" x="0.0" y="197" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.63529411759999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="vNQ-GU-Pe6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="comfirmAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="uY0-48-vjz"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购买选项" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHv-Gx-AGb">
+                    <rect key="frame" x="45" y="40" width="72" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="OgC-Nd-Zwd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd6-kX-0oH">
+                    <rect key="frame" x="45" y="110" width="38" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="PcQ-Fo-7zf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly8-9Z-OLX">
+                    <rect key="frame" x="222" y="109.5" width="14" height="22"/>
+                    <state key="normal" image="shopcar_reduce"/>
+                    <connections>
+                        <action selector="reduceAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="daV-z3-q76"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPv-G1-JBg">
+                    <rect key="frame" x="316" y="109.5" width="14" height="22"/>
+                    <state key="normal" image="shopcar_plus"/>
+                    <connections>
+                        <action selector="addAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qao-0Y-Dxb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKl-QW-xSp">
+                    <rect key="frame" x="236" y="112" width="80" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="P5O-Ly-eOl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.63529411759999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Bd6-kX-0oH" firstAttribute="leading" secondItem="aHv-Gx-AGb" secondAttribute="leading" id="5fV-tA-JBE"/>
+                <constraint firstAttribute="bottom" secondItem="mdT-zE-OuT" secondAttribute="bottom" id="6J1-ix-skj"/>
+                <constraint firstItem="pPv-G1-JBg" firstAttribute="leading" secondItem="GKl-QW-xSp" secondAttribute="trailing" id="9fx-kL-4kL"/>
+                <constraint firstItem="Bd6-kX-0oH" firstAttribute="top" secondItem="aHv-Gx-AGb" secondAttribute="bottom" constant="49" id="MIq-ZC-6lc"/>
+                <constraint firstItem="aHv-Gx-AGb" firstAttribute="leading" secondItem="c9F-Av-JOC" secondAttribute="leading" constant="45" id="asa-8R-fsx"/>
+                <constraint firstItem="GKl-QW-xSp" firstAttribute="centerY" secondItem="Bd6-kX-0oH" secondAttribute="centerY" id="hdh-ax-ZX4"/>
+                <constraint firstItem="mdT-zE-OuT" firstAttribute="leading" secondItem="c9F-Av-JOC" secondAttribute="leading" id="ljD-XS-kzJ"/>
+                <constraint firstItem="GKl-QW-xSp" firstAttribute="leading" secondItem="ly8-9Z-OLX" secondAttribute="trailing" id="nzz-GY-EUi"/>
+                <constraint firstItem="aHv-Gx-AGb" firstAttribute="top" secondItem="c9F-Av-JOC" secondAttribute="top" constant="40" id="odr-eG-PzF"/>
+                <constraint firstItem="ly8-9Z-OLX" firstAttribute="centerY" secondItem="Bd6-kX-0oH" secondAttribute="centerY" id="pPt-IB-9ZK"/>
+                <constraint firstItem="pPv-G1-JBg" firstAttribute="centerY" secondItem="Bd6-kX-0oH" secondAttribute="centerY" id="qlp-Iw-gwn"/>
+                <constraint firstAttribute="trailing" secondItem="mdT-zE-OuT" secondAttribute="trailing" id="tQe-kU-Ge1"/>
+                <constraint firstAttribute="trailing" secondItem="pPv-G1-JBg" secondAttribute="trailing" constant="45" id="wrt-bC-zIe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="563" y="61"/>
+        </view>
+        <tapGestureRecognizer id="xD8-rF-1tu">
+            <connections>
+                <action selector="touchBackgroundAction:" destination="iN0-l3-epB" id="bWR-eA-yHN"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="shopcar_plus" width="14" height="14"/>
+        <image name="shopcar_reduce" width="14" height="14"/>
+    </resources>
+</document>

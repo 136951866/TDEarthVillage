@@ -1,0 +1,1827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		300300951F1DA8FD00A83857 /* TDVillageDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 300300941F1DA8FD00A83857 /* TDVillageDetailHeaderView.m */; };
+		300300981F1DAFBB00A83857 /* TDAgricultureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 300300971F1DAFBB00A83857 /* TDAgricultureModel.m */; };
+		3003009B1F1DD31100A83857 /* TDTourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3003009A1F1DD31100A83857 /* TDTourModel.m */; };
+		3011AA171F0E0DF500DCB2DA /* TDHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA0C1F0E0DF500DCB2DA /* TDHomeCell.m */; };
+		3011AA181F0E0DF500DCB2DA /* TDHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA0D1F0E0DF500DCB2DA /* TDHomeCell.xib */; };
+		3011AA191F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA0F1F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.m */; };
+		3011AA1A1F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA101F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.xib */; };
+		3011AA1B1F0E0DF500DCB2DA /* TDHomeFilterTableViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA121F0E0DF500DCB2DA /* TDHomeFilterTableViewView.m */; };
+		3011AA1C1F0E0DF500DCB2DA /* TDHomeFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA141F0E0DF500DCB2DA /* TDHomeFilterView.m */; };
+		3011AA1D1F0E0DF500DCB2DA /* TDHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA161F0E0DF500DCB2DA /* TDHomeHeaderView.m */; };
+		3011AA211F0E0EB500DCB2DA /* TDAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA1F1F0E0EB500DCB2DA /* TDAboutVC.m */; };
+		3011AA221F0E0EB500DCB2DA /* TDAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA201F0E0EB500DCB2DA /* TDAboutVC.xib */; };
+		3011AA261F0E0FFB00DCB2DA /* TDVillageDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA241F0E0FFB00DCB2DA /* TDVillageDetails.m */; };
+		3011AA271F0E0FFB00DCB2DA /* TDVillageDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA251F0E0FFB00DCB2DA /* TDVillageDetails.xib */; };
+		3011AA2D1F0E156F00DCB2DA /* TDProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA2B1F0E156F00DCB2DA /* TDProductCell.m */; };
+		3011AA2E1F0E156F00DCB2DA /* TDProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA2C1F0E156F00DCB2DA /* TDProductCell.xib */; };
+		3011AA321F0E16F100DCB2DA /* TDAgricultureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA301F0E16F100DCB2DA /* TDAgricultureVC.m */; };
+		3011AA331F0E16F100DCB2DA /* TDAgricultureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA311F0E16F100DCB2DA /* TDAgricultureVC.xib */; };
+		3011AA371F0E185000DCB2DA /* TDTourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA351F0E185000DCB2DA /* TDTourVC.m */; };
+		3011AA381F0E185000DCB2DA /* TDTourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA361F0E185000DCB2DA /* TDTourVC.xib */; };
+		3011AA3C1F0E196F00DCB2DA /* TDInfoHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA3A1F0E196F00DCB2DA /* TDInfoHomeVC.m */; };
+		3011AA3D1F0E196F00DCB2DA /* TDInfoHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA3B1F0E196F00DCB2DA /* TDInfoHomeVC.xib */; };
+		3011AA411F0E199300DCB2DA /* TDTInfoHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA3F1F0E199300DCB2DA /* TDTInfoHomeCell.m */; };
+		3011AA421F0E199300DCB2DA /* TDTInfoHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA401F0E199300DCB2DA /* TDTInfoHomeCell.xib */; };
+		3011AA4C1F0E1D3500DCB2DA /* UIWebView+FLUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA461F0E1D3500DCB2DA /* UIWebView+FLUIWebView.m */; };
+		3011AA4D1F0E1D3500DCB2DA /* ZLWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA481F0E1D3500DCB2DA /* ZLWebVC.m */; };
+		3011AA4E1F0E1D3500DCB2DA /* ZLWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA4A1F0E1D3500DCB2DA /* ZLWebViewVC.m */; };
+		3011AA4F1F0E1D3500DCB2DA /* ZLWKJSPOST.html in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA4B1F0E1D3500DCB2DA /* ZLWKJSPOST.html */; };
+		3011AA581F0E20CE00DCB2DA /* TDAgricultureHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA561F0E20CE00DCB2DA /* TDAgricultureHomeVC.m */; };
+		3011AA591F0E20CE00DCB2DA /* TDAgricultureHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA571F0E20CE00DCB2DA /* TDAgricultureHomeVC.xib */; };
+		3011AA5D1F0E22A100DCB2DA /* TDAgricultureSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA5B1F0E22A100DCB2DA /* TDAgricultureSearchVC.m */; };
+		3011AA5E1F0E22A100DCB2DA /* TDAgricultureSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA5C1F0E22A100DCB2DA /* TDAgricultureSearchVC.xib */; };
+		3011AA641F0E2BB000DCB2DA /* TDMyDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA621F0E2BB000DCB2DA /* TDMyDataVC.m */; };
+		3011AA651F0E2BB000DCB2DA /* TDMyDataVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA631F0E2BB000DCB2DA /* TDMyDataVC.xib */; };
+		3011AA691F0E2BCA00DCB2DA /* TDMyDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA671F0E2BCA00DCB2DA /* TDMyDataCell.m */; };
+		3011AA6A1F0E2BCA00DCB2DA /* TDMyDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011AA681F0E2BCA00DCB2DA /* TDMyDataCell.xib */; };
+		3011AA6D1F0E2DE000DCB2DA /* TDMyDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3011AA6C1F0E2DE000DCB2DA /* TDMyDataModel.m */; };
+		301D5D711F21DBCB002620BB /* TDHomeDvilllageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D5D701F21DBCB002620BB /* TDHomeDvilllageModel.m */; };
+		301D5D741F21E0A4002620BB /* TDCodeAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D5D731F21E0A4002620BB /* TDCodeAppModel.m */; };
+		301D5D7A1F21FA86002620BB /* NSString+HankCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D5D791F21FA86002620BB /* NSString+HankCategory.m */; };
+		3032A76E1F17429000428B33 /* TDPublicTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032A76B1F17429000428B33 /* TDPublicTools.m */; };
+		3032A76F1F17429000428B33 /* TDTickTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032A76D1F17429000428B33 /* TDTickTimer.m */; };
+		3032A7721F1742FD00428B33 /* TDPublicNetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032A7711F1742FD00428B33 /* TDPublicNetWorkTools.m */; };
+		304145E11F13128100849B88 /* TDTourDetalsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304145E01F13128100849B88 /* TDTourDetalsHeaderView.m */; };
+		304145E51F1313E200849B88 /* TDTourDetalsHeaderSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304145E41F1313E200849B88 /* TDTourDetalsHeaderSubView.m */; };
+		304145E71F1313ED00849B88 /* TDTourDetalsHeaderSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304145E61F1313ED00849B88 /* TDTourDetalsHeaderSubView.xib */; };
+		304145EB1F13156100849B88 /* TDTourDetalisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 304145E91F13156100849B88 /* TDTourDetalisVC.m */; };
+		304145EC1F13156100849B88 /* TDTourDetalisVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304145EA1F13156100849B88 /* TDTourDetalisVC.xib */; };
+		304145EF1F131AD700849B88 /* TDPurchasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304145EE1F131AD700849B88 /* TDPurchasePopupView.m */; };
+		304145F11F131AE800849B88 /* TDPurchasePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304145F01F131AE800849B88 /* TDPurchasePopupView.xib */; };
+		304145F51F132A7100849B88 /* UIView+TDBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 304145F41F132A7100849B88 /* UIView+TDBadge.m */; };
+		304145FC1F134AA500849B88 /* TDOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 304145FA1F134AA500849B88 /* TDOrderCell.m */; };
+		304145FD1F134AA500849B88 /* TDOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304145FB1F134AA500849B88 /* TDOrderCell.xib */; };
+		304146021F13517C00849B88 /* TDOrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146001F13517C00849B88 /* TDOrderListVC.m */; };
+		304146031F13517C00849B88 /* TDOrderListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304146011F13517C00849B88 /* TDOrderListVC.xib */; };
+		304146071F13546D00849B88 /* TDOrderSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146051F13546D00849B88 /* TDOrderSubCell.m */; };
+		304146081F13546D00849B88 /* TDOrderSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304146061F13546D00849B88 /* TDOrderSubCell.xib */; };
+		3041460C1F1359B000849B88 /* TDOrderDetalisCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041460A1F1359B000849B88 /* TDOrderDetalisCell.m */; };
+		3041460D1F1359B000849B88 /* TDOrderDetalisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3041460B1F1359B000849B88 /* TDOrderDetalisCell.xib */; };
+		304146111F135EF100849B88 /* TDOrderDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041460F1F135EF100849B88 /* TDOrderDetailsVC.m */; };
+		304146121F135EF100849B88 /* TDOrderDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304146101F135EF100849B88 /* TDOrderDetailsVC.xib */; };
+		304146161F1361C100849B88 /* TDOrderPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146141F1361C100849B88 /* TDOrderPayCell.m */; };
+		304146171F1361C100849B88 /* TDOrderPayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304146151F1361C100849B88 /* TDOrderPayCell.xib */; };
+		3041461B1F13649F00849B88 /* TDOrderPayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146191F13649F00849B88 /* TDOrderPayVC.m */; };
+		3041461C1F13649F00849B88 /* TDOrderPayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3041461A1F13649F00849B88 /* TDOrderPayVC.xib */; };
+		304146201F1372EF00849B88 /* TDOrderPayStatuesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041461E1F1372EF00849B88 /* TDOrderPayStatuesCell.m */; };
+		304146211F1372EF00849B88 /* TDOrderPayStatuesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3041461F1F1372EF00849B88 /* TDOrderPayStatuesCell.xib */; };
+		304146251F1374B600849B88 /* TDOrderPayStatuesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146231F1374B600849B88 /* TDOrderPayStatuesVC.m */; };
+		304146261F1374B600849B88 /* TDOrderPayStatuesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304146241F1374B600849B88 /* TDOrderPayStatuesVC.xib */; };
+		304146961F13796000849B88 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041462A1F13796000849B88 /* APAuthV2Info.m */; };
+		304146971F13796000849B88 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3041462B1F13796000849B88 /* libcrypto.a */; };
+		304146981F13796000849B88 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3041462C1F13796000849B88 /* libssl.a */; };
+		304146991F13796000849B88 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041467A1F13796000849B88 /* Order.m */; };
+		3041469A1F13796000849B88 /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041467D1F13796000849B88 /* base64.m */; };
+		3041469B1F13796000849B88 /* DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146801F13796000849B88 /* DataSigner.m */; };
+		3041469C1F13796000849B88 /* DataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146821F13796000849B88 /* DataVerifier.m */; };
+		3041469D1F13796000849B88 /* MD5DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146841F13796000849B88 /* MD5DataSigner.m */; };
+		3041469E1F13796000849B88 /* NSDataEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146861F13796000849B88 /* NSDataEx.m */; };
+		3041469F1F13796000849B88 /* openssl_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146881F13796000849B88 /* openssl_wrapper.m */; };
+		304146A01F13796000849B88 /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041468A1F13796000849B88 /* RSADataSigner.m */; };
+		304146A11F13796000849B88 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041468C1F13796000849B88 /* RSADataVerifier.m */; };
+		304146A21F13796000849B88 /* DataMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041468F1F13796000849B88 /* DataMD5.m */; };
+		304146A31F13796000849B88 /* getIPhoneIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146911F13796000849B88 /* getIPhoneIP.m */; };
+		304146A41F13796000849B88 /* LVWxPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146931F13796000849B88 /* LVWxPay.m */; };
+		304146A51F13796000849B88 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 304146951F13796000849B88 /* XMLDictionary.m */; };
+		304146AB1F137B0100849B88 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 304146A91F137B0100849B88 /* AlipaySDK.bundle */; };
+		304146AC1F137B0100849B88 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304146AA1F137B0100849B88 /* AlipaySDK.framework */; };
+		304F95231F0C940D004A13DD /* TDShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F95221F0C940D004A13DD /* TDShopModel.m */; };
+		304F95261F0CAFAA004A13DD /* TDShopBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F95251F0CAFAA004A13DD /* TDShopBottomView.m */; };
+		304F95281F0CB024004A13DD /* TDShopBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304F95271F0CB024004A13DD /* TDShopBottomView.xib */; };
+		304F95301F0CC75D004A13DD /* TDProfileHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F952F1F0CC75D004A13DD /* TDProfileHomeVC.m */; };
+		304F95331F0CC817004A13DD /* TDProfileHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F95321F0CC817004A13DD /* TDProfileHomeHeaderView.m */; };
+		304F95351F0CC820004A13DD /* TDProfileHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304F95341F0CC820004A13DD /* TDProfileHomeHeaderView.xib */; };
+		304F95391F0CCACD004A13DD /* TDProfileHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F95371F0CCACD004A13DD /* TDProfileHomeCell.m */; };
+		304F953A1F0CCACD004A13DD /* TDProfileHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304F95381F0CCACD004A13DD /* TDProfileHomeCell.xib */; };
+		304F953D1F0CCC52004A13DD /* TDProfileHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F953C1F0CCC52004A13DD /* TDProfileHome.m */; };
+		304F954B1F0CE17C004A13DD /* TDLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F95491F0CE17C004A13DD /* TDLoginVC.m */; };
+		304F954C1F0CE17C004A13DD /* TDLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304F954A1F0CE17C004A13DD /* TDLoginVC.xib */; };
+		305732021F1F31CC00BF27A0 /* TDOrderPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 305732011F1F31CC00BF27A0 /* TDOrderPayModel.m */; };
+		3076655B1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076655A1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m */; };
+		307804EA1F0B46720040B515 /* TDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 307804E91F0B46720040B515 /* TDHomeVC.m */; };
+		307804FF1F0B91FC0040B515 /* TDShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 307804FE1F0B91FC0040B515 /* TDShopCell.m */; };
+		307805021F0B94C30040B515 /* TDShopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 307805011F0B94C30040B515 /* TDShopVC.m */; };
+		308C4D691F0F6E6100CC386F /* TDModifymyDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 308C4D671F0F6E6100CC386F /* TDModifymyDataVC.m */; };
+		308C4D6A1F0F6E6100CC386F /* TDModifymyDataVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C4D681F0F6E6100CC386F /* TDModifymyDataVC.xib */; };
+		30A095A81F204F8800D89958 /* TDOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A095A71F204F8800D89958 /* TDOrderModel.m */; };
+		30BE3DBA1F09D80C00866F92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DB91F09D80C00866F92 /* main.m */; };
+		30BE3DBD1F09D80C00866F92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DBC1F09D80C00866F92 /* AppDelegate.m */; };
+		30BE3DC61F09D80C00866F92 /* TDEarthVillage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DC41F09D80C00866F92 /* TDEarthVillage.xcdatamodeld */; };
+		30BE3DC81F09D80C00866F92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30BE3DC71F09D80C00866F92 /* Assets.xcassets */; };
+		30BE3DCB1F09D80C00866F92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BE3DC91F09D80C00866F92 /* LaunchScreen.storyboard */; };
+		30BE3DF11F09EB5600866F92 /* TDInitThridPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DF01F09EB5600866F92 /* TDInitThridPart.m */; };
+		30BE3DF41F09EC3600866F92 /* TDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DF31F09EC3600866F92 /* TDBaseModel.m */; };
+		30BE3DF71F09EC7500866F92 /* TDBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DF61F09EC7500866F92 /* TDBaseVC.m */; };
+		30BE3DFA1F09ECB700866F92 /* TDNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DF91F09ECB700866F92 /* TDNavigationVC.m */; };
+		30BE3DFD1F09F27100866F92 /* TDTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3DFC1F09F27100866F92 /* TDTabBarVC.m */; };
+		30C6A8811F14638200600D01 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C6A8801F14638200600D01 /* CoreMotion.framework */; };
+		30C6A88D1F1466D700600D01 /* ALBBMediaService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C6A88A1F1466D700600D01 /* ALBBMediaService.framework */; };
+		30C6A88E1F1466D700600D01 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C6A88B1F1466D700600D01 /* UTDID.framework */; };
+		30C6A88F1F1466D700600D01 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30C6A88C1F1466D700600D01 /* yw_1222.jpg */; };
+		30C6A8911F14670900600D01 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C6A8901F14670900600D01 /* VideoToolbox.framework */; };
+		30C6A8931F14675C00600D01 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C6A8921F14675C00600D01 /* AssetsLibrary.framework */; };
+		30C6A8961F146A8C00600D01 /* TDAlipayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8951F146A8C00600D01 /* TDAlipayTool.m */; };
+		30C6A89F1F14B12600600D01 /* TDWebViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A89D1F14B12600600D01 /* TDWebViewCell.m */; };
+		30C6A8A01F14B12600600D01 /* TDWebViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C6A89E1F14B12600600D01 /* TDWebViewCell.xib */; };
+		30C6A8AD1F14B79900600D01 /* THTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8A61F14B79900600D01 /* THTTPRequestOperationManager.m */; };
+		30C6A8AE1F14B79900600D01 /* ZLFailLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8A81F14B79900600D01 /* ZLFailLoadView.m */; };
+		30C6A8AF1F14B79900600D01 /* ZLRefreshTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8AA1F14B79900600D01 /* ZLRefreshTool.m */; };
+		30C6A8B01F14B79900600D01 /* ZLRequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8AC1F14B79900600D01 /* ZLRequestResponse.m */; };
+		30C6A8B31F14B83400600D01 /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8B21F14B83400600D01 /* MBProgressHUD+Category.m */; };
+		30C6A8B71F14BC5100600D01 /* TDUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8B61F14BC5100600D01 /* TDUserInfoModel.m */; };
+		30C6A8BB1F14BD4000600D01 /* TDBaseModel+Coding.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6A8BA1F14BD4000600D01 /* TDBaseModel+Coding.m */; };
+		30C6D9261F25D471002051F8 /* TDAgricultureFilterSaveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6D9251F25D471002051F8 /* TDAgricultureFilterSaveModel.m */; };
+		30CD96A11F1CA61A006CC159 /* TDInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD96A01F1CA61A006CC159 /* TDInfoModel.m */; };
+		30CD96A51F1CAE68006CC159 /* TDInfoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD96A31F1CAE68006CC159 /* TDInfoDetailVC.m */; };
+		30CD96A61F1CAE68006CC159 /* TDInfoDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CD96A41F1CAE68006CC159 /* TDInfoDetailVC.xib */; };
+		30CD96A91F1CB336006CC159 /* TDHomeVillAgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD96A81F1CB336006CC159 /* TDHomeVillAgeModel.m */; };
+		30CD96AC1F1CB65A006CC159 /* TDHomeSysTopManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD96AB1F1CB65A006CC159 /* TDHomeSysTopManagerModel.m */; };
+		30DC02601F15BB4400C0793D /* TDDataBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC025F1F15BB4400C0793D /* TDDataBaseTool.m */; };
+		51E91ABC06664507F7272EAB /* libPods-TDEarthVillage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1E5B53E04A42AD726D20FC /* libPods-TDEarthVillage.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		300300931F1DA8FD00A83857 /* TDVillageDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDVillageDetailHeaderView.h; sourceTree = "<group>"; };
+		300300941F1DA8FD00A83857 /* TDVillageDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVillageDetailHeaderView.m; sourceTree = "<group>"; };
+		300300961F1DAFBB00A83857 /* TDAgricultureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAgricultureModel.h; sourceTree = "<group>"; };
+		300300971F1DAFBB00A83857 /* TDAgricultureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAgricultureModel.m; sourceTree = "<group>"; };
+		300300991F1DD31100A83857 /* TDTourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTourModel.h; sourceTree = "<group>"; };
+		3003009A1F1DD31100A83857 /* TDTourModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTourModel.m; sourceTree = "<group>"; };
+		3011AA0B1F0E0DF500DCB2DA /* TDHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeCell.h; sourceTree = "<group>"; };
+		3011AA0C1F0E0DF500DCB2DA /* TDHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeCell.m; sourceTree = "<group>"; };
+		3011AA0D1F0E0DF500DCB2DA /* TDHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDHomeCell.xib; sourceTree = "<group>"; };
+		3011AA0E1F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeFilterTableViewCell.h; sourceTree = "<group>"; };
+		3011AA0F1F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeFilterTableViewCell.m; sourceTree = "<group>"; };
+		3011AA101F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDHomeFilterTableViewCell.xib; sourceTree = "<group>"; };
+		3011AA111F0E0DF500DCB2DA /* TDHomeFilterTableViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeFilterTableViewView.h; sourceTree = "<group>"; };
+		3011AA121F0E0DF500DCB2DA /* TDHomeFilterTableViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeFilterTableViewView.m; sourceTree = "<group>"; };
+		3011AA131F0E0DF500DCB2DA /* TDHomeFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeFilterView.h; sourceTree = "<group>"; };
+		3011AA141F0E0DF500DCB2DA /* TDHomeFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeFilterView.m; sourceTree = "<group>"; };
+		3011AA151F0E0DF500DCB2DA /* TDHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeHeaderView.h; sourceTree = "<group>"; };
+		3011AA161F0E0DF500DCB2DA /* TDHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeHeaderView.m; sourceTree = "<group>"; };
+		3011AA1E1F0E0EB500DCB2DA /* TDAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAboutVC.h; sourceTree = "<group>"; };
+		3011AA1F1F0E0EB500DCB2DA /* TDAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAboutVC.m; sourceTree = "<group>"; };
+		3011AA201F0E0EB500DCB2DA /* TDAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDAboutVC.xib; sourceTree = "<group>"; };
+		3011AA231F0E0FFB00DCB2DA /* TDVillageDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDVillageDetails.h; sourceTree = "<group>"; };
+		3011AA241F0E0FFB00DCB2DA /* TDVillageDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDVillageDetails.m; sourceTree = "<group>"; };
+		3011AA251F0E0FFB00DCB2DA /* TDVillageDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDVillageDetails.xib; sourceTree = "<group>"; };
+		3011AA2A1F0E156F00DCB2DA /* TDProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProductCell.h; sourceTree = "<group>"; };
+		3011AA2B1F0E156F00DCB2DA /* TDProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProductCell.m; sourceTree = "<group>"; };
+		3011AA2C1F0E156F00DCB2DA /* TDProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDProductCell.xib; sourceTree = "<group>"; };
+		3011AA2F1F0E16F100DCB2DA /* TDAgricultureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAgricultureVC.h; sourceTree = "<group>"; };
+		3011AA301F0E16F100DCB2DA /* TDAgricultureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAgricultureVC.m; sourceTree = "<group>"; };
+		3011AA311F0E16F100DCB2DA /* TDAgricultureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDAgricultureVC.xib; sourceTree = "<group>"; };
+		3011AA341F0E185000DCB2DA /* TDTourVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTourVC.h; sourceTree = "<group>"; };
+		3011AA351F0E185000DCB2DA /* TDTourVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTourVC.m; sourceTree = "<group>"; };
+		3011AA361F0E185000DCB2DA /* TDTourVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDTourVC.xib; sourceTree = "<group>"; };
+		3011AA391F0E196F00DCB2DA /* TDInfoHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDInfoHomeVC.h; sourceTree = "<group>"; };
+		3011AA3A1F0E196F00DCB2DA /* TDInfoHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDInfoHomeVC.m; sourceTree = "<group>"; };
+		3011AA3B1F0E196F00DCB2DA /* TDInfoHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDInfoHomeVC.xib; sourceTree = "<group>"; };
+		3011AA3E1F0E199300DCB2DA /* TDTInfoHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTInfoHomeCell.h; sourceTree = "<group>"; };
+		3011AA3F1F0E199300DCB2DA /* TDTInfoHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTInfoHomeCell.m; sourceTree = "<group>"; };
+		3011AA401F0E199300DCB2DA /* TDTInfoHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDTInfoHomeCell.xib; sourceTree = "<group>"; };
+		3011AA441F0E1D3500DCB2DA /* FLWebViewProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLWebViewProvider.h; sourceTree = "<group>"; };
+		3011AA451F0E1D3500DCB2DA /* UIWebView+FLUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+FLUIWebView.h"; sourceTree = "<group>"; };
+		3011AA461F0E1D3500DCB2DA /* UIWebView+FLUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+FLUIWebView.m"; sourceTree = "<group>"; };
+		3011AA471F0E1D3500DCB2DA /* ZLWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLWebVC.h; sourceTree = "<group>"; };
+		3011AA481F0E1D3500DCB2DA /* ZLWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLWebVC.m; sourceTree = "<group>"; };
+		3011AA491F0E1D3500DCB2DA /* ZLWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLWebViewVC.h; sourceTree = "<group>"; };
+		3011AA4A1F0E1D3500DCB2DA /* ZLWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLWebViewVC.m; sourceTree = "<group>"; };
+		3011AA4B1F0E1D3500DCB2DA /* ZLWKJSPOST.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ZLWKJSPOST.html; sourceTree = "<group>"; };
+		3011AA551F0E20CE00DCB2DA /* TDAgricultureHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAgricultureHomeVC.h; sourceTree = "<group>"; };
+		3011AA561F0E20CE00DCB2DA /* TDAgricultureHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAgricultureHomeVC.m; sourceTree = "<group>"; };
+		3011AA571F0E20CE00DCB2DA /* TDAgricultureHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDAgricultureHomeVC.xib; sourceTree = "<group>"; };
+		3011AA5A1F0E22A100DCB2DA /* TDAgricultureSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAgricultureSearchVC.h; sourceTree = "<group>"; };
+		3011AA5B1F0E22A100DCB2DA /* TDAgricultureSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAgricultureSearchVC.m; sourceTree = "<group>"; };
+		3011AA5C1F0E22A100DCB2DA /* TDAgricultureSearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDAgricultureSearchVC.xib; sourceTree = "<group>"; };
+		3011AA611F0E2BB000DCB2DA /* TDMyDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMyDataVC.h; sourceTree = "<group>"; };
+		3011AA621F0E2BB000DCB2DA /* TDMyDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMyDataVC.m; sourceTree = "<group>"; };
+		3011AA631F0E2BB000DCB2DA /* TDMyDataVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDMyDataVC.xib; sourceTree = "<group>"; };
+		3011AA661F0E2BCA00DCB2DA /* TDMyDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMyDataCell.h; sourceTree = "<group>"; };
+		3011AA671F0E2BCA00DCB2DA /* TDMyDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMyDataCell.m; sourceTree = "<group>"; };
+		3011AA681F0E2BCA00DCB2DA /* TDMyDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDMyDataCell.xib; sourceTree = "<group>"; };
+		3011AA6B1F0E2DE000DCB2DA /* TDMyDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMyDataModel.h; sourceTree = "<group>"; };
+		3011AA6C1F0E2DE000DCB2DA /* TDMyDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMyDataModel.m; sourceTree = "<group>"; };
+		301D5D6F1F21DBCB002620BB /* TDHomeDvilllageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeDvilllageModel.h; sourceTree = "<group>"; };
+		301D5D701F21DBCB002620BB /* TDHomeDvilllageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeDvilllageModel.m; sourceTree = "<group>"; };
+		301D5D721F21E0A4002620BB /* TDCodeAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCodeAppModel.h; sourceTree = "<group>"; };
+		301D5D731F21E0A4002620BB /* TDCodeAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDCodeAppModel.m; sourceTree = "<group>"; };
+		301D5D781F21FA86002620BB /* NSString+HankCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HankCategory.h"; sourceTree = "<group>"; };
+		301D5D791F21FA86002620BB /* NSString+HankCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HankCategory.m"; sourceTree = "<group>"; };
+		3032A76A1F17429000428B33 /* TDPublicTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDPublicTools.h; sourceTree = "<group>"; };
+		3032A76B1F17429000428B33 /* TDPublicTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDPublicTools.m; sourceTree = "<group>"; };
+		3032A76C1F17429000428B33 /* TDTickTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTickTimer.h; sourceTree = "<group>"; };
+		3032A76D1F17429000428B33 /* TDTickTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTickTimer.m; sourceTree = "<group>"; };
+		3032A7701F1742FD00428B33 /* TDPublicNetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDPublicNetWorkTools.h; sourceTree = "<group>"; };
+		3032A7711F1742FD00428B33 /* TDPublicNetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDPublicNetWorkTools.m; sourceTree = "<group>"; };
+		304145DF1F13128100849B88 /* TDTourDetalsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTourDetalsHeaderView.h; sourceTree = "<group>"; };
+		304145E01F13128100849B88 /* TDTourDetalsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTourDetalsHeaderView.m; sourceTree = "<group>"; };
+		304145E21F13136300849B88 /* TDCommonConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDCommonConst.h; sourceTree = "<group>"; };
+		304145E31F1313E200849B88 /* TDTourDetalsHeaderSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTourDetalsHeaderSubView.h; sourceTree = "<group>"; };
+		304145E41F1313E200849B88 /* TDTourDetalsHeaderSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTourDetalsHeaderSubView.m; sourceTree = "<group>"; };
+		304145E61F1313ED00849B88 /* TDTourDetalsHeaderSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDTourDetalsHeaderSubView.xib; sourceTree = "<group>"; };
+		304145E81F13156100849B88 /* TDTourDetalisVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTourDetalisVC.h; sourceTree = "<group>"; };
+		304145E91F13156100849B88 /* TDTourDetalisVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTourDetalisVC.m; sourceTree = "<group>"; };
+		304145EA1F13156100849B88 /* TDTourDetalisVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDTourDetalisVC.xib; sourceTree = "<group>"; };
+		304145ED1F131AD700849B88 /* TDPurchasePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDPurchasePopupView.h; sourceTree = "<group>"; };
+		304145EE1F131AD700849B88 /* TDPurchasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDPurchasePopupView.m; sourceTree = "<group>"; };
+		304145F01F131AE800849B88 /* TDPurchasePopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDPurchasePopupView.xib; sourceTree = "<group>"; };
+		304145F31F132A7100849B88 /* UIView+TDBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TDBadge.h"; sourceTree = "<group>"; };
+		304145F41F132A7100849B88 /* UIView+TDBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TDBadge.m"; sourceTree = "<group>"; };
+		304145F71F132AD800849B88 /* TDBadgeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDBadgeProtocol.h; sourceTree = "<group>"; };
+		304145F91F134AA500849B88 /* TDOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderCell.h; sourceTree = "<group>"; };
+		304145FA1F134AA500849B88 /* TDOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderCell.m; sourceTree = "<group>"; };
+		304145FB1F134AA500849B88 /* TDOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderCell.xib; sourceTree = "<group>"; };
+		304145FF1F13517C00849B88 /* TDOrderListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderListVC.h; sourceTree = "<group>"; };
+		304146001F13517C00849B88 /* TDOrderListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderListVC.m; sourceTree = "<group>"; };
+		304146011F13517C00849B88 /* TDOrderListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderListVC.xib; sourceTree = "<group>"; };
+		304146041F13546D00849B88 /* TDOrderSubCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderSubCell.h; sourceTree = "<group>"; };
+		304146051F13546D00849B88 /* TDOrderSubCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderSubCell.m; sourceTree = "<group>"; };
+		304146061F13546D00849B88 /* TDOrderSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderSubCell.xib; sourceTree = "<group>"; };
+		304146091F1359B000849B88 /* TDOrderDetalisCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderDetalisCell.h; sourceTree = "<group>"; };
+		3041460A1F1359B000849B88 /* TDOrderDetalisCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderDetalisCell.m; sourceTree = "<group>"; };
+		3041460B1F1359B000849B88 /* TDOrderDetalisCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderDetalisCell.xib; sourceTree = "<group>"; };
+		3041460E1F135EF100849B88 /* TDOrderDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderDetailsVC.h; sourceTree = "<group>"; };
+		3041460F1F135EF100849B88 /* TDOrderDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderDetailsVC.m; sourceTree = "<group>"; };
+		304146101F135EF100849B88 /* TDOrderDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderDetailsVC.xib; sourceTree = "<group>"; };
+		304146131F1361C100849B88 /* TDOrderPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderPayCell.h; sourceTree = "<group>"; };
+		304146141F1361C100849B88 /* TDOrderPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderPayCell.m; sourceTree = "<group>"; };
+		304146151F1361C100849B88 /* TDOrderPayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderPayCell.xib; sourceTree = "<group>"; };
+		304146181F13649F00849B88 /* TDOrderPayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderPayVC.h; sourceTree = "<group>"; };
+		304146191F13649F00849B88 /* TDOrderPayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderPayVC.m; sourceTree = "<group>"; };
+		3041461A1F13649F00849B88 /* TDOrderPayVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderPayVC.xib; sourceTree = "<group>"; };
+		3041461D1F1372EF00849B88 /* TDOrderPayStatuesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderPayStatuesCell.h; sourceTree = "<group>"; };
+		3041461E1F1372EF00849B88 /* TDOrderPayStatuesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderPayStatuesCell.m; sourceTree = "<group>"; };
+		3041461F1F1372EF00849B88 /* TDOrderPayStatuesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderPayStatuesCell.xib; sourceTree = "<group>"; };
+		304146221F1374B600849B88 /* TDOrderPayStatuesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderPayStatuesVC.h; sourceTree = "<group>"; };
+		304146231F1374B600849B88 /* TDOrderPayStatuesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderPayStatuesVC.m; sourceTree = "<group>"; };
+		304146241F1374B600849B88 /* TDOrderPayStatuesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDOrderPayStatuesVC.xib; sourceTree = "<group>"; };
+		304146291F13796000849B88 /* APAuthV2Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAuthV2Info.h; sourceTree = "<group>"; };
+		3041462A1F13796000849B88 /* APAuthV2Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAuthV2Info.m; sourceTree = "<group>"; };
+		3041462B1F13796000849B88 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		3041462C1F13796000849B88 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		3041462E1F13796000849B88 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		3041462F1F13796000849B88 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
+		304146301F13796000849B88 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
+		304146311F13796000849B88 /* asn1t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1t.h; sourceTree = "<group>"; };
+		304146321F13796000849B88 /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
+		304146331F13796000849B88 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		304146341F13796000849B88 /* bn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
+		304146351F13796000849B88 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		304146361F13796000849B88 /* camellia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camellia.h; sourceTree = "<group>"; };
+		304146371F13796000849B88 /* cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast.h; sourceTree = "<group>"; };
+		304146381F13796000849B88 /* cmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
+		304146391F13796000849B88 /* cms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
+		3041463A1F13796000849B88 /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
+		3041463B1F13796000849B88 /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
+		3041463C1F13796000849B88 /* conf_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
+		3041463D1F13796000849B88 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		3041463E1F13796000849B88 /* des.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
+		3041463F1F13796000849B88 /* des_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
+		304146401F13796000849B88 /* dh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
+		304146411F13796000849B88 /* dsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
+		304146421F13796000849B88 /* dso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dso.h; sourceTree = "<group>"; };
+		304146431F13796000849B88 /* dtls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
+		304146441F13796000849B88 /* e_os2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
+		304146451F13796000849B88 /* ebcdic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
+		304146461F13796000849B88 /* ec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
+		304146471F13796000849B88 /* ecdh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdh.h; sourceTree = "<group>"; };
+		304146481F13796000849B88 /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		304146491F13796000849B88 /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		3041464A1F13796000849B88 /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
+		3041464B1F13796000849B88 /* evp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
+		3041464C1F13796000849B88 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		3041464D1F13796000849B88 /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
+		3041464E1F13796000849B88 /* krb5_asn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
+		3041464F1F13796000849B88 /* kssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kssl.h; sourceTree = "<group>"; };
+		304146501F13796000849B88 /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
+		304146511F13796000849B88 /* md4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md4.h; sourceTree = "<group>"; };
+		304146521F13796000849B88 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		304146531F13796000849B88 /* mdc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdc2.h; sourceTree = "<group>"; };
+		304146541F13796000849B88 /* modes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
+		304146551F13796000849B88 /* obj_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = obj_mac.h; sourceTree = "<group>"; };
+		304146561F13796000849B88 /* objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
+		304146571F13796000849B88 /* ocsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
+		304146581F13796000849B88 /* opensslconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
+		304146591F13796000849B88 /* opensslv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslv.h; sourceTree = "<group>"; };
+		3041465A1F13796000849B88 /* ossl_typ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ossl_typ.h; sourceTree = "<group>"; };
+		3041465B1F13796000849B88 /* pem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem.h; sourceTree = "<group>"; };
+		3041465C1F13796000849B88 /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
+		3041465D1F13796000849B88 /* pkcs12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
+		3041465E1F13796000849B88 /* pkcs7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
+		3041465F1F13796000849B88 /* pqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
+		304146601F13796000849B88 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
+		304146611F13796000849B88 /* rc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc2.h; sourceTree = "<group>"; };
+		304146621F13796000849B88 /* rc4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
+		304146631F13796000849B88 /* ripemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
+		304146641F13796000849B88 /* rsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
+		304146651F13796000849B88 /* safestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
+		304146661F13796000849B88 /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
+		304146671F13796000849B88 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		304146681F13796000849B88 /* srp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
+		304146691F13796000849B88 /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
+		3041466A1F13796000849B88 /* ssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
+		3041466B1F13796000849B88 /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
+		3041466C1F13796000849B88 /* ssl23.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl23.h; sourceTree = "<group>"; };
+		3041466D1F13796000849B88 /* ssl3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
+		3041466E1F13796000849B88 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		3041466F1F13796000849B88 /* symhacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
+		304146701F13796000849B88 /* tls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
+		304146711F13796000849B88 /* ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
+		304146721F13796000849B88 /* txt_db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
+		304146731F13796000849B88 /* ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui.h; sourceTree = "<group>"; };
+		304146741F13796000849B88 /* ui_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
+		304146751F13796000849B88 /* whrlpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whrlpool.h; sourceTree = "<group>"; };
+		304146761F13796000849B88 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		304146771F13796000849B88 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
+		304146781F13796000849B88 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
+		304146791F13796000849B88 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		3041467A1F13796000849B88 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		3041467C1F13796000849B88 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		3041467D1F13796000849B88 /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
+		3041467E1F13796000849B88 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		3041467F1F13796000849B88 /* DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSigner.h; sourceTree = "<group>"; };
+		304146801F13796000849B88 /* DataSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSigner.m; sourceTree = "<group>"; };
+		304146811F13796000849B88 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
+		304146821F13796000849B88 /* DataVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataVerifier.m; sourceTree = "<group>"; };
+		304146831F13796000849B88 /* MD5DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5DataSigner.h; sourceTree = "<group>"; };
+		304146841F13796000849B88 /* MD5DataSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5DataSigner.m; sourceTree = "<group>"; };
+		304146851F13796000849B88 /* NSDataEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataEx.h; sourceTree = "<group>"; };
+		304146861F13796000849B88 /* NSDataEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataEx.m; sourceTree = "<group>"; };
+		304146871F13796000849B88 /* openssl_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openssl_wrapper.h; sourceTree = "<group>"; };
+		304146881F13796000849B88 /* openssl_wrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = openssl_wrapper.m; sourceTree = "<group>"; };
+		304146891F13796000849B88 /* RSADataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSADataSigner.h; sourceTree = "<group>"; };
+		3041468A1F13796000849B88 /* RSADataSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataSigner.m; sourceTree = "<group>"; };
+		3041468B1F13796000849B88 /* RSADataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSADataVerifier.h; sourceTree = "<group>"; };
+		3041468C1F13796000849B88 /* RSADataVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataVerifier.m; sourceTree = "<group>"; };
+		3041468E1F13796000849B88 /* DataMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataMD5.h; sourceTree = "<group>"; };
+		3041468F1F13796000849B88 /* DataMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataMD5.m; sourceTree = "<group>"; };
+		304146901F13796000849B88 /* getIPhoneIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getIPhoneIP.h; sourceTree = "<group>"; };
+		304146911F13796000849B88 /* getIPhoneIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getIPhoneIP.m; sourceTree = "<group>"; };
+		304146921F13796000849B88 /* LVWxPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVWxPay.h; sourceTree = "<group>"; };
+		304146931F13796000849B88 /* LVWxPay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVWxPay.m; sourceTree = "<group>"; };
+		304146941F13796000849B88 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		304146951F13796000849B88 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		304146A61F1379FF00849B88 /* TDPayNeedMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDPayNeedMacros.h; sourceTree = "<group>"; };
+		304146A91F137B0100849B88 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		304146AA1F137B0100849B88 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		304F95191F0C7F4B004A13DD /* TDOtherMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDOtherMacros.h; sourceTree = "<group>"; };
+		304F95211F0C940D004A13DD /* TDShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDShopModel.h; sourceTree = "<group>"; };
+		304F95221F0C940D004A13DD /* TDShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDShopModel.m; sourceTree = "<group>"; };
+		304F95241F0CAFAA004A13DD /* TDShopBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDShopBottomView.h; sourceTree = "<group>"; };
+		304F95251F0CAFAA004A13DD /* TDShopBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDShopBottomView.m; sourceTree = "<group>"; };
+		304F95271F0CB024004A13DD /* TDShopBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDShopBottomView.xib; sourceTree = "<group>"; };
+		304F952E1F0CC75D004A13DD /* TDProfileHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProfileHomeVC.h; sourceTree = "<group>"; };
+		304F952F1F0CC75D004A13DD /* TDProfileHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProfileHomeVC.m; sourceTree = "<group>"; };
+		304F95311F0CC817004A13DD /* TDProfileHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProfileHomeHeaderView.h; sourceTree = "<group>"; };
+		304F95321F0CC817004A13DD /* TDProfileHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProfileHomeHeaderView.m; sourceTree = "<group>"; };
+		304F95341F0CC820004A13DD /* TDProfileHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDProfileHomeHeaderView.xib; sourceTree = "<group>"; };
+		304F95361F0CCACD004A13DD /* TDProfileHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProfileHomeCell.h; sourceTree = "<group>"; };
+		304F95371F0CCACD004A13DD /* TDProfileHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProfileHomeCell.m; sourceTree = "<group>"; };
+		304F95381F0CCACD004A13DD /* TDProfileHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDProfileHomeCell.xib; sourceTree = "<group>"; };
+		304F953B1F0CCC52004A13DD /* TDProfileHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProfileHome.h; sourceTree = "<group>"; };
+		304F953C1F0CCC52004A13DD /* TDProfileHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProfileHome.m; sourceTree = "<group>"; };
+		304F95481F0CE17C004A13DD /* TDLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLoginVC.h; sourceTree = "<group>"; };
+		304F95491F0CE17C004A13DD /* TDLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginVC.m; sourceTree = "<group>"; };
+		304F954A1F0CE17C004A13DD /* TDLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDLoginVC.xib; sourceTree = "<group>"; };
+		305732001F1F31CC00BF27A0 /* TDOrderPayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderPayModel.h; sourceTree = "<group>"; };
+		305732011F1F31CC00BF27A0 /* TDOrderPayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderPayModel.m; sourceTree = "<group>"; };
+		307665591F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAgricultureFilterOneMenuView.h; sourceTree = "<group>"; };
+		3076655A1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAgricultureFilterOneMenuView.m; sourceTree = "<group>"; };
+		307804E81F0B46720040B515 /* TDHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeVC.h; sourceTree = "<group>"; };
+		307804E91F0B46720040B515 /* TDHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeVC.m; sourceTree = "<group>"; };
+		307804EE1F0B68160040B515 /* TDColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDColorMacros.h; sourceTree = "<group>"; };
+		307804FD1F0B91FC0040B515 /* TDShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDShopCell.h; sourceTree = "<group>"; };
+		307804FE1F0B91FC0040B515 /* TDShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDShopCell.m; sourceTree = "<group>"; };
+		307805001F0B94C30040B515 /* TDShopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDShopVC.h; sourceTree = "<group>"; };
+		307805011F0B94C30040B515 /* TDShopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDShopVC.m; sourceTree = "<group>"; };
+		308C4D661F0F6E6100CC386F /* TDModifymyDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDModifymyDataVC.h; sourceTree = "<group>"; };
+		308C4D671F0F6E6100CC386F /* TDModifymyDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDModifymyDataVC.m; sourceTree = "<group>"; };
+		308C4D681F0F6E6100CC386F /* TDModifymyDataVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDModifymyDataVC.xib; sourceTree = "<group>"; };
+		30A095A61F204F8800D89958 /* TDOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderModel.h; sourceTree = "<group>"; };
+		30A095A71F204F8800D89958 /* TDOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderModel.m; sourceTree = "<group>"; };
+		30BE3DB51F09D80C00866F92 /* TDEarthVillage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDEarthVillage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30BE3DB91F09D80C00866F92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		30BE3DBB1F09D80C00866F92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		30BE3DBC1F09D80C00866F92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		30BE3DC51F09D80C00866F92 /* TDEarthVillage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TDEarthVillage.xcdatamodel; sourceTree = "<group>"; };
+		30BE3DC71F09D80C00866F92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		30BE3DCA1F09D80C00866F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30BE3DCC1F09D80C00866F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		30BE3DED1F09E02800866F92 /* TD-EVPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TD-EVPrefixHeader.pch"; sourceTree = "<group>"; };
+		30BE3DEF1F09EB5600866F92 /* TDInitThridPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDInitThridPart.h; sourceTree = "<group>"; };
+		30BE3DF01F09EB5600866F92 /* TDInitThridPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDInitThridPart.m; sourceTree = "<group>"; };
+		30BE3DF21F09EC3600866F92 /* TDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseModel.h; sourceTree = "<group>"; };
+		30BE3DF31F09EC3600866F92 /* TDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseModel.m; sourceTree = "<group>"; };
+		30BE3DF51F09EC7500866F92 /* TDBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBaseVC.h; sourceTree = "<group>"; };
+		30BE3DF61F09EC7500866F92 /* TDBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBaseVC.m; sourceTree = "<group>"; };
+		30BE3DF81F09ECB700866F92 /* TDNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNavigationVC.h; sourceTree = "<group>"; };
+		30BE3DF91F09ECB700866F92 /* TDNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNavigationVC.m; sourceTree = "<group>"; };
+		30BE3DFB1F09F27100866F92 /* TDTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTabBarVC.h; sourceTree = "<group>"; };
+		30BE3DFC1F09F27100866F92 /* TDTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTabBarVC.m; sourceTree = "<group>"; };
+		30C6A8801F14638200600D01 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		30C6A88A1F1466D700600D01 /* ALBBMediaService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ALBBMediaService.framework; sourceTree = "<group>"; };
+		30C6A88B1F1466D700600D01 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		30C6A88C1F1466D700600D01 /* yw_1222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
+		30C6A8901F14670900600D01 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		30C6A8921F14675C00600D01 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		30C6A8941F146A8C00600D01 /* TDAlipayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAlipayTool.h; sourceTree = "<group>"; };
+		30C6A8951F146A8C00600D01 /* TDAlipayTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAlipayTool.m; sourceTree = "<group>"; };
+		30C6A89C1F14B12600600D01 /* TDWebViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDWebViewCell.h; sourceTree = "<group>"; };
+		30C6A89D1F14B12600600D01 /* TDWebViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDWebViewCell.m; sourceTree = "<group>"; };
+		30C6A89E1F14B12600600D01 /* TDWebViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDWebViewCell.xib; sourceTree = "<group>"; };
+		30C6A8A51F14B79900600D01 /* THTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		30C6A8A61F14B79900600D01 /* THTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		30C6A8A71F14B79900600D01 /* ZLFailLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLFailLoadView.h; sourceTree = "<group>"; };
+		30C6A8A81F14B79900600D01 /* ZLFailLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLFailLoadView.m; sourceTree = "<group>"; };
+		30C6A8A91F14B79900600D01 /* ZLRefreshTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLRefreshTool.h; sourceTree = "<group>"; };
+		30C6A8AA1F14B79900600D01 /* ZLRefreshTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLRefreshTool.m; sourceTree = "<group>"; };
+		30C6A8AB1F14B79900600D01 /* ZLRequestResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLRequestResponse.h; sourceTree = "<group>"; };
+		30C6A8AC1F14B79900600D01 /* ZLRequestResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLRequestResponse.m; sourceTree = "<group>"; };
+		30C6A8B11F14B83400600D01 /* MBProgressHUD+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Category.h"; sourceTree = "<group>"; };
+		30C6A8B21F14B83400600D01 /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
+		30C6A8B41F14B90F00600D01 /* LocalCategoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalCategoryHeader.h; sourceTree = "<group>"; };
+		30C6A8B51F14BC5100600D01 /* TDUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUserInfoModel.h; sourceTree = "<group>"; };
+		30C6A8B61F14BC5100600D01 /* TDUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUserInfoModel.m; sourceTree = "<group>"; };
+		30C6A8B91F14BD4000600D01 /* TDBaseModel+Coding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TDBaseModel+Coding.h"; sourceTree = "<group>"; };
+		30C6A8BA1F14BD4000600D01 /* TDBaseModel+Coding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TDBaseModel+Coding.m"; sourceTree = "<group>"; };
+		30C6D9241F25D471002051F8 /* TDAgricultureFilterSaveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAgricultureFilterSaveModel.h; sourceTree = "<group>"; };
+		30C6D9251F25D471002051F8 /* TDAgricultureFilterSaveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAgricultureFilterSaveModel.m; sourceTree = "<group>"; };
+		30CD969E1F1C538E006CC159 /* TDAPIMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDAPIMacros.h; sourceTree = "<group>"; };
+		30CD969F1F1CA61A006CC159 /* TDInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDInfoModel.h; sourceTree = "<group>"; };
+		30CD96A01F1CA61A006CC159 /* TDInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDInfoModel.m; sourceTree = "<group>"; };
+		30CD96A21F1CAE68006CC159 /* TDInfoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDInfoDetailVC.h; sourceTree = "<group>"; };
+		30CD96A31F1CAE68006CC159 /* TDInfoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDInfoDetailVC.m; sourceTree = "<group>"; };
+		30CD96A41F1CAE68006CC159 /* TDInfoDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDInfoDetailVC.xib; sourceTree = "<group>"; };
+		30CD96A71F1CB336006CC159 /* TDHomeVillAgeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeVillAgeModel.h; sourceTree = "<group>"; };
+		30CD96A81F1CB336006CC159 /* TDHomeVillAgeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeVillAgeModel.m; sourceTree = "<group>"; };
+		30CD96AA1F1CB65A006CC159 /* TDHomeSysTopManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeSysTopManagerModel.h; sourceTree = "<group>"; };
+		30CD96AB1F1CB65A006CC159 /* TDHomeSysTopManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeSysTopManagerModel.m; sourceTree = "<group>"; };
+		30DC025E1F15BB4400C0793D /* TDDataBaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDataBaseTool.h; sourceTree = "<group>"; };
+		30DC025F1F15BB4400C0793D /* TDDataBaseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDataBaseTool.m; sourceTree = "<group>"; };
+		4F1E5B53E04A42AD726D20FC /* libPods-TDEarthVillage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TDEarthVillage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E658F6314A2B6080B42C71 /* Pods-TDEarthVillage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDEarthVillage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDEarthVillage/Pods-TDEarthVillage.debug.xcconfig"; sourceTree = "<group>"; };
+		BB19B8A6C487C3CD6D0B485C /* Pods-TDEarthVillage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDEarthVillage.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDEarthVillage/Pods-TDEarthVillage.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30BE3DB21F09D80C00866F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C6A8931F14675C00600D01 /* AssetsLibrary.framework in Frameworks */,
+				30C6A8911F14670900600D01 /* VideoToolbox.framework in Frameworks */,
+				30C6A88D1F1466D700600D01 /* ALBBMediaService.framework in Frameworks */,
+				30C6A8811F14638200600D01 /* CoreMotion.framework in Frameworks */,
+				304146971F13796000849B88 /* libcrypto.a in Frameworks */,
+				304146AC1F137B0100849B88 /* AlipaySDK.framework in Frameworks */,
+				51E91ABC06664507F7272EAB /* libPods-TDEarthVillage.a in Frameworks */,
+				30C6A88E1F1466D700600D01 /* UTDID.framework in Frameworks */,
+				304146981F13796000849B88 /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3011AA0A1F0E0DF500DCB2DA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA0B1F0E0DF500DCB2DA /* TDHomeCell.h */,
+				3011AA0C1F0E0DF500DCB2DA /* TDHomeCell.m */,
+				3011AA0D1F0E0DF500DCB2DA /* TDHomeCell.xib */,
+				3011AA0E1F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.h */,
+				3011AA0F1F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.m */,
+				3011AA101F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.xib */,
+				3011AA111F0E0DF500DCB2DA /* TDHomeFilterTableViewView.h */,
+				3011AA121F0E0DF500DCB2DA /* TDHomeFilterTableViewView.m */,
+				3011AA131F0E0DF500DCB2DA /* TDHomeFilterView.h */,
+				3011AA141F0E0DF500DCB2DA /* TDHomeFilterView.m */,
+				3011AA151F0E0DF500DCB2DA /* TDHomeHeaderView.h */,
+				3011AA161F0E0DF500DCB2DA /* TDHomeHeaderView.m */,
+				3011AA2A1F0E156F00DCB2DA /* TDProductCell.h */,
+				3011AA2B1F0E156F00DCB2DA /* TDProductCell.m */,
+				3011AA2C1F0E156F00DCB2DA /* TDProductCell.xib */,
+				300300931F1DA8FD00A83857 /* TDVillageDetailHeaderView.h */,
+				300300941F1DA8FD00A83857 /* TDVillageDetailHeaderView.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3011AA281F0E153200DCB2DA /* Agriculture */ = {
+			isa = PBXGroup;
+			children = (
+				304145DF1F13128100849B88 /* TDTourDetalsHeaderView.h */,
+				304145E01F13128100849B88 /* TDTourDetalsHeaderView.m */,
+				304145E31F1313E200849B88 /* TDTourDetalsHeaderSubView.h */,
+				304145E41F1313E200849B88 /* TDTourDetalsHeaderSubView.m */,
+				304145E61F1313ED00849B88 /* TDTourDetalsHeaderSubView.xib */,
+				304145ED1F131AD700849B88 /* TDPurchasePopupView.h */,
+				304145EE1F131AD700849B88 /* TDPurchasePopupView.m */,
+				304145F01F131AE800849B88 /* TDPurchasePopupView.xib */,
+			);
+			path = Agriculture;
+			sourceTree = "<group>";
+		};
+		3011AA291F0E153200DCB2DA /* Tour */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tour;
+			sourceTree = "<group>";
+		};
+		3011AA431F0E1D3500DCB2DA /* ZLWebViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA441F0E1D3500DCB2DA /* FLWebViewProvider.h */,
+				3011AA451F0E1D3500DCB2DA /* UIWebView+FLUIWebView.h */,
+				3011AA461F0E1D3500DCB2DA /* UIWebView+FLUIWebView.m */,
+				3011AA471F0E1D3500DCB2DA /* ZLWebVC.h */,
+				3011AA481F0E1D3500DCB2DA /* ZLWebVC.m */,
+				3011AA491F0E1D3500DCB2DA /* ZLWebViewVC.h */,
+				3011AA4A1F0E1D3500DCB2DA /* ZLWebViewVC.m */,
+				3011AA4B1F0E1D3500DCB2DA /* ZLWKJSPOST.html */,
+			);
+			path = ZLWebViewVC;
+			sourceTree = "<group>";
+		};
+		3011AA5F1F0E29B800DCB2DA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA611F0E2BB000DCB2DA /* TDMyDataVC.h */,
+				3011AA621F0E2BB000DCB2DA /* TDMyDataVC.m */,
+				3011AA631F0E2BB000DCB2DA /* TDMyDataVC.xib */,
+				308C4D661F0F6E6100CC386F /* TDModifymyDataVC.h */,
+				308C4D671F0F6E6100CC386F /* TDModifymyDataVC.m */,
+				308C4D681F0F6E6100CC386F /* TDModifymyDataVC.xib */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3011AA601F0E29C200DCB2DA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA661F0E2BCA00DCB2DA /* TDMyDataCell.h */,
+				3011AA671F0E2BCA00DCB2DA /* TDMyDataCell.m */,
+				3011AA681F0E2BCA00DCB2DA /* TDMyDataCell.xib */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3032A7691F17429000428B33 /* TDCommonTools */ = {
+			isa = PBXGroup;
+			children = (
+				3032A76A1F17429000428B33 /* TDPublicTools.h */,
+				3032A76B1F17429000428B33 /* TDPublicTools.m */,
+				3032A76C1F17429000428B33 /* TDTickTimer.h */,
+				3032A76D1F17429000428B33 /* TDTickTimer.m */,
+			);
+			path = TDCommonTools;
+			sourceTree = "<group>";
+		};
+		304145F21F132A5800849B88 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				304145F31F132A7100849B88 /* UIView+TDBadge.h */,
+				304145F41F132A7100849B88 /* UIView+TDBadge.m */,
+				304145F71F132AD800849B88 /* TDBadgeProtocol.h */,
+				30C6A8B11F14B83400600D01 /* MBProgressHUD+Category.h */,
+				30C6A8B21F14B83400600D01 /* MBProgressHUD+Category.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		304145F81F134A6300849B88 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				304145F91F134AA500849B88 /* TDOrderCell.h */,
+				304145FA1F134AA500849B88 /* TDOrderCell.m */,
+				304145FB1F134AA500849B88 /* TDOrderCell.xib */,
+				304146041F13546D00849B88 /* TDOrderSubCell.h */,
+				304146051F13546D00849B88 /* TDOrderSubCell.m */,
+				304146061F13546D00849B88 /* TDOrderSubCell.xib */,
+				304146091F1359B000849B88 /* TDOrderDetalisCell.h */,
+				3041460A1F1359B000849B88 /* TDOrderDetalisCell.m */,
+				3041460B1F1359B000849B88 /* TDOrderDetalisCell.xib */,
+				304146131F1361C100849B88 /* TDOrderPayCell.h */,
+				304146141F1361C100849B88 /* TDOrderPayCell.m */,
+				304146151F1361C100849B88 /* TDOrderPayCell.xib */,
+				3041461D1F1372EF00849B88 /* TDOrderPayStatuesCell.h */,
+				3041461E1F1372EF00849B88 /* TDOrderPayStatuesCell.m */,
+				3041461F1F1372EF00849B88 /* TDOrderPayStatuesCell.xib */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		304145FE1F13516400849B88 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				304145FF1F13517C00849B88 /* TDOrderListVC.h */,
+				304146001F13517C00849B88 /* TDOrderListVC.m */,
+				304146011F13517C00849B88 /* TDOrderListVC.xib */,
+				3041460E1F135EF100849B88 /* TDOrderDetailsVC.h */,
+				3041460F1F135EF100849B88 /* TDOrderDetailsVC.m */,
+				304146101F135EF100849B88 /* TDOrderDetailsVC.xib */,
+				304146181F13649F00849B88 /* TDOrderPayVC.h */,
+				304146191F13649F00849B88 /* TDOrderPayVC.m */,
+				3041461A1F13649F00849B88 /* TDOrderPayVC.xib */,
+				304146221F1374B600849B88 /* TDOrderPayStatuesVC.h */,
+				304146231F1374B600849B88 /* TDOrderPayStatuesVC.m */,
+				304146241F1374B600849B88 /* TDOrderPayStatuesVC.xib */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		304146271F13796000849B88 /* PayMentPlatForm */ = {
+			isa = PBXGroup;
+			children = (
+				305731FF1F1F31AF00BF27A0 /* PayModel */,
+				304146281F13796000849B88 /* AilPay */,
+				3041468D1F13796000849B88 /* WeChatPay */,
+			);
+			path = PayMentPlatForm;
+			sourceTree = "<group>";
+		};
+		304146281F13796000849B88 /* AilPay */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A8941F146A8C00600D01 /* TDAlipayTool.h */,
+				30C6A8951F146A8C00600D01 /* TDAlipayTool.m */,
+				304146291F13796000849B88 /* APAuthV2Info.h */,
+				3041462A1F13796000849B88 /* APAuthV2Info.m */,
+				3041462B1F13796000849B88 /* libcrypto.a */,
+				3041462C1F13796000849B88 /* libssl.a */,
+				3041462D1F13796000849B88 /* openssl */,
+				304146791F13796000849B88 /* Order.h */,
+				3041467A1F13796000849B88 /* Order.m */,
+				3041467B1F13796000849B88 /* Util */,
+			);
+			path = AilPay;
+			sourceTree = "<group>";
+		};
+		3041462D1F13796000849B88 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				3041462E1F13796000849B88 /* aes.h */,
+				3041462F1F13796000849B88 /* asn1.h */,
+				304146301F13796000849B88 /* asn1_mac.h */,
+				304146311F13796000849B88 /* asn1t.h */,
+				304146321F13796000849B88 /* bio.h */,
+				304146331F13796000849B88 /* blowfish.h */,
+				304146341F13796000849B88 /* bn.h */,
+				304146351F13796000849B88 /* buffer.h */,
+				304146361F13796000849B88 /* camellia.h */,
+				304146371F13796000849B88 /* cast.h */,
+				304146381F13796000849B88 /* cmac.h */,
+				304146391F13796000849B88 /* cms.h */,
+				3041463A1F13796000849B88 /* comp.h */,
+				3041463B1F13796000849B88 /* conf.h */,
+				3041463C1F13796000849B88 /* conf_api.h */,
+				3041463D1F13796000849B88 /* crypto.h */,
+				3041463E1F13796000849B88 /* des.h */,
+				3041463F1F13796000849B88 /* des_old.h */,
+				304146401F13796000849B88 /* dh.h */,
+				304146411F13796000849B88 /* dsa.h */,
+				304146421F13796000849B88 /* dso.h */,
+				304146431F13796000849B88 /* dtls1.h */,
+				304146441F13796000849B88 /* e_os2.h */,
+				304146451F13796000849B88 /* ebcdic.h */,
+				304146461F13796000849B88 /* ec.h */,
+				304146471F13796000849B88 /* ecdh.h */,
+				304146481F13796000849B88 /* ecdsa.h */,
+				304146491F13796000849B88 /* engine.h */,
+				3041464A1F13796000849B88 /* err.h */,
+				3041464B1F13796000849B88 /* evp.h */,
+				3041464C1F13796000849B88 /* hmac.h */,
+				3041464D1F13796000849B88 /* idea.h */,
+				3041464E1F13796000849B88 /* krb5_asn.h */,
+				3041464F1F13796000849B88 /* kssl.h */,
+				304146501F13796000849B88 /* lhash.h */,
+				304146511F13796000849B88 /* md4.h */,
+				304146521F13796000849B88 /* md5.h */,
+				304146531F13796000849B88 /* mdc2.h */,
+				304146541F13796000849B88 /* modes.h */,
+				304146551F13796000849B88 /* obj_mac.h */,
+				304146561F13796000849B88 /* objects.h */,
+				304146571F13796000849B88 /* ocsp.h */,
+				304146581F13796000849B88 /* opensslconf.h */,
+				304146591F13796000849B88 /* opensslv.h */,
+				3041465A1F13796000849B88 /* ossl_typ.h */,
+				3041465B1F13796000849B88 /* pem.h */,
+				3041465C1F13796000849B88 /* pem2.h */,
+				3041465D1F13796000849B88 /* pkcs12.h */,
+				3041465E1F13796000849B88 /* pkcs7.h */,
+				3041465F1F13796000849B88 /* pqueue.h */,
+				304146601F13796000849B88 /* rand.h */,
+				304146611F13796000849B88 /* rc2.h */,
+				304146621F13796000849B88 /* rc4.h */,
+				304146631F13796000849B88 /* ripemd.h */,
+				304146641F13796000849B88 /* rsa.h */,
+				304146651F13796000849B88 /* safestack.h */,
+				304146661F13796000849B88 /* seed.h */,
+				304146671F13796000849B88 /* sha.h */,
+				304146681F13796000849B88 /* srp.h */,
+				304146691F13796000849B88 /* srtp.h */,
+				3041466A1F13796000849B88 /* ssl.h */,
+				3041466B1F13796000849B88 /* ssl2.h */,
+				3041466C1F13796000849B88 /* ssl23.h */,
+				3041466D1F13796000849B88 /* ssl3.h */,
+				3041466E1F13796000849B88 /* stack.h */,
+				3041466F1F13796000849B88 /* symhacks.h */,
+				304146701F13796000849B88 /* tls1.h */,
+				304146711F13796000849B88 /* ts.h */,
+				304146721F13796000849B88 /* txt_db.h */,
+				304146731F13796000849B88 /* ui.h */,
+				304146741F13796000849B88 /* ui_compat.h */,
+				304146751F13796000849B88 /* whrlpool.h */,
+				304146761F13796000849B88 /* x509.h */,
+				304146771F13796000849B88 /* x509_vfy.h */,
+				304146781F13796000849B88 /* x509v3.h */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		3041467B1F13796000849B88 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3041467C1F13796000849B88 /* base64.h */,
+				3041467D1F13796000849B88 /* base64.m */,
+				3041467E1F13796000849B88 /* config.h */,
+				3041467F1F13796000849B88 /* DataSigner.h */,
+				304146801F13796000849B88 /* DataSigner.m */,
+				304146811F13796000849B88 /* DataVerifier.h */,
+				304146821F13796000849B88 /* DataVerifier.m */,
+				304146831F13796000849B88 /* MD5DataSigner.h */,
+				304146841F13796000849B88 /* MD5DataSigner.m */,
+				304146851F13796000849B88 /* NSDataEx.h */,
+				304146861F13796000849B88 /* NSDataEx.m */,
+				304146871F13796000849B88 /* openssl_wrapper.h */,
+				304146881F13796000849B88 /* openssl_wrapper.m */,
+				304146891F13796000849B88 /* RSADataSigner.h */,
+				3041468A1F13796000849B88 /* RSADataSigner.m */,
+				3041468B1F13796000849B88 /* RSADataVerifier.h */,
+				3041468C1F13796000849B88 /* RSADataVerifier.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3041468D1F13796000849B88 /* WeChatPay */ = {
+			isa = PBXGroup;
+			children = (
+				3041468E1F13796000849B88 /* DataMD5.h */,
+				3041468F1F13796000849B88 /* DataMD5.m */,
+				304146901F13796000849B88 /* getIPhoneIP.h */,
+				304146911F13796000849B88 /* getIPhoneIP.m */,
+				304146921F13796000849B88 /* LVWxPay.h */,
+				304146931F13796000849B88 /* LVWxPay.m */,
+				304146941F13796000849B88 /* XMLDictionary.h */,
+				304146951F13796000849B88 /* XMLDictionary.m */,
+			);
+			path = WeChatPay;
+			sourceTree = "<group>";
+		};
+		304146A71F137AE900849B88 /* SDKFile */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A8891F1466D700600D01 /* OneSDK */,
+				304146A81F137B0100849B88 /* PayMent */,
+			);
+			path = SDKFile;
+			sourceTree = "<group>";
+		};
+		304146A81F137B0100849B88 /* PayMent */ = {
+			isa = PBXGroup;
+			children = (
+				304146A91F137B0100849B88 /* AlipaySDK.bundle */,
+				304146AA1F137B0100849B88 /* AlipaySDK.framework */,
+			);
+			path = PayMent;
+			sourceTree = "<group>";
+		};
+		304F951D1F0C9190004A13DD /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				3032A7691F17429000428B33 /* TDCommonTools */,
+				30C6A8A11F14B72900600D01 /* TDNetWorkTool */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		304F95291F0CC709004A13DD /* home */ = {
+			isa = PBXGroup;
+			children = (
+				304F95311F0CC817004A13DD /* TDProfileHomeHeaderView.h */,
+				304F95321F0CC817004A13DD /* TDProfileHomeHeaderView.m */,
+				304F95341F0CC820004A13DD /* TDProfileHomeHeaderView.xib */,
+				304F95361F0CCACD004A13DD /* TDProfileHomeCell.h */,
+				304F95371F0CCACD004A13DD /* TDProfileHomeCell.m */,
+				304F95381F0CCACD004A13DD /* TDProfileHomeCell.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		304F952A1F0CC711004A13DD /* home */ = {
+			isa = PBXGroup;
+			children = (
+				304F952E1F0CC75D004A13DD /* TDProfileHomeVC.h */,
+				304F952F1F0CC75D004A13DD /* TDProfileHomeVC.m */,
+				3011AA1E1F0E0EB500DCB2DA /* TDAboutVC.h */,
+				3011AA1F1F0E0EB500DCB2DA /* TDAboutVC.m */,
+				3011AA201F0E0EB500DCB2DA /* TDAboutVC.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		305731FF1F1F31AF00BF27A0 /* PayModel */ = {
+			isa = PBXGroup;
+			children = (
+				305732001F1F31CC00BF27A0 /* TDOrderPayModel.h */,
+				305732011F1F31CC00BF27A0 /* TDOrderPayModel.m */,
+			);
+			path = PayModel;
+			sourceTree = "<group>";
+		};
+		307804E41F0B464F0040B515 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				307804E51F0B464F0040B515 /* Controller */,
+				307804E61F0B464F0040B515 /* Model */,
+				307804E71F0B464F0040B515 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		307804E51F0B464F0040B515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				307804E81F0B46720040B515 /* TDHomeVC.h */,
+				307804E91F0B46720040B515 /* TDHomeVC.m */,
+				3011AA231F0E0FFB00DCB2DA /* TDVillageDetails.h */,
+				3011AA241F0E0FFB00DCB2DA /* TDVillageDetails.m */,
+				3011AA251F0E0FFB00DCB2DA /* TDVillageDetails.xib */,
+				3011AA2F1F0E16F100DCB2DA /* TDAgricultureVC.h */,
+				3011AA301F0E16F100DCB2DA /* TDAgricultureVC.m */,
+				3011AA311F0E16F100DCB2DA /* TDAgricultureVC.xib */,
+				3011AA341F0E185000DCB2DA /* TDTourVC.h */,
+				3011AA351F0E185000DCB2DA /* TDTourVC.m */,
+				3011AA361F0E185000DCB2DA /* TDTourVC.xib */,
+				304145E81F13156100849B88 /* TDTourDetalisVC.h */,
+				304145E91F13156100849B88 /* TDTourDetalisVC.m */,
+				304145EA1F13156100849B88 /* TDTourDetalisVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		307804E61F0B464F0040B515 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30CD96A71F1CB336006CC159 /* TDHomeVillAgeModel.h */,
+				30CD96A81F1CB336006CC159 /* TDHomeVillAgeModel.m */,
+				30CD96AA1F1CB65A006CC159 /* TDHomeSysTopManagerModel.h */,
+				30CD96AB1F1CB65A006CC159 /* TDHomeSysTopManagerModel.m */,
+				300300961F1DAFBB00A83857 /* TDAgricultureModel.h */,
+				300300971F1DAFBB00A83857 /* TDAgricultureModel.m */,
+				300300991F1DD31100A83857 /* TDTourModel.h */,
+				3003009A1F1DD31100A83857 /* TDTourModel.m */,
+				301D5D6F1F21DBCB002620BB /* TDHomeDvilllageModel.h */,
+				301D5D701F21DBCB002620BB /* TDHomeDvilllageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		307804E71F0B464F0040B515 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA281F0E153200DCB2DA /* Agriculture */,
+				3011AA291F0E153200DCB2DA /* Tour */,
+				3011AA0A1F0E0DF500DCB2DA /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		307804EF1F0B8F6F0040B515 /* Agriculture */ = {
+			isa = PBXGroup;
+			children = (
+				307804F01F0B8F6F0040B515 /* Controller */,
+				307804F11F0B8F6F0040B515 /* Model */,
+				307804F21F0B8F6F0040B515 /* View */,
+			);
+			path = Agriculture;
+			sourceTree = "<group>";
+		};
+		307804F01F0B8F6F0040B515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA551F0E20CE00DCB2DA /* TDAgricultureHomeVC.h */,
+				3011AA561F0E20CE00DCB2DA /* TDAgricultureHomeVC.m */,
+				3011AA571F0E20CE00DCB2DA /* TDAgricultureHomeVC.xib */,
+				3011AA5A1F0E22A100DCB2DA /* TDAgricultureSearchVC.h */,
+				3011AA5B1F0E22A100DCB2DA /* TDAgricultureSearchVC.m */,
+				3011AA5C1F0E22A100DCB2DA /* TDAgricultureSearchVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		307804F11F0B8F6F0040B515 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				301D5D721F21E0A4002620BB /* TDCodeAppModel.h */,
+				301D5D731F21E0A4002620BB /* TDCodeAppModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		307804F21F0B8F6F0040B515 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				307665591F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.h */,
+				3076655A1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		307804F31F0B8F6F0040B515 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				307804F41F0B8F6F0040B515 /* Controller */,
+				307804F51F0B8F6F0040B515 /* Model */,
+				307804F61F0B8F6F0040B515 /* View */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		307804F41F0B8F6F0040B515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA391F0E196F00DCB2DA /* TDInfoHomeVC.h */,
+				3011AA3A1F0E196F00DCB2DA /* TDInfoHomeVC.m */,
+				3011AA3B1F0E196F00DCB2DA /* TDInfoHomeVC.xib */,
+				30CD96A21F1CAE68006CC159 /* TDInfoDetailVC.h */,
+				30CD96A31F1CAE68006CC159 /* TDInfoDetailVC.m */,
+				30CD96A41F1CAE68006CC159 /* TDInfoDetailVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		307804F51F0B8F6F0040B515 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30CD969F1F1CA61A006CC159 /* TDInfoModel.h */,
+				30CD96A01F1CA61A006CC159 /* TDInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		307804F61F0B8F6F0040B515 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA3E1F0E199300DCB2DA /* TDTInfoHomeCell.h */,
+				3011AA3F1F0E199300DCB2DA /* TDTInfoHomeCell.m */,
+				3011AA401F0E199300DCB2DA /* TDTInfoHomeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		307804F71F0B8F6F0040B515 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				307804F81F0B8F6F0040B515 /* Controller */,
+				307804F91F0B8F6F0040B515 /* Model */,
+				307804FA1F0B8F6F0040B515 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		307804F81F0B8F6F0040B515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				304145FE1F13516400849B88 /* Order */,
+				3011AA5F1F0E29B800DCB2DA /* Data */,
+				304F952A1F0CC711004A13DD /* home */,
+				307804FB1F0B90830040B515 /* Shop */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		307804F91F0B8F6F0040B515 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				304F95211F0C940D004A13DD /* TDShopModel.h */,
+				304F95221F0C940D004A13DD /* TDShopModel.m */,
+				304F953B1F0CCC52004A13DD /* TDProfileHome.h */,
+				304F953C1F0CCC52004A13DD /* TDProfileHome.m */,
+				3011AA6B1F0E2DE000DCB2DA /* TDMyDataModel.h */,
+				3011AA6C1F0E2DE000DCB2DA /* TDMyDataModel.m */,
+				30A095A61F204F8800D89958 /* TDOrderModel.h */,
+				30A095A71F204F8800D89958 /* TDOrderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		307804FA1F0B8F6F0040B515 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				304145F81F134A6300849B88 /* Order */,
+				3011AA601F0E29C200DCB2DA /* Data */,
+				304F95291F0CC709004A13DD /* home */,
+				307804FC1F0B90930040B515 /* Shop */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		307804FB1F0B90830040B515 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				307805001F0B94C30040B515 /* TDShopVC.h */,
+				307805011F0B94C30040B515 /* TDShopVC.m */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		307804FC1F0B90930040B515 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				307804FD1F0B91FC0040B515 /* TDShopCell.h */,
+				307804FE1F0B91FC0040B515 /* TDShopCell.m */,
+				304F95241F0CAFAA004A13DD /* TDShopBottomView.h */,
+				304F95251F0CAFAA004A13DD /* TDShopBottomView.m */,
+				304F95271F0CB024004A13DD /* TDShopBottomView.xib */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		30BE3DAC1F09D80C00866F92 = {
+			isa = PBXGroup;
+			children = (
+				30BE3DB71F09D80C00866F92 /* TDEarthVillage */,
+				30BE3DB61F09D80C00866F92 /* Products */,
+				67F8C37895D6B656314F7EB6 /* Pods */,
+				54E9B8B90BA3F8396FB5DBD8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30BE3DB61F09D80C00866F92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DB51F09D80C00866F92 /* TDEarthVillage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30BE3DB71F09D80C00866F92 /* TDEarthVillage */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DD21F09DE4F00866F92 /* AppDelegate */,
+				30BE3DD71F09DEA900866F92 /* Main */,
+				30BE3DD61F09DEA900866F92 /* Expand */,
+				304146A71F137AE900849B88 /* SDKFile */,
+				30BE3DD81F09DEA900866F92 /* Vender */,
+				30BE3DDA1F09DF0700866F92 /* Resource */,
+				30BE3DB81F09D80C00866F92 /* Supporting Files */,
+			);
+			path = TDEarthVillage;
+			sourceTree = "<group>";
+		};
+		30BE3DB81F09D80C00866F92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DC41F09D80C00866F92 /* TDEarthVillage.xcdatamodeld */,
+				30BE3DC91F09D80C00866F92 /* LaunchScreen.storyboard */,
+				30BE3DB91F09D80C00866F92 /* main.m */,
+				30BE3DED1F09E02800866F92 /* TD-EVPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30BE3DD21F09DE4F00866F92 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DBB1F09D80C00866F92 /* AppDelegate.h */,
+				30BE3DBC1F09D80C00866F92 /* AppDelegate.m */,
+				30BE3DEF1F09EB5600866F92 /* TDInitThridPart.h */,
+				30BE3DF01F09EB5600866F92 /* TDInitThridPart.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		30BE3DD61F09DEA900866F92 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				304F951D1F0C9190004A13DD /* Tool */,
+				30BE3DEE1F09EB2600866F92 /* Const */,
+				30BE3DDD1F09DF8700866F92 /* Category */,
+				30BE3DDF1F09DF8700866F92 /* DataBase */,
+				30BE3DE01F09DF8700866F92 /* Macros */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		30BE3DD71F09DEA900866F92 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				307804E41F0B464F0040B515 /* Home */,
+				307804EF1F0B8F6F0040B515 /* Agriculture */,
+				307804F31F0B8F6F0040B515 /* Info */,
+				307804F71F0B8F6F0040B515 /* Profile */,
+				30BE3DE91F09E00200866F92 /* Base */,
+				30BE3DE31F09DFCE00866F92 /* Other */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30BE3DD81F09DEA900866F92 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				304146271F13796000849B88 /* PayMentPlatForm */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		30BE3DDA1F09DF0700866F92 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DDC1F09DF3200866F92 /* Image */,
+				30BE3DDB1F09DF1E00866F92 /* Plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		30BE3DDB1F09DF1E00866F92 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DCC1F09D80C00866F92 /* Info.plist */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		30BE3DDC1F09DF3200866F92 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DC71F09D80C00866F92 /* Assets.xcassets */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		30BE3DDD1F09DF8700866F92 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A8B41F14B90F00600D01 /* LocalCategoryHeader.h */,
+				30C6A8B81F14BD1600600D01 /* NSObject */,
+				304145F21F132A5800849B88 /* UIView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		30BE3DDF1F09DF8700866F92 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				30DC025E1F15BB4400C0793D /* TDDataBaseTool.h */,
+				30DC025F1F15BB4400C0793D /* TDDataBaseTool.m */,
+				30C6D9241F25D471002051F8 /* TDAgricultureFilterSaveModel.h */,
+				30C6D9251F25D471002051F8 /* TDAgricultureFilterSaveModel.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		30BE3DE01F09DF8700866F92 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				307804EE1F0B68160040B515 /* TDColorMacros.h */,
+				304F95191F0C7F4B004A13DD /* TDOtherMacros.h */,
+				304146A61F1379FF00849B88 /* TDPayNeedMacros.h */,
+				30CD969E1F1C538E006CC159 /* TDAPIMacros.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		30BE3DE31F09DFCE00866F92 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DE41F09DFCE00866F92 /* Login */,
+				30BE3DE61F09DFCE00866F92 /* Public */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		30BE3DE41F09DFCE00866F92 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				304F95481F0CE17C004A13DD /* TDLoginVC.h */,
+				304F95491F0CE17C004A13DD /* TDLoginVC.m */,
+				304F954A1F0CE17C004A13DD /* TDLoginVC.xib */,
+				30C6A8B51F14BC5100600D01 /* TDUserInfoModel.h */,
+				30C6A8B61F14BC5100600D01 /* TDUserInfoModel.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		30BE3DE61F09DFCE00866F92 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				3011AA431F0E1D3500DCB2DA /* ZLWebViewVC */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		30BE3DE91F09E00200866F92 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DEA1F09E00200866F92 /* Controller */,
+				30BE3DEB1F09E00200866F92 /* Model */,
+				30BE3DEC1F09E00200866F92 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		30BE3DEA1F09E00200866F92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DF51F09EC7500866F92 /* TDBaseVC.h */,
+				30BE3DF61F09EC7500866F92 /* TDBaseVC.m */,
+				30BE3DF81F09ECB700866F92 /* TDNavigationVC.h */,
+				30BE3DF91F09ECB700866F92 /* TDNavigationVC.m */,
+				30BE3DFB1F09F27100866F92 /* TDTabBarVC.h */,
+				30BE3DFC1F09F27100866F92 /* TDTabBarVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30BE3DEB1F09E00200866F92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30BE3DF21F09EC3600866F92 /* TDBaseModel.h */,
+				30BE3DF31F09EC3600866F92 /* TDBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30BE3DEC1F09E00200866F92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A89C1F14B12600600D01 /* TDWebViewCell.h */,
+				30C6A89D1F14B12600600D01 /* TDWebViewCell.m */,
+				30C6A89E1F14B12600600D01 /* TDWebViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30BE3DEE1F09EB2600866F92 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				304145E21F13136300849B88 /* TDCommonConst.h */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		30C6A8891F1466D700600D01 /* OneSDK */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A88A1F1466D700600D01 /* ALBBMediaService.framework */,
+				30C6A88B1F1466D700600D01 /* UTDID.framework */,
+				30C6A88C1F1466D700600D01 /* yw_1222.jpg */,
+			);
+			path = OneSDK;
+			sourceTree = "<group>";
+		};
+		30C6A8A11F14B72900600D01 /* TDNetWorkTool */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A8A51F14B79900600D01 /* THTTPRequestOperationManager.h */,
+				30C6A8A61F14B79900600D01 /* THTTPRequestOperationManager.m */,
+				30C6A8A71F14B79900600D01 /* ZLFailLoadView.h */,
+				30C6A8A81F14B79900600D01 /* ZLFailLoadView.m */,
+				30C6A8A91F14B79900600D01 /* ZLRefreshTool.h */,
+				30C6A8AA1F14B79900600D01 /* ZLRefreshTool.m */,
+				30C6A8AB1F14B79900600D01 /* ZLRequestResponse.h */,
+				30C6A8AC1F14B79900600D01 /* ZLRequestResponse.m */,
+				3032A7701F1742FD00428B33 /* TDPublicNetWorkTools.h */,
+				3032A7711F1742FD00428B33 /* TDPublicNetWorkTools.m */,
+			);
+			path = TDNetWorkTool;
+			sourceTree = "<group>";
+		};
+		30C6A8B81F14BD1600600D01 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A8B91F14BD4000600D01 /* TDBaseModel+Coding.h */,
+				30C6A8BA1F14BD4000600D01 /* TDBaseModel+Coding.m */,
+				301D5D781F21FA86002620BB /* NSString+HankCategory.h */,
+				301D5D791F21FA86002620BB /* NSString+HankCategory.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		54E9B8B90BA3F8396FB5DBD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C6A8921F14675C00600D01 /* AssetsLibrary.framework */,
+				30C6A8901F14670900600D01 /* VideoToolbox.framework */,
+				30C6A8801F14638200600D01 /* CoreMotion.framework */,
+				4F1E5B53E04A42AD726D20FC /* libPods-TDEarthVillage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67F8C37895D6B656314F7EB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54E658F6314A2B6080B42C71 /* Pods-TDEarthVillage.debug.xcconfig */,
+				BB19B8A6C487C3CD6D0B485C /* Pods-TDEarthVillage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30BE3DB41F09D80C00866F92 /* TDEarthVillage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30BE3DCF1F09D80C00866F92 /* Build configuration list for PBXNativeTarget "TDEarthVillage" */;
+			buildPhases = (
+				DA73BFAD77F77C76B34D4912 /* [CP] Check Pods Manifest.lock */,
+				30BE3DB11F09D80C00866F92 /* Sources */,
+				30BE3DB21F09D80C00866F92 /* Frameworks */,
+				30BE3DB31F09D80C00866F92 /* Resources */,
+				F28DD77B69FA4B5D30938DA7 /* [CP] Embed Pods Frameworks */,
+				A86DC2BE341BE6ABADEA4CBB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDEarthVillage;
+			productName = TDEarthVillage;
+			productReference = 30BE3DB51F09D80C00866F92 /* TDEarthVillage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30BE3DAD1F09D80C00866F92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TD;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Hank;
+				TargetAttributes = {
+					30BE3DB41F09D80C00866F92 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6B7VB4TTSU;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 30BE3DB01F09D80C00866F92 /* Build configuration list for PBXProject "TDEarthVillage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30BE3DAC1F09D80C00866F92;
+			productRefGroup = 30BE3DB61F09D80C00866F92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30BE3DB41F09D80C00866F92 /* TDEarthVillage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30BE3DB31F09D80C00866F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3041461C1F13649F00849B88 /* TDOrderPayVC.xib in Resources */,
+				3011AA1A1F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.xib in Resources */,
+				3011AA6A1F0E2BCA00DCB2DA /* TDMyDataCell.xib in Resources */,
+				304145F11F131AE800849B88 /* TDPurchasePopupView.xib in Resources */,
+				30BE3DCB1F09D80C00866F92 /* LaunchScreen.storyboard in Resources */,
+				3011AA181F0E0DF500DCB2DA /* TDHomeCell.xib in Resources */,
+				304146AB1F137B0100849B88 /* AlipaySDK.bundle in Resources */,
+				3041460D1F1359B000849B88 /* TDOrderDetalisCell.xib in Resources */,
+				3011AA221F0E0EB500DCB2DA /* TDAboutVC.xib in Resources */,
+				3011AA5E1F0E22A100DCB2DA /* TDAgricultureSearchVC.xib in Resources */,
+				30CD96A61F1CAE68006CC159 /* TDInfoDetailVC.xib in Resources */,
+				3011AA331F0E16F100DCB2DA /* TDAgricultureVC.xib in Resources */,
+				304F95281F0CB024004A13DD /* TDShopBottomView.xib in Resources */,
+				304F953A1F0CCACD004A13DD /* TDProfileHomeCell.xib in Resources */,
+				3011AA3D1F0E196F00DCB2DA /* TDInfoHomeVC.xib in Resources */,
+				304146121F135EF100849B88 /* TDOrderDetailsVC.xib in Resources */,
+				3011AA651F0E2BB000DCB2DA /* TDMyDataVC.xib in Resources */,
+				304145FD1F134AA500849B88 /* TDOrderCell.xib in Resources */,
+				304145E71F1313ED00849B88 /* TDTourDetalsHeaderSubView.xib in Resources */,
+				304146211F1372EF00849B88 /* TDOrderPayStatuesCell.xib in Resources */,
+				30C6A8A01F14B12600600D01 /* TDWebViewCell.xib in Resources */,
+				3011AA421F0E199300DCB2DA /* TDTInfoHomeCell.xib in Resources */,
+				304F95351F0CC820004A13DD /* TDProfileHomeHeaderView.xib in Resources */,
+				304145EC1F13156100849B88 /* TDTourDetalisVC.xib in Resources */,
+				304146031F13517C00849B88 /* TDOrderListVC.xib in Resources */,
+				304146261F1374B600849B88 /* TDOrderPayStatuesVC.xib in Resources */,
+				304F954C1F0CE17C004A13DD /* TDLoginVC.xib in Resources */,
+				304146171F1361C100849B88 /* TDOrderPayCell.xib in Resources */,
+				304146081F13546D00849B88 /* TDOrderSubCell.xib in Resources */,
+				3011AA591F0E20CE00DCB2DA /* TDAgricultureHomeVC.xib in Resources */,
+				30BE3DC81F09D80C00866F92 /* Assets.xcassets in Resources */,
+				3011AA2E1F0E156F00DCB2DA /* TDProductCell.xib in Resources */,
+				3011AA4F1F0E1D3500DCB2DA /* ZLWKJSPOST.html in Resources */,
+				3011AA271F0E0FFB00DCB2DA /* TDVillageDetails.xib in Resources */,
+				30C6A88F1F1466D700600D01 /* yw_1222.jpg in Resources */,
+				308C4D6A1F0F6E6100CC386F /* TDModifymyDataVC.xib in Resources */,
+				3011AA381F0E185000DCB2DA /* TDTourVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A86DC2BE341BE6ABADEA4CBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TDEarthVillage/Pods-TDEarthVillage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA73BFAD77F77C76B34D4912 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F28DD77B69FA4B5D30938DA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TDEarthVillage/Pods-TDEarthVillage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30BE3DB11F09D80C00866F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30DC02601F15BB4400C0793D /* TDDataBaseTool.m in Sources */,
+				3041469A1F13796000849B88 /* base64.m in Sources */,
+				30BE3DF41F09EC3600866F92 /* TDBaseModel.m in Sources */,
+				300300981F1DAFBB00A83857 /* TDAgricultureModel.m in Sources */,
+				304F95231F0C940D004A13DD /* TDShopModel.m in Sources */,
+				30C6A8B71F14BC5100600D01 /* TDUserInfoModel.m in Sources */,
+				3011AA191F0E0DF500DCB2DA /* TDHomeFilterTableViewCell.m in Sources */,
+				3011AA2D1F0E156F00DCB2DA /* TDProductCell.m in Sources */,
+				30C6D9261F25D471002051F8 /* TDAgricultureFilterSaveModel.m in Sources */,
+				304146A01F13796000849B88 /* RSADataSigner.m in Sources */,
+				30BE3DBD1F09D80C00866F92 /* AppDelegate.m in Sources */,
+				30BE3DFA1F09ECB700866F92 /* TDNavigationVC.m in Sources */,
+				308C4D691F0F6E6100CC386F /* TDModifymyDataVC.m in Sources */,
+				301D5D711F21DBCB002620BB /* TDHomeDvilllageModel.m in Sources */,
+				307804FF1F0B91FC0040B515 /* TDShopCell.m in Sources */,
+				304F95261F0CAFAA004A13DD /* TDShopBottomView.m in Sources */,
+				304146A21F13796000849B88 /* DataMD5.m in Sources */,
+				301D5D741F21E0A4002620BB /* TDCodeAppModel.m in Sources */,
+				3032A7721F1742FD00428B33 /* TDPublicNetWorkTools.m in Sources */,
+				304146A31F13796000849B88 /* getIPhoneIP.m in Sources */,
+				3041469F1F13796000849B88 /* openssl_wrapper.m in Sources */,
+				304145F51F132A7100849B88 /* UIView+TDBadge.m in Sources */,
+				304145E11F13128100849B88 /* TDTourDetalsHeaderView.m in Sources */,
+				30C6A8BB1F14BD4000600D01 /* TDBaseModel+Coding.m in Sources */,
+				3011AA1D1F0E0DF500DCB2DA /* TDHomeHeaderView.m in Sources */,
+				304146021F13517C00849B88 /* TDOrderListVC.m in Sources */,
+				3011AA3C1F0E196F00DCB2DA /* TDInfoHomeVC.m in Sources */,
+				30A095A81F204F8800D89958 /* TDOrderModel.m in Sources */,
+				304146991F13796000849B88 /* Order.m in Sources */,
+				3011AA261F0E0FFB00DCB2DA /* TDVillageDetails.m in Sources */,
+				304146961F13796000849B88 /* APAuthV2Info.m in Sources */,
+				3041469D1F13796000849B88 /* MD5DataSigner.m in Sources */,
+				30CD96A11F1CA61A006CC159 /* TDInfoModel.m in Sources */,
+				30C6A8B01F14B79900600D01 /* ZLRequestResponse.m in Sources */,
+				3011AA5D1F0E22A100DCB2DA /* TDAgricultureSearchVC.m in Sources */,
+				30BE3DBA1F09D80C00866F92 /* main.m in Sources */,
+				30C6A89F1F14B12600600D01 /* TDWebViewCell.m in Sources */,
+				30BE3DFD1F09F27100866F92 /* TDTabBarVC.m in Sources */,
+				3011AA4C1F0E1D3500DCB2DA /* UIWebView+FLUIWebView.m in Sources */,
+				305732021F1F31CC00BF27A0 /* TDOrderPayModel.m in Sources */,
+				3003009B1F1DD31100A83857 /* TDTourModel.m in Sources */,
+				3041469B1F13796000849B88 /* DataSigner.m in Sources */,
+				3032A76E1F17429000428B33 /* TDPublicTools.m in Sources */,
+				3011AA411F0E199300DCB2DA /* TDTInfoHomeCell.m in Sources */,
+				304F953D1F0CCC52004A13DD /* TDProfileHome.m in Sources */,
+				304145EF1F131AD700849B88 /* TDPurchasePopupView.m in Sources */,
+				304146251F1374B600849B88 /* TDOrderPayStatuesVC.m in Sources */,
+				3011AA691F0E2BCA00DCB2DA /* TDMyDataCell.m in Sources */,
+				3011AA581F0E20CE00DCB2DA /* TDAgricultureHomeVC.m in Sources */,
+				3011AA4E1F0E1D3500DCB2DA /* ZLWebViewVC.m in Sources */,
+				300300951F1DA8FD00A83857 /* TDVillageDetailHeaderView.m in Sources */,
+				304146071F13546D00849B88 /* TDOrderSubCell.m in Sources */,
+				301D5D7A1F21FA86002620BB /* NSString+HankCategory.m in Sources */,
+				3011AA371F0E185000DCB2DA /* TDTourVC.m in Sources */,
+				3032A76F1F17429000428B33 /* TDTickTimer.m in Sources */,
+				3011AA1B1F0E0DF500DCB2DA /* TDHomeFilterTableViewView.m in Sources */,
+				3041469C1F13796000849B88 /* DataVerifier.m in Sources */,
+				3011AA641F0E2BB000DCB2DA /* TDMyDataVC.m in Sources */,
+				3076655B1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m in Sources */,
+				304146111F135EF100849B88 /* TDOrderDetailsVC.m in Sources */,
+				3041460C1F1359B000849B88 /* TDOrderDetalisCell.m in Sources */,
+				30BE3DF11F09EB5600866F92 /* TDInitThridPart.m in Sources */,
+				3011AA171F0E0DF500DCB2DA /* TDHomeCell.m in Sources */,
+				304F95331F0CC817004A13DD /* TDProfileHomeHeaderView.m in Sources */,
+				30BE3DC61F09D80C00866F92 /* TDEarthVillage.xcdatamodeld in Sources */,
+				304146A11F13796000849B88 /* RSADataVerifier.m in Sources */,
+				30C6A8B31F14B83400600D01 /* MBProgressHUD+Category.m in Sources */,
+				307805021F0B94C30040B515 /* TDShopVC.m in Sources */,
+				30BE3DF71F09EC7500866F92 /* TDBaseVC.m in Sources */,
+				304146201F1372EF00849B88 /* TDOrderPayStatuesCell.m in Sources */,
+				307804EA1F0B46720040B515 /* TDHomeVC.m in Sources */,
+				304146A41F13796000849B88 /* LVWxPay.m in Sources */,
+				304F95391F0CCACD004A13DD /* TDProfileHomeCell.m in Sources */,
+				304F95301F0CC75D004A13DD /* TDProfileHomeVC.m in Sources */,
+				3041461B1F13649F00849B88 /* TDOrderPayVC.m in Sources */,
+				304F954B1F0CE17C004A13DD /* TDLoginVC.m in Sources */,
+				3011AA6D1F0E2DE000DCB2DA /* TDMyDataModel.m in Sources */,
+				3011AA211F0E0EB500DCB2DA /* TDAboutVC.m in Sources */,
+				3011AA321F0E16F100DCB2DA /* TDAgricultureVC.m in Sources */,
+				30C6A8961F146A8C00600D01 /* TDAlipayTool.m in Sources */,
+				304145FC1F134AA500849B88 /* TDOrderCell.m in Sources */,
+				30CD96A51F1CAE68006CC159 /* TDInfoDetailVC.m in Sources */,
+				304146161F1361C100849B88 /* TDOrderPayCell.m in Sources */,
+				3011AA1C1F0E0DF500DCB2DA /* TDHomeFilterView.m in Sources */,
+				304145EB1F13156100849B88 /* TDTourDetalisVC.m in Sources */,
+				30C6A8AF1F14B79900600D01 /* ZLRefreshTool.m in Sources */,
+				30CD96AC1F1CB65A006CC159 /* TDHomeSysTopManagerModel.m in Sources */,
+				3041469E1F13796000849B88 /* NSDataEx.m in Sources */,
+				30C6A8AD1F14B79900600D01 /* THTTPRequestOperationManager.m in Sources */,
+				30C6A8AE1F14B79900600D01 /* ZLFailLoadView.m in Sources */,
+				304146A51F13796000849B88 /* XMLDictionary.m in Sources */,
+				30CD96A91F1CB336006CC159 /* TDHomeVillAgeModel.m in Sources */,
+				3011AA4D1F0E1D3500DCB2DA /* ZLWebVC.m in Sources */,
+				304145E51F1313E200849B88 /* TDTourDetalsHeaderSubView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		30BE3DC91F09D80C00866F92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30BE3DCA1F09D80C00866F92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30BE3DCD1F09D80C00866F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		30BE3DCE1F09D80C00866F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30BE3DD01F09D80C00866F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54E658F6314A2B6080B42C71 /* Pods-TDEarthVillage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6B7VB4TTSU;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TDEarthVillage/SDKFile/PayMent",
+					"$(PROJECT_DIR)/TDEarthVillage/Vender/OneSDK",
+					"$(PROJECT_DIR)/TDEarthVillage/SDKFile/OneSDK",
+				);
+				GCC_PREFIX_HEADER = "./TDEarthVillage/TD-EVPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/HKCategory\"",
+					"\"${PODS_ROOT}/Headers/Public/HKTool\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MGSwipeTableCell\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"./TDEarthVillage/Vender/PayMentPlatForm/AilPay\"",
+				);
+				INFOPLIST_FILE = TDEarthVillage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TDEarthVillage/Vender/PayMentPlatForm/AilPay",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hank.TDEarthVillage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		30BE3DD11F09D80C00866F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB19B8A6C487C3CD6D0B485C /* Pods-TDEarthVillage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6B7VB4TTSU;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TDEarthVillage/SDKFile/PayMent",
+					"$(PROJECT_DIR)/TDEarthVillage/Vender/OneSDK",
+					"$(PROJECT_DIR)/TDEarthVillage/SDKFile/OneSDK",
+				);
+				GCC_PREFIX_HEADER = "./TDEarthVillage/TD-EVPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/HKCategory\"",
+					"\"${PODS_ROOT}/Headers/Public/HKTool\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MGSwipeTableCell\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"./TDEarthVillage/Vender/PayMentPlatForm/AilPay\"",
+				);
+				INFOPLIST_FILE = TDEarthVillage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TDEarthVillage/Vender/PayMentPlatForm/AilPay",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hank.TDEarthVillage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30BE3DB01F09D80C00866F92 /* Build configuration list for PBXProject "TDEarthVillage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30BE3DCD1F09D80C00866F92 /* Debug */,
+				30BE3DCE1F09D80C00866F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30BE3DCF1F09D80C00866F92 /* Build configuration list for PBXNativeTarget "TDEarthVillage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30BE3DD01F09D80C00866F92 /* Debug */,
+				30BE3DD11F09D80C00866F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30BE3DC41F09D80C00866F92 /* TDEarthVillage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30BE3DC51F09D80C00866F92 /* TDEarthVillage.xcdatamodel */,
+			);
+			currentVersion = 30BE3DC51F09D80C00866F92 /* TDEarthVillage.xcdatamodel */;
+			path = TDEarthVillage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 30BE3DAD1F09D80C00866F92 /* Project object */;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TDProfileHomeHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="189"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_portrait_3" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-Ga-PSb">
+                    <rect key="frame" x="147" y="30" width="82" height="82"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="1f9-sH-lgp"/>
+                        <constraint firstAttribute="height" constant="82" id="7HO-9b-uym"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="41"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFy-TS-5Kf">
+                    <rect key="frame" x="161" y="122" width="54" height="26.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26.5" id="AbJ-bs-ubQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-SA-DvZ">
+                    <rect key="frame" x="167" y="153.5" width="42" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="tJp-w0-KAc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh5-mf-dcx">
+                    <rect key="frame" x="310" y="30" width="52" height="22"/>
+                    <state key="normal" image="me_edit"/>
+                    <connections>
+                        <action selector="editAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="bEu-G8-kat"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.63529411759999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vUc-SA-DvZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1K0-W0-INH"/>
+                <constraint firstItem="HQ7-Ga-PSb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7V8-yK-OWq"/>
+                <constraint firstItem="vUc-SA-DvZ" firstAttribute="top" secondItem="CFy-TS-5Kf" secondAttribute="bottom" constant="5" id="M3y-hz-wVB"/>
+                <constraint firstItem="CFy-TS-5Kf" firstAttribute="top" secondItem="HQ7-Ga-PSb" secondAttribute="bottom" constant="10" id="Qzk-Kz-11F"/>
+                <constraint firstItem="Mh5-mf-dcx" firstAttribute="top" secondItem="HQ7-Ga-PSb" secondAttribute="top" id="R7k-c4-iJK"/>
+                <constraint firstItem="CFy-TS-5Kf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cjy-oK-Isv"/>
+                <constraint firstItem="HQ7-Ga-PSb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="hWq-3H-2WS"/>
+                <constraint firstAttribute="trailing" secondItem="Mh5-mf-dcx" secondAttribute="trailing" constant="14" id="kYb-AT-Hgf"/>
+                <constraint firstItem="HQ7-Ga-PSb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vCQ-rd-wI6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgPic" destination="HQ7-Ga-PSb" id="BBV-15-VxK"/>
+                <outlet property="lblName" destination="CFy-TS-5Kf" id="w15-Wu-Ydk"/>
+                <outlet property="lblNumber" destination="vUc-SA-DvZ" id="cyS-Ch-0xH"/>
+            </connections>
+            <point key="canvasLocation" x="30" y="-196.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="me_edit" width="52" height="21"/>
+        <image name="me_portrait_3" width="82" height="82"/>
+    </resources>
+</document>
