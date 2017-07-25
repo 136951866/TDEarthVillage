@@ -27,6 +27,7 @@ const static CGFloat KTapMoreTag = 2000;
     UILabel *_lblPre;
     UILabel *_lblCurrent;
     
+    NSMutableArray *_filterTabArrModel;
 }
 
 @property (nonatomic, strong) TDHomeFilterTableViewView *filterTabView;
@@ -40,6 +41,7 @@ const static CGFloat KTapMoreTag = 2000;
 - (instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){
         _arrLabel = [NSMutableArray array];
+        _filterTabArrModel = [NSMutableArray array];
     }
     return self;
 }
@@ -58,12 +60,15 @@ const static CGFloat KTapMoreTag = 2000;
     [_arrLabel enumerateObjectsUsingBlock:^(UILabel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj removeFromSuperview];
     }];
-    [self.filterTabView removeFromSuperview];
-    self.filterTabView = nil;
+    if(_filterTabArrModel.count){
+        [self.filterTabView removeFromSuperview];
+        self.filterTabView = nil;
+    }
 }
 
 - (void)setLabel{
     _previousFrame = CGRectMake(0, KMargin, 0, 0);
+    __block NSInteger lastindex;
     HANKWEAKSELF
     [_filterArrModel enumerateObjectsUsingBlock:^(TDHomeDvilllageModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         HANKSTRONGSELF
@@ -90,8 +95,8 @@ const static CGFloat KTapMoreTag = 2000;
             tagLabel.textAlignment = NSTextAlignmentCenter;
             tagLabel.tag = KTapMoreTag;
             tagLabel.font = [UIFont boldSystemFontOfSize:12];
-            tagLabel.textColor = [UIColor whiteColor];
-            tagLabel.backgroundColor = kThemeBlue;
+            tagLabel.textColor = kTitleThemeBlack;
+            tagLabel.backgroundColor = kThemeGray;
             tagLabel.text = @"更多 >";
             tagLabel.layer.cornerRadius = 2;
             tagLabel.clipsToBounds=YES;
@@ -100,6 +105,7 @@ const static CGFloat KTapMoreTag = 2000;
             [tagLabel addGestureRecognizer:tap];
             [strongSelf addSubview:tagLabel];
              [lblPre removeFromSuperview];
+            lastindex = idx -1;
             *stop = YES;
         }else{
              CGRect newRect = CGRectZero;
@@ -125,9 +131,8 @@ const static CGFloat KTapMoreTag = 2000;
             [strongSelf addSubview:tagLabel];
             [_arrLabel addObject:tagLabel];
         }
-
-
     }];
+    _filterTabArrModel = [NSMutableArray arrayWithArray:[_filterArrModel subarrayWithRange:NSMakeRange(lastindex, _filterArrModel.count - lastindex)]];
 }
 
 //设置view的高度
@@ -143,23 +148,24 @@ const static CGFloat KTapMoreTag = 2000;
     if(![tap.view isKindOfClass:[UILabel class]]){
         return;
     }
+
+    
     if(tap.view.tag == KTapMoreTag){
         [self.filterTabView show];
+//        _lblPre = (UILabel *)(tap.view);;
     }else{
+        [self.filterTabView cleanSelect];
         NSInteger index = tap.view.tag - KTapTag;
         TDHomeDvilllageModel *model = _filterArrModel[index];
-        
         _lblPre.textColor = kTitleThemeBlack;
         _lblPre.backgroundColor = kThemeGray;
         
         _lblCurrent = (UILabel *)(tap.view);
         _lblCurrent.textColor = [UIColor whiteColor];
         _lblCurrent.backgroundColor = kThemeBlue;
-        
         _lblPre = _lblCurrent;
        kHankCallBlock(_selectFilterBlock,model);
     }
-    
 }
 
 #pragma mark - Setter
@@ -167,7 +173,18 @@ const static CGFloat KTapMoreTag = 2000;
 - (TDHomeFilterTableViewView *)filterTabView{
     if(!_filterTabView){
         _filterTabView = [[TDHomeFilterTableViewView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        [_filterTabView setUIWithModel:_filterArrModel selectFilterBlock:_selectFilterBlock];
+        HANKWEAKSELF    
+        [_filterTabView setUIWithModel:_filterTabArrModel selectFilterBlock:^(TDHomeDvilllageModel *model) {
+            HANKSTRONGSELF
+            strongSelf->_lblPre.textColor = kTitleThemeBlack;
+            strongSelf->_lblPre.backgroundColor = kThemeGray;
+            
+            strongSelf->_lblCurrent = (UILabel *)([self viewWithTag:KTapMoreTag]);
+            strongSelf->_lblCurrent.textColor = [UIColor whiteColor];
+            strongSelf->_lblCurrent.backgroundColor = kThemeBlue;
+            strongSelf->_lblPre = _lblCurrent;
+            kHankCallBlock(strongSelf->_selectFilterBlock,model);
+        }];
         [_filterTabView setSubView];
     }
     return _filterTabView;

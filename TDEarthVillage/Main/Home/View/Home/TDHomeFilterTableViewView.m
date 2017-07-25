@@ -105,6 +105,10 @@
     }];
 }
 
+- (void)cleanSelect{
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:-1 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+}
+
 #pragma mark - Setter
 
 - (UIView *)viewBack{

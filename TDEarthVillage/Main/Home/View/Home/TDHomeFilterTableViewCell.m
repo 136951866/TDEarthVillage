@@ -24,6 +24,10 @@ const static CGFloat kMargin = 14;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleBlue;
+    
+    self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.frame];
+    self.selectedBackgroundView.backgroundColor = kThemeBlue;
     // Initialization code
 }
 

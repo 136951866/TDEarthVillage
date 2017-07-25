@@ -17,4 +17,6 @@
 - (void)setUIWithModel:(NSArray *)filterArrModel
      selectFilterBlock:(kHomeDvilllageModelBlock)selectFilterBlock;
 
+- (void)cleanSelect;
+
 @end
