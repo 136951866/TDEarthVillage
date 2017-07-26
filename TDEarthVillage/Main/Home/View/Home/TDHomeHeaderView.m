@@ -129,4 +129,9 @@
     return _filterView;
 }
 
++ (CGFloat)getTDHomeHeaderViewHeightWithFilterArrModel:(NSArray *)filterArrModel{
+    CGFloat height = ((SCREEN_WIDTH*3)/5);
+    height +=[TDHomeFilterView getTDHomeFilterViewHeightWithFilterArrModel:filterArrModel];
+    return height;
+}
 @end

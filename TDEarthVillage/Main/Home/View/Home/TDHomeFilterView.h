@@ -16,4 +16,5 @@
 - (void)setUIWithFilterArrModel:(NSArray *)filterArrModel
               selectFilterBlock:(kHomeDvilllageModelBlock)selectFilterBlock;
 
++ (CGFloat)getTDHomeFilterViewHeightWithFilterArrModel:(NSArray *)filterArrModel;
 @end

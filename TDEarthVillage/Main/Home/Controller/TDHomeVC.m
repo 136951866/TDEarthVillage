@@ -58,12 +58,6 @@
         TDHomeDvilllageModel *model = [TDHomeDvilllageModel new];
         model.name = @"全部";
         [_arrFilter addObject:model];
-        for (int i = 0; i<14; i++) {
-            TDHomeDvilllageModel *model = [TDHomeDvilllageModel new];
-            model.name = [NSString stringWithFormat:@"test%@",@(i).description];
-            [_arrFilter addObject:model];
-        }
-
         [_arrFilter addObjectsFromArray:[TDHomeDvilllageModel mj_objectArrayWithKeyValuesArray:responseObject.data]];
         [TDAgricultureFilterSaveModel saveHomeFilterModel:_arrFilter];
         dispatch_semaphore_signal(semaphore);
@@ -77,10 +71,12 @@
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         dispatch_async(dispatch_get_main_queue(), ^{
             HANKSTRONGSELF
+            strongSelf.tableView.tableHeaderView = strongSelf.headerView;
             [strongSelf.headerView setUIWithTopManArrModel:_arrTopManage filterArrModel:_arrFilter selectFilterBlock:^(TDHomeDvilllageModel *model) {
                 _model = model;
                 [_refresh reload];
             }];
+            [strongSelf.tableView reloadData];
         });
     });
 }
@@ -139,7 +135,8 @@
 
 - (TDHomeHeaderView *)headerView{
     if(!_headerView){
-        _headerView = [[TDHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kTDHomeHeaderViewHeight)];
+        CGFloat height = [TDHomeHeaderView getTDHomeHeaderViewHeightWithFilterArrModel:_arrFilter];
+        _headerView = [[TDHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH,height)];
     }
     return _headerView;
 }
@@ -149,11 +146,11 @@
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - kHankTabBarHeight) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TDHomeCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([TDHomeCell class])];
+        _tableView.tableHeaderView = [UIView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.tableHeaderView = self.headerView;
-        _tableView.tableFooterView = [UIView new];;
+        _tableView.tableFooterView = [UIView new];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;

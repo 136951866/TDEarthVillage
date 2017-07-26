@@ -28,6 +28,7 @@ const static CGFloat kMargin = 14;
     
     self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.frame];
     self.selectedBackgroundView.backgroundColor = kThemeBlue;
+    _lblTitle.highlightedTextColor = [UIColor whiteColor];
     // Initialization code
 }
 

@@ -9,6 +9,8 @@
 #import "TDHomeFilterView.h"
 #import "TDHomeFilterTableViewView.h"
 
+#define klblMaxWdith (SCREEN_WIDTH/5)
+
 const static CGFloat KTapTag = 1000;
 const static CGFloat KWdithFill = 14;
 const static CGFloat KHeightFill = 6;
@@ -68,11 +70,12 @@ const static CGFloat KTapMoreTag = 2000;
 
 - (void)setLabel{
     _previousFrame = CGRectMake(0, KMargin, 0, 0);
-    __block NSInteger lastindex;
+    __block NSInteger lastindex = 0;
     HANKWEAKSELF
     [_filterArrModel enumerateObjectsUsingBlock:^(TDHomeDvilllageModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         HANKSTRONGSELF
         UILabel*tagLabel=[[UILabel alloc]initWithFrame:CGRectZero];
+        tagLabel.lineBreakMode = NSLineBreakByTruncatingMiddle;
         tagLabel.textColor = idx?kTitleThemeBlack:[UIColor whiteColor];
         tagLabel.backgroundColor = idx?kThemeGray:kThemeBlue;
         if(!idx){
@@ -86,7 +89,9 @@ const static CGFloat KTapMoreTag = 2000;
         tagLabel.clipsToBounds=YES;
         NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:12]};
         CGSize Size_str=[kHankUnNilStr(obj.name) sizeWithAttributes:attrs];
+        
         Size_str.width += KWdithFill;
+        Size_str.width = Size_str.width > klblMaxWdith?klblMaxWdith:Size_str.width;
         Size_str.height += KHeightFill;
         
         if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) > ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= self.width ) ){
@@ -190,5 +195,35 @@ const static CGFloat KTapMoreTag = 2000;
     return _filterTabView;
 }
 
++ (CGFloat)getTDHomeFilterViewHeightWithFilterArrModel:(NSArray *)filterArrModel{
+    __block CGFloat height = 50;
+    __block CGRect _previousFrame = CGRectMake(0, KMargin, 0, 0);
+    __block NSInteger lastindex;
+    [filterArrModel enumerateObjectsUsingBlock:^(TDHomeDvilllageModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:12]};
+        CGSize Size_str=[kHankUnNilStr(obj.name) sizeWithAttributes:attrs];
+        Size_str.width += KWdithFill;
+        Size_str.width = Size_str.width > klblMaxWdith?klblMaxWdith:Size_str.width;
+        Size_str.height += KHeightFill;
+        if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) > ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ) ){
+                       lastindex = idx -1;
+            height +=40;
+            *stop = YES;
+        }else{
+            CGRect newRect = CGRectZero;
+            if (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ){
+                newRect.origin = CGPointMake(KMargin, _previousFrame.origin.y + Size_str.height + KMargin);
+            }else {
+                newRect.origin = CGPointMake(_previousFrame.origin.x + _previousFrame.size.width + KMargin, _previousFrame.origin.y);
+            }
+            newRect.size = Size_str;
+            if (_previousFrame.origin.x + _previousFrame.size.width + KMargin*2 + Size_str.width>= SCREEN_WIDTH ){
+                newRect.size.width -= KMargin;
+            }
+            _previousFrame=newRect;
+        }
+    }];
 
+    return height;
+}
 @end

@@ -41,7 +41,7 @@
 - (void)hide:(kHankBasicBlock)finishBlock{
     [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:1.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.maskView.alpha = 0;
-        self.tableView.frame = CGRectMake((SCREEN_WIDTH - kTDHomeFilterTableViewCellWdith)/2, SCREEN_HEIGHT, kTDHomeFilterTableViewCellWdith,_allHeight);
+        self.tableView.frame = CGRectMake((SCREEN_WIDTH - kTDHomeFilterTableViewCellWdith)/2, SCREEN_HEIGHT + kCommonMargin, kTDHomeFilterTableViewCellWdith,_allHeight);
     } completion:^(BOOL finished) {
         kHankCallBlock(finishBlock);
         [self removeFromSuperview];

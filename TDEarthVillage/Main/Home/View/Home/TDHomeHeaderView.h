@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TDHomeDvilllageModel.h"
 
-#define kTDHomeHeaderViewHeight (90 + ((SCREEN_WIDTH*3)/5))
+//#define kTDHomeHeaderViewHeight (90 + ((SCREEN_WIDTH*3)/5))
 
 @interface TDHomeHeaderView : UIView
 
@@ -19,4 +19,5 @@
                  filterArrModel:(NSArray *)filterArrModel
               selectFilterBlock:(kHomeDvilllageModelBlock)selectFilterBlock;
 
++ (CGFloat)getTDHomeHeaderViewHeightWithFilterArrModel:(NSArray *)filterArrModel;
 @end
