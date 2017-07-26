@@ -44,7 +44,7 @@
         [HUD hideAnimated:YES];
         kHankCallBlock(successBlock,responseObject);
     } failure:^(id error) {
-        [HUD hideAnimated:YES];
+        [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
         kHankCallBlock(failure,error);
     }];
 #else
@@ -53,7 +53,7 @@
             [HUD hideAnimated:YES];
             kHankCallBlock(successBlock,responseObject);
         } failure:^(id error) {
-            [HUD hideAnimated:YES];
+            [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
             kHankCallBlock(failure,error);
         }];
     }else{
@@ -67,7 +67,7 @@
                     [HUD hideAnimated:YES];
                     kHankCallBlock(successBlock,responseObject);
                 } failure:^(id error) {
-                    [HUD hideAnimated:YES];
+                    [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
                     kHankCallBlock(failure,error);
                 }];
             }
@@ -93,6 +93,11 @@
     dic[@"token"] = kHankUnNilStr(kCurrentUser.token);
     NSString *url = @"";
     switch (type) {
+        case TDMyDataCellNicktype:{
+            dic[@"nickName"] = kHankUnNilStr(content);
+            url = [BASEIP stringByAppendingString:UPDATENICKNAME];
+        }
+            break;
         case TDMyDataCellNametype:{
             dic[@"userName"] = kHankUnNilStr(content);
             url = [BASEIP stringByAppendingString:UPDATENAME];
@@ -116,8 +121,17 @@
         kHankCallBlock(successBlock,responseObject);
         [HUD hideAnimated:YES];
     } failure:^(id error) {
-        [HUD hideAnimated:YES];
+        [TDPublicTools SHOWHUDWITHHUD:HUD test:@"修改失败"];
         kHankCallBlock(failure,error);
+    }];
+}
+
++ (void)postUploadLogoWithData:(NSData *)data showProgressView:(UIView *)view successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure{
+    NSString *url = [BASEIP stringByAppendingString:[NSString stringWithFormat:@"%@?token=%@",UPLOADLOGO,kHankUnNilStr(kCurrentUser.token)]];
+    [THTTPManager postWithUrlStr:url parameter:nil data:data showProgressView:view success:^(ZLRequestResponse *responseObject) {
+        kHankCallBlock(successBlock,responseObject);
+    } failure:^(id object) {
+        kHankCallBlock(failure,object);
     }];
 }
 
@@ -233,7 +247,7 @@
         [HUD hideAnimated:YES];
         kHankCallBlock(successBlock,responseObject);
     } failure:^(id error) {
-        [HUD hideAnimated:YES];
+        [TDPublicTools SHOWHUDWITHHUD:HUD test:@"获取订单失败"];
         kHankCallBlock(failure,error);
     }];
 }

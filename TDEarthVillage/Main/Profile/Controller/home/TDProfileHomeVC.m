@@ -166,6 +166,7 @@
             TDMyDataVC *dataVC = [[TDMyDataVC alloc]init];
             [strongSelf.navigationController pushViewController:dataVC animated:YES];
         };
+        [_headerView setUserInfo];
     }
     return _headerView;
 }

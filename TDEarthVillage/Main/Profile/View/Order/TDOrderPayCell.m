@@ -59,6 +59,11 @@
     _lblName.text = kHankUnNilStr(model.receiptAddress).length?kHankUnNilStr(model.receiptAddress):kHankUnNilStr(kCurrentUser.acceptAddress);
     _lblAddress.text =  kHankUnNilStr(model.receiptName).length?kHankUnNilStr(model.receiptName):kHankUnNilStr(kCurrentUser.acceptName);
     _lblTel.text = kHankUnNilStr(model.receiptPhone).length?kHankUnNilStr(model.receiptPhone):kHankUnNilStr(kCurrentUser.acceptPhone);
+    if( _model.isCanEdit == NO){
+        _selectTYpe = _model.payType;
+        _btnAli.selected = _model.payType == TDPayApliType;
+        _btnWeiXin.selected = _model.payType != TDPayApliType;
+    }
     [self layoutIfNeeded];
 }
 

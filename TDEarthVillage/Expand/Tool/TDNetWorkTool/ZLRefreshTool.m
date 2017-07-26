@@ -32,6 +32,7 @@ NSUInteger const kSizeNum = 10;
         _arrData = [[NSMutableArray alloc] initWithCapacity:26];
         _showFailView = YES;
         _url = url;
+        _isLoading = NO;
     }
     return self;
 }
@@ -52,6 +53,7 @@ NSUInteger const kSizeNum = 10;
 }
 
 - (void)headrefresh{
+    _isLoading = YES;
     self.pageIndex = 1;
     [self requestNetWorkIsHead:YES];
 }
@@ -63,6 +65,7 @@ NSUInteger const kSizeNum = 10;
 }
 
 - (void)footerfresh{
+    _isLoading = YES;
     NSInteger size = kSizeNum;
     if ([_numOfsize integerValue] > 0) {
         size = [_numOfsize integerValue];
@@ -166,6 +169,7 @@ NSUInteger const kSizeNum = 10;
     } else {
         [self.contentView.mj_footer resetNoMoreData];
     }
+    _isLoading = NO;
 }
 
 - (NSDictionary *)requestParameter{

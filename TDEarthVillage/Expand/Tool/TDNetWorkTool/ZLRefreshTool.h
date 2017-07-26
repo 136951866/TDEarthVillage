@@ -46,6 +46,8 @@
 //每页的size值,默认为20
 @property (nonatomic,assign) NSNumber *numOfsize;
 
+//正在刷新
+@property (nonatomic,assign,readonly) BOOL isLoading;
 - (instancetype ) initWithContentView:(UIScrollView *)scrollView url:(NSString *)url;
 
 - (void)setBlockEditFailVIew:(editFailLoadVIewBlock)blockEditFailVIew;

@@ -16,13 +16,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz9-nB-qEr">
-                    <rect key="frame" x="14" y="14.5" width="35" height="21"/>
+                    <rect key="frame" x="14" y="14.5" width="36" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="VBA-g6-iXv"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekl-tW-snQ">
-                    <rect key="frame" x="63" y="15" width="50" height="21"/>
+                    <rect key="frame" x="64" y="15" width="50" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="cM2-Lj-Jzb"/>
                     </constraints>
@@ -43,14 +46,17 @@
                         <action selector="settlementAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="4ce-gK-UQ4"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-z6-Bx9">
-                    <rect key="frame" x="192" y="14" width="10.5" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-z6-Bx9">
+                    <rect key="frame" x="194" y="14" width="91" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.63529411759999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iK-fX-I0x">
-                    <rect key="frame" x="143" y="15" width="35" height="21"/>
+                    <rect key="frame" x="144" y="15" width="36" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="gaK-fM-K1O"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -60,6 +66,7 @@
             <constraints>
                 <constraint firstItem="rWu-z6-Bx9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7Kh-IZ-Xos"/>
                 <constraint firstItem="Gz9-nB-qEr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8M6-L5-poP"/>
+                <constraint firstItem="gzu-gG-FVz" firstAttribute="leading" secondItem="rWu-z6-Bx9" secondAttribute="trailing" constant="10" id="BuQ-yF-nDL"/>
                 <constraint firstAttribute="bottom" secondItem="gzu-gG-FVz" secondAttribute="bottom" id="CjI-dG-Kir"/>
                 <constraint firstItem="gzu-gG-FVz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="H8H-4X-xUS"/>
                 <constraint firstItem="ekl-tW-snQ" firstAttribute="centerY" secondItem="Gz9-nB-qEr" secondAttribute="centerY" id="VHD-wJ-V31"/>
@@ -73,7 +80,8 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="lblCost" destination="rWu-z6-Bx9" id="8g4-pl-xLZ"/>
+                <outlet property="consMargin" destination="Xpd-a4-PWp" id="d4W-52-7S0"/>
+                <outlet property="lblCost" destination="rWu-z6-Bx9" id="Uwm-NC-9vJ"/>
                 <outlet property="lblNum" destination="ekl-tW-snQ" id="Stu-Aq-xWo"/>
             </connections>
             <point key="canvasLocation" x="8.5" y="42"/>

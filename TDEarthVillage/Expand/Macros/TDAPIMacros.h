@@ -34,6 +34,10 @@
 #define UPDATEADDRESS @"web/app/duserAddress/updateAddress"
 //修改收货地址
 #define UPDATEPHONE @"web/app/duserAddress/updatePhone"
+//修改用户的昵称
+#define UPDATENICKNAME @"web/app/updateNickName"
+//修改用户头像
+#define UPLOADLOGO @"web/app/uploadLogo"
 
 /********************
  资讯

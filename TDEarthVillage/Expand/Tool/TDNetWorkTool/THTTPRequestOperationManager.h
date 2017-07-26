@@ -38,6 +38,16 @@ typedef void(^RequestResponse)(ZLRequestResponse *responseObject);
         hudAddedToView:(UIView *)view success:(RequestResponse)success
                failure:(kHankObjBlock)failure;
 /**
+ *  post请求 上传文件
+ *
+ */
+- (void)postWithUrlStr:(NSString *)urlStr
+             parameter:(NSDictionary *)parameter
+                  data:(NSData *)data
+      showProgressView:(UIView *)view
+               success:(RequestResponse)success
+               failure:(kHankObjBlock)failure;
+/**
  *  get请求
  *
  */

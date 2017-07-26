@@ -82,11 +82,20 @@
     HANKWEAKSELF
     switch (model.type) {
         case TDMyDataCellHeadPortraittype:{
-            [[HKPhotoTool shareTool] showImageViewSelcteWithResultBlock:^(UIImage *data, NSDictionary *info) {
-                NSURL *url = [info objectForKey:UIImagePickerControllerReferenceURL];
-                NSMutableArray *arrScetion0 = _arrModel[0];
-                [arrScetion0 replaceObjectAtIndex:0 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellHeadPortraittype content:[url absoluteString] image:data]];
-                [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:YES];
+            HANKWEAKSELF    
+            [[HKPhotoTool shareTool] showImageViewSelcteWithResultBlock:^(UIImage *image, NSDictionary *info) {
+                HANKSTRONGSELF
+                NSData *data = UIImageJPEGRepresentation(image, 0.3);
+                [TDPublicNetWorkTools postUploadLogoWithData:data showProgressView:strongSelf.view successBlock:^(ZLRequestResponse *responseObject) {
+                    NSString *url = responseObject.data;
+                    kCurrentUser.logo = kHankUnNilStr(url);
+                    [kCurrentUser save];
+                    NSMutableArray *arrScetion0 = _arrModel[0];
+                    [arrScetion0 replaceObjectAtIndex:0 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellHeadPortraittype content:kHankUnNilStr(url) image:image]];
+                    [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:NO];
+                } failure:^(id object) {
+                    
+                }];
             }];
         }
             break;
@@ -96,8 +105,8 @@
                 [kCurrentUser save];
                 HANKSTRONGSELF
                 NSMutableArray *arrScetion1 = strongSelf->_arrModel[0];
-                [arrScetion1 replaceObjectAtIndex:0 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellNicktype content:kHankUnNilStr(str)] ];
-                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:YES];
+                [arrScetion1 replaceObjectAtIndex:1 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellNicktype content:kHankUnNilStr(str)] ];
+                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:NO];
             }];
             [self.navigationController pushViewController:modifyVC animated:YES];
         }
@@ -109,7 +118,7 @@
                 HANKSTRONGSELF
                 NSMutableArray *arrScetion1 = strongSelf->_arrModel[1];
                 [arrScetion1 replaceObjectAtIndex:0 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellNametype content:kHankUnNilStr(str)] ];
-                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:YES];
+                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:NO];
             }];
             [self.navigationController pushViewController:modifyVC animated:YES];
         }
@@ -121,7 +130,7 @@
                 HANKSTRONGSELF
                 NSMutableArray *arrScetion1 = strongSelf->_arrModel[1];
                 [arrScetion1 replaceObjectAtIndex:1 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellAddressetype content:kHankUnNilStr(str)] ];
-                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:YES];
+                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:NO];
             }];
             [self.navigationController pushViewController:modifyVC animated:YES];
         }
@@ -133,7 +142,7 @@
                 HANKSTRONGSELF
                 NSMutableArray *arrScetion1 = strongSelf->_arrModel[1];
                 [arrScetion1 replaceObjectAtIndex:2 withObject:[[TDMyDataModel alloc]initWithType:TDMyDataCellPhoneetype content:kHankUnNilStr(str)] ];
-                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:YES];
+                [strongSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:NO];
             }];
             [self.navigationController pushViewController:modifyVC animated:YES];
         }

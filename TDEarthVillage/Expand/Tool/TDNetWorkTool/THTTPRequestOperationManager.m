@@ -91,6 +91,47 @@ NSString *const kServerError = @"服务器无法连接";
     }];
 }
 
+- (void)postWithUrlStr:(NSString *)urlStr
+             parameter:(NSDictionary *)parameter
+              data:(NSData *)data
+      showProgressView:(UIView *)view
+               success:(RequestResponse)success
+               failure:(kHankObjBlock)failure{
+    if([THTTPRequestOperationManager reachability]){
+        return;
+    }
+    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    progress.dimBackground = YES;
+    progress.mode = MBProgressHUDModeAnnularDeterminate;
+    NSLog(@"dicParameter = %@",parameter);
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 8;
+    [manager POST:urlStr parameters:parameter constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:data name:@"file" fileName:@"headPicFile" mimeType:@"image/png"];
+    }progress:^(NSProgress *uploadProgress){
+        NSLog(@"进度= %f",uploadProgress.fractionCompleted);
+        progress.progress = uploadProgress.fractionCompleted;
+    }success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"responseObject = %@",dic);
+        [self requestResponse:dic success:^(ZLRequestResponse *responseObject) {
+            progress.label.text = @"上传成功";
+            [progress hideAnimated:YES];
+            kHankCallBlock(success,responseObject);
+        } failure:^(id object) {
+            progress.label.text = @"上传失败";
+            [progress hideAnimated:YES];
+            kHankCallBlock(failure,object);
+        }];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        progress.label.text = @"上传失败";
+        [progress hideAnimated:YES];
+        kHankCallBlock(failure,error);
+    }];
+}
+
 #pragma mark - GET
 
 #pragma mark- 所有Get请求最终调此函数

@@ -70,11 +70,6 @@
         make.top.equalTo(self.imgPic.mas_top);
     }];
     
-    [self.lblCost mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.lblTitle.mas_right);
-        make.bottom.equalTo(self.imgPic.mas_bottom);
-    }];
-   
     [self.btnReduce mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.lblTitle.mas_left);
         make.bottom.equalTo(self.imgPic.mas_bottom);
@@ -93,6 +88,11 @@
         make.centerY.equalTo(self.lblNumber.mas_centerY);
         make.height.equalTo(@(20));
         make.width.equalTo(@(20));
+    }];
+    [self.lblCost mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.lblTitle.mas_right);
+        make.left.equalTo(self.btnAdd.mas_right);
+        make.bottom.equalTo(self.imgPic.mas_bottom);
     }];
 
 }
@@ -196,6 +196,7 @@
         _lblCost = [UILabel new];
         _lblCost.textColor = kThemeBlue;
         _lblCost.textAlignment  = NSTextAlignmentRight;
+        _lblCost.adjustsFontSizeToFitWidth = YES;
         _lblCost.font = kHankFont(17);
     }
     return _lblCost;

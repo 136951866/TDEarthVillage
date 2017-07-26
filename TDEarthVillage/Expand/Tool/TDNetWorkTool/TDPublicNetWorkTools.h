@@ -48,6 +48,13 @@
  */
 + (void)postUpdateNameWithContent:(NSString *)content type:(TDMyDataCelltype)type successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure;
 
+/**
+ 修改用户头像
+
+ @param data 文件对象
+ @param view 显示进度的view
+ */
++ (void)postUploadLogoWithData:(NSData *)data showProgressView:(UIView *)view successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure;
 
 /********************
  首页

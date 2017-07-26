@@ -153,11 +153,8 @@ const static CGFloat KTapMoreTag = 2000;
     if(![tap.view isKindOfClass:[UILabel class]]){
         return;
     }
-
-    
     if(tap.view.tag == KTapMoreTag){
         [self.filterTabView show];
-//        _lblPre = (UILabel *)(tap.view);;
     }else{
         [self.filterTabView cleanSelect];
         NSInteger index = tap.view.tag - KTapTag;
