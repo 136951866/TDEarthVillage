@@ -193,7 +193,7 @@ const static CGFloat KTapMoreTag = 2000;
 }
 
 + (CGFloat)getTDHomeFilterViewHeightWithFilterArrModel:(NSArray *)filterArrModel{
-    __block CGFloat height = 50;
+    __block CGFloat height = filterArrModel.count?50:0;
     __block CGRect _previousFrame = CGRectMake(0, KMargin, 0, 0);
     __block NSInteger lastindex;
     [filterArrModel enumerateObjectsUsingBlock:^(TDHomeDvilllageModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {

@@ -36,6 +36,7 @@
     _arrFilter = [NSMutableArray array];
     [self.view addSubview:self.tableView];
     [self.refresh addRefreshView];
+    [self requestNetWork];
     // Do any additional setup after loading the view.
 }
 
@@ -45,6 +46,7 @@
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     [_arrTopManage removeAllObjects];
+    [_arrFilter removeAllObjects];
     [TDPublicNetWorkTools postSysTopManagerWithsuccessBlock:^(ZLRequestResponse *responseObject) {
         [_arrTopManage addObjectsFromArray:[TDHomeSysTopManagerModel mj_objectArrayWithKeyValuesArray:responseObject.data]];
         [TDAgricultureFilterSaveModel saveHomeTopManageModel:_arrTopManage];
