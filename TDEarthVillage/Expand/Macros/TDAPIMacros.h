@@ -38,7 +38,7 @@
 #define UPDATENICKNAME @"web/app/updateNickName"
 //修改用户头像
 #define UPLOADLOGO @"web/app/uploadLogo"
-
+//关于地球村
 #define ABOUT @"web/app/common/about"
 
 /********************
