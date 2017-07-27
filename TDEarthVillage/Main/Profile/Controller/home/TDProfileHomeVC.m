@@ -14,6 +14,7 @@
 #import "TDAboutVC.h"
 #import "TDMyDataVC.h"
 #import "TDOrderListVC.h"
+#import "ZLWebVC.h"
 
 @interface TDProfileHomeVC ()<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>{
     NSArray *_arrType;
@@ -98,7 +99,7 @@
         }
             break;
         case TDProfileHomeCellAbouttype:{
-            TDAboutVC *aboutVC = [[TDAboutVC alloc]init];
+            ZLWebVC *aboutVC = [[ZLWebVC alloc]initWithUrl:[BASEIP stringByAppendingString:ABOUT]];
             [self.navigationController pushViewController:aboutVC animated:YES];
         }
             break;

@@ -39,6 +39,8 @@
 //修改用户头像
 #define UPLOADLOGO @"web/app/uploadLogo"
 
+#define ABOUT @"web/app/common/about"
+
 /********************
  资讯
  *******************/
