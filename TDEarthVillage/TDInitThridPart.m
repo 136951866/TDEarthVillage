@@ -35,7 +35,6 @@
 }
 
 + (void)td_registeUmMobClick{
-#pragma mark 友盟统计
     UMConfigInstance.appKey = MobAppkey;
     UMConfigInstance.ePolicy = BATCH;
     [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
