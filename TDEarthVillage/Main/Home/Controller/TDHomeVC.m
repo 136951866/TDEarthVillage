@@ -45,18 +45,20 @@
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    [_arrTopManage removeAllObjects];
-    [_arrFilter removeAllObjects];
+
     [TDPublicNetWorkTools postSysTopManagerWithsuccessBlock:^(ZLRequestResponse *responseObject) {
+        [_arrTopManage removeAllObjects];
         [_arrTopManage addObjectsFromArray:[TDHomeSysTopManagerModel mj_objectArrayWithKeyValuesArray:responseObject.data]];
         [TDAgricultureFilterSaveModel saveHomeTopManageModel:_arrTopManage];
         dispatch_semaphore_signal(semaphore);
     } failure:^(id object) {
+        [_arrTopManage removeAllObjects];
         _arrTopManage = [NSMutableArray arrayWithArray:[TDAgricultureFilterSaveModel getHomeTopManageModel]];
         dispatch_semaphore_signal(semaphore);
     }];
     
     [TDPublicNetWorkTools postDvillageGetAreasWithsuccessBlock:^(ZLRequestResponse *responseObject) {
+        [_arrFilter removeAllObjects];
         TDHomeDvilllageModel *model = [TDHomeDvilllageModel new];
         model.name = @"全部";
         [_arrFilter addObject:model];
@@ -64,6 +66,7 @@
         [TDAgricultureFilterSaveModel saveHomeFilterModel:_arrFilter];
         dispatch_semaphore_signal(semaphore);
     } failure:^(id object) {
+        [_arrFilter removeAllObjects];
         _arrFilter = [NSMutableArray arrayWithArray:[TDAgricultureFilterSaveModel getHomeFilterModel]];
        dispatch_semaphore_signal(semaphore);
     }];
