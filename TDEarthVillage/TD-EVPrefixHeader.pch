@@ -26,6 +26,7 @@
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import <FMDB/FMDB.h>
 #import <SMS_SDK/SMSSDK.h>
+#import <UMMobClick/MobClick.h>
 
 //local header
 #import "TDAPIMacros.h"

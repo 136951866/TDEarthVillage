@@ -17,6 +17,7 @@
         [[self class] td_initIQKeyboardManager];
         [[self class] td_registerWeixinPay];
         [[self class] td_registeSMSSDK];
+        [[self class] td_registeUmMobClick];
     });
 }
 
@@ -31,6 +32,15 @@
 + (void)td_registeSMSSDK{
     [SMSSDK registerApp:SMSApp
              withSecret:SMSSecret];
+}
+
++ (void)td_registeUmMobClick{
+#pragma mark 友盟统计
+    UMConfigInstance.appKey = MobAppkey;
+    UMConfigInstance.ePolicy = BATCH;
+    [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
 }
 
 @end

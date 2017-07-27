@@ -84,7 +84,11 @@ typedef enum{
 
 #pragma mark - 第三方macros
 
+//短信
 #define  SMSApp @"1780c400ba1ec"
 #define  SMSSecret @"adf7c6f8d11897665289995fb58c0720"
+
+//友盟统计
+#define  MobAppkey @"597951301061d26430001090"
 
 #endif /* TDOtherMacros_h */

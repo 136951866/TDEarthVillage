@@ -24,10 +24,12 @@
     [super viewWillAppear:animated];
     [self.view endEditing:YES];
     [self.navigationController setNavigationBarHidden:self.navBarHidden animated:YES];
+    [MobClick beginLogPageView:NSStringFromClass([self class])];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [MobClick endLogPageView:NSStringFromClass([self class])];
 }
 
 - (void)dealloc{
