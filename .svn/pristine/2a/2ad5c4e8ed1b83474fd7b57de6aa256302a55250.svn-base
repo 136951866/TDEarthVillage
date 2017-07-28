@@ -1,0 +1,49 @@
+//
+//  TD-EVPrefixHeader.pch
+//  TDEarthVillage
+//
+//  Created by Hank on 2017/7/3.
+//  Copyright © 2017年 Hank. All rights reserved.
+//
+
+#ifndef TD_EVPrefixHeader_pch
+#define TD_EVPrefixHeader_pch
+
+// System Library
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+// Pods Library
+#import <AFNetworking/AFNetworking.h>
+#import <HKCategory/HKCategoryHeader.h>
+#import <HKTool/HankToolMacros.h>
+#import <HKTool/HKToolsHeader.h>
+#import <Masonry.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <MJRefresh/MJRefresh.h>
+#import <MJExtension/MJExtension.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>
+#import <FMDB/FMDB.h>
+#import <SMS_SDK/SMSSDK.h>
+#import <UMMobClick/MobClick.h>
+
+//local header
+#import "TDAPIMacros.h"
+#import "TDColorMacros.h"//色值
+#import "TDOtherMacros.h"//一些宏定义
+#import "TDPublicTools.h"//工具类
+#import "TDCommonConst.h"//一些静态变量
+#import "TDPayNeedMacros.h"//支付宏
+#import "TDAlipayTool.h"//支付宝支付
+#import "LVWxPay.h"//微信支付
+#import "LocalCategoryHeader.h"
+#import "TDUserInfoModel.h"//本地用户信息
+#import "TDDataBaseTool.h"//数据库工具
+#import "TDShopModel.h"
+#import "THTTPRequestOperationManager.h"
+#import "TDPublicNetWorkTools.h"
+#import "ZLRefreshTool.h"
+#import "ZLRequestResponse.h"
+
+#endif /* TD_EVPrefixHeader_pch */

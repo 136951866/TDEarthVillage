@@ -11,8 +11,6 @@
 
 #define kimgPlaceholder  [UIImage imageNamed:@"placeholderImage"]
 
-
-
 #pragma mark - enum
 
 //我的首页cell类型

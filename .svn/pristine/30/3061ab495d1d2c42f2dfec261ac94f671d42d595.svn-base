@@ -1,0 +1,16 @@
+[core]
+	bare = false
+	filemode = true
+	ignorecase = true
+	precomposeunicode = true
+	logallrefupdates = true
+[core]
+	repositoryformatversion = 0
+[remote "origin"]
+	url = https://github.com/136951866/TDEarthVillage.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[lfs "https://github.com/136951866/TDEarthVillage.git/info/lfs"]
+	access = basic
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
