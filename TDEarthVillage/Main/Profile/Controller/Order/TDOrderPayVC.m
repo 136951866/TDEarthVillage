@@ -101,6 +101,11 @@ HankMustImplementedDataInit()
     _model.payType = _payType;
     _model.payTime = [TDPublicTools dateStringForFormat:@"yyyy.MM.dd HH:mm" timeInterval:[[NSDate date] timeIntervalSince1970] * 1000];
     TDOrderPayStatuesVC *statusVC = [[TDOrderPayStatuesVC alloc]initWithModel:_model];
+    HANKWEAKSELF
+    statusVC.popBlock = ^{
+        HANKSTRONGSELF
+        [strongSelf.navigationController popViewControllerAnimated:NO];
+    };
     [self.navigationController pushViewController:statusVC animated:YES];
 }
 
@@ -131,12 +136,27 @@ HankMustImplementedDataInit()
 #pragma mark - Action
 
 - (IBAction)payAction:(UIButton *)sender {
+    if(_model.isCanEdit){
+        [TDPublicNetWorkTools postOrderPayWithPayId:kHankUnNilStr(_model.strPayId) payNum:kHankUnNilStr(_model.numStr)  paymentType:_payType successBlock:^(ZLRequestResponse *responseObject) {
+            kHankCallBlock(_payBlock);
+            TDOrderPayModel *model = [TDOrderPayModel mj_objectWithKeyValues:responseObject.data];
+            _model = model;
+            [self payActionWithModel:_model];
+        } failure:^(id object) {
+            
+        }];
+    }else{
+        [self payActionWithModel:_model];
+    }
+}
+
+- (void)payActionWithModel:(TDOrderPayModel *)model{
     if(_payType == TDPayApliType){
         //支付宝
-        [TDAlipayTool payAliPayWithOrderId:kHankUnNilStr(_model.outTradeNo) totalMoney:kHankUnNilStr(_model.amount) payTitle:kHankUnNilStr(_model.subject) productDescription:kHankUnNilStr(_model.subject) notifyURL:kHankUnNilStr(_model.notifyUrl)];
+        [TDAlipayTool payAliPayWithOrderId:kHankUnNilStr(model.outTradeNo) totalMoney:kHankUnNilStr(model.amount) payTitle:kHankUnNilStr(model.subject) productDescription:kHankUnNilStr(_model.subject) notifyURL:kHankUnNilStr(_model.notifyUrl)];
     }else{
         //微信
-        [LVWxPay WXPayWithbody:kHankUnNilStr(_model.subject) andtrade_no:kHankUnNilStr(_model.outTradeNo) andPrice:[NSString stringWithFormat:@"%ld",(long)([kHankUnNilStr(_model.amount) floatValue] * 100)] notifyURL:kHankUnNilStr(_model.notifyUrl)];
+        [LVWxPay WXPayWithbody:kHankUnNilStr(model.subject) andtrade_no:kHankUnNilStr(model.outTradeNo) andPrice:[NSString stringWithFormat:@"%ld",(long)([kHankUnNilStr(model.amount) floatValue] * 100)] notifyURL:kHankUnNilStr(model.notifyUrl)];
     }
 }
 

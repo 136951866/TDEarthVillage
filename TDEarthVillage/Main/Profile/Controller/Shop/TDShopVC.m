@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"购物车";
+    _arrData = [NSMutableArray arrayWithArray:[TDDataBase getAllpdcInCarWithUserId:kHankUnNilStr(kCurrentUser.userId)]];
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.bottomView];
     [self setBottomData];
@@ -34,11 +35,10 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    _arrData = [NSMutableArray arrayWithArray:[TDDataBase getAllpdcInCarWithUserId:kHankUnNilStr(kCurrentUser.userId)]];
-    [_tableView reloadData];
-}
+//- (void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    [_tableView reloadData];
+//}
 
 - (void)allSelect:(UIButton *)btn{
     if(!_arrData.count){
@@ -56,11 +56,13 @@
 - (void)settlementAction{
     __block NSMutableArray *arrPayId = [NSMutableArray array];
     __block NSMutableArray *arrPayNum = [NSMutableArray array];
+    __block NSMutableArray *arrSubject = [NSMutableArray array];
     __block NSMutableArray *arrSelectModel = [NSMutableArray array];
     [_arrData enumerateObjectsUsingBlock:^(TDShopModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if(obj.isSelect){
             [arrPayId addObject:obj.TDId];
             [arrPayNum addObject:obj.strNum];
+            [arrSubject addObject:obj.title];
             [arrSelectModel addObject:obj];
         }
     }];
@@ -68,21 +70,26 @@
         [TDPublicTools showMessage:@"请选择" view:self.view];
         return;
     }
-    NSString *strPayId =  [arrPayId componentsJoinedByString:@","];
-    NSString *strPayNum =  [arrPayNum componentsJoinedByString:@","];
-    [TDPublicNetWorkTools postOrderPayWithPayId:strPayId payNum:strPayNum successBlock:^(ZLRequestResponse *responseObject) {
+
+    TDOrderPayModel *model = [TDOrderPayModel new];
+    model.subject = [arrSubject componentsJoinedByString:@","];
+    model.amount = self.bottomView.lblCost.text;
+    model.numStr = [arrPayNum componentsJoinedByString:@","];
+    model.strPayId =  [arrPayId componentsJoinedByString:@","];
+    TDOrderPayVC *payVC = [[TDOrderPayVC alloc]initWithModel:model];
+    HANKWEAKSELF
+    payVC.payBlock = ^{
+        HANKSTRONGSELF
         [arrSelectModel enumerateObjectsUsingBlock:^(TDShopModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
-            [TDDataBase deletePdcInCarByModel:model];
+                    [TDDataBase deletePdcInCarByModel:model];
         }];
-        self.bottomView.lblNum.text = @"0";
-        self.bottomView.lblCost.text = @"0.00";
-        self.btnRight.selected = NO;
-        TDOrderPayModel *model = [TDOrderPayModel mj_objectWithKeyValues:responseObject.data];
-        TDOrderPayVC *payVC = [[TDOrderPayVC alloc]initWithModel:model];
-        [self.navigationController pushViewController:payVC animated:YES];
-    } failure:^(id object) {
-        
-    }];
+        strongSelf.bottomView.lblNum.text = @"0";
+        strongSelf.bottomView.lblCost.text = @"0.00";
+        strongSelf.btnRight.selected = NO;
+        strongSelf->_arrData = [NSMutableArray arrayWithArray:[TDDataBase getAllpdcInCarWithUserId:kHankUnNilStr(kCurrentUser.userId)]];
+        [strongSelf.tableView reloadData];
+    };
+    [self.navigationController pushViewController:payVC animated:YES];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource

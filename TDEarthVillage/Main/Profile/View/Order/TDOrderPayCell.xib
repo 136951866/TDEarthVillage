@@ -12,43 +12,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="532" id="KGk-i7-Jjw" customClass="TDOrderPayCell">
-            <rect key="frame" x="0.0" y="0.0" width="345" height="528"/>
+            <rect key="frame" x="0.0" y="0.0" width="345" height="458"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="345" height="528"/>
+                <rect key="frame" x="0.0" y="0.0" width="345" height="457.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-aO-9zZ">
-                        <rect key="frame" x="0.0" y="10" width="345" height="60"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单编号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDT-8m-ZFc">
-                                <rect key="frame" x="10" y="20" width="71" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="71" id="oQN-gf-adN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-rj-8jt">
-                                <rect key="frame" x="91" y="20" width="244" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tzt-rj-8jt" firstAttribute="leading" secondItem="jDT-8m-ZFc" secondAttribute="trailing" constant="10" id="50g-67-i6Y"/>
-                            <constraint firstAttribute="height" constant="60" id="GHq-Bp-BMY"/>
-                            <constraint firstItem="tzt-rj-8jt" firstAttribute="centerY" secondItem="jDT-8m-ZFc" secondAttribute="centerY" id="azs-Cp-WKj"/>
-                            <constraint firstItem="jDT-8m-ZFc" firstAttribute="centerY" secondItem="JKW-aO-9zZ" secondAttribute="centerY" id="hfy-s0-FGu"/>
-                            <constraint firstAttribute="trailing" secondItem="tzt-rj-8jt" secondAttribute="trailing" constant="10" id="lCM-kr-2Bt"/>
-                            <constraint firstItem="jDT-8m-ZFc" firstAttribute="leading" secondItem="JKW-aO-9zZ" secondAttribute="leading" constant="10" id="t4g-dJ-7H7"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqM-c9-OZz">
-                        <rect key="frame" x="0.0" y="80" width="345" height="125"/>
+                        <rect key="frame" x="0.0" y="10" width="345" height="125"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbO-Dm-3SX">
                                 <rect key="frame" x="10" y="41" width="325" height="0.5"/>
@@ -87,7 +58,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMZ-rY-CnL">
-                        <rect key="frame" x="0.0" y="215.5" width="345" height="145"/>
+                        <rect key="frame" x="0.0" y="145.5" width="345" height="145"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXW-6J-crX">
                                 <rect key="frame" x="10" y="20" width="69.5" height="21"/>
@@ -173,7 +144,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkY-S1-Zwf">
-                        <rect key="frame" x="0.0" y="370.5" width="345" height="157"/>
+                        <rect key="frame" x="0.0" y="300.5" width="345" height="157"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEg-T2-GfI">
                                 <rect key="frame" x="10" y="20" width="325" height="21"/>
@@ -282,13 +253,10 @@
                     <constraint firstItem="PMZ-rY-CnL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GT0-lw-jbo"/>
                     <constraint firstItem="fkY-S1-Zwf" firstAttribute="top" secondItem="PMZ-rY-CnL" secondAttribute="bottom" constant="10" id="RAp-WU-D2z"/>
                     <constraint firstAttribute="trailing" secondItem="fkY-S1-Zwf" secondAttribute="trailing" id="T2J-Lv-Dol"/>
-                    <constraint firstAttribute="trailing" secondItem="JKW-aO-9zZ" secondAttribute="trailing" id="TXZ-DT-2of"/>
                     <constraint firstAttribute="trailing" secondItem="gqM-c9-OZz" secondAttribute="trailing" id="VSM-07-5O4"/>
-                    <constraint firstItem="JKW-aO-9zZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cxS-mH-KRQ"/>
+                    <constraint firstItem="gqM-c9-OZz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dll-4e-CqK"/>
                     <constraint firstItem="fkY-S1-Zwf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dpP-yA-a4i"/>
                     <constraint firstAttribute="bottom" secondItem="fkY-S1-Zwf" secondAttribute="bottom" id="eCC-nl-y6j"/>
-                    <constraint firstItem="gqM-c9-OZz" firstAttribute="top" secondItem="JKW-aO-9zZ" secondAttribute="bottom" constant="10" id="iaf-CC-XXr"/>
-                    <constraint firstItem="JKW-aO-9zZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="osE-xd-qDD"/>
                     <constraint firstAttribute="trailing" secondItem="PMZ-rY-CnL" secondAttribute="trailing" id="tAA-hc-r6V"/>
                 </constraints>
             </tableViewCellContentView>
@@ -300,7 +268,6 @@
                 <outlet property="consGoodViewHeight" destination="yB0-v3-8cL" id="Edy-aK-RI8"/>
                 <outlet property="lblAddress" destination="EVt-n9-vuq" id="sI7-oA-IIn"/>
                 <outlet property="lblName" destination="UWY-8U-BsB" id="rPe-pA-4Fx"/>
-                <outlet property="lblOrderNum" destination="tzt-rj-8jt" id="uWR-rF-MXx"/>
                 <outlet property="lblTel" destination="ZCQ-mS-xAe" id="SWQ-wr-TVS"/>
                 <outlet property="tableView" destination="93f-IW-qpe" id="5bJ-da-j2w"/>
             </connections>

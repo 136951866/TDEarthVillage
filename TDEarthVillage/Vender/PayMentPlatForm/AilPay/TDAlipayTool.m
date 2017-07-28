@@ -50,7 +50,7 @@
     order.productDescription = productDescription; //商品描述
     NSLog(@"paymodel.price%@",totalMoney);
     order.amount = totalMoney; //商品价格
-    order.notifyURL = kAliNotifyURL;//kAliNotifyURL; //回调URL//notifyURL
+    order.notifyURL = kHankUnNilStr(notifyURL);//kAliNotifyURL;//kAliNotifyURL; //回调URL//notifyURL
     order.service = @"mobile.securitypay.pay";
     order.paymentType = @"1";
     order.inputCharset = @"utf-8";

@@ -13,4 +13,6 @@
 
 - (instancetype)initWithModel:(TDOrderPayModel *)model;
 
+@property (nonatomic, strong)kHankBasicBlock popBlock;
+
 @end

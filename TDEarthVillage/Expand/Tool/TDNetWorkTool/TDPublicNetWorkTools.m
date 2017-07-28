@@ -236,10 +236,11 @@
 
 #pragma mark - 订单和支付
 
-+ (void)postOrderPayWithPayId:(NSString *)payId payNum:(NSString *)payNum successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure{
++ (void)postOrderPayWithPayId:(NSString *)payId payNum:(NSString *)payNum paymentType:(TDPayType)paymentType successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure{
     NSDictionary *dic = @{@"token":kHankUnNilStr(kCurrentUser.token),
                           @"payId":kHankUnNilStr(payId),
-                          @"payNum":kHankUnNilStr(payNum)
+                          @"payNum":kHankUnNilStr(payNum),
+                          @"paymentType":@(paymentType)
                           };
     MBProgressHUD *HUD = [self commitWithHUD:@"获取订单中"];
     NSString *url = [BASEIP stringByAppendingString:ORDERPAY];

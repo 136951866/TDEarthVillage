@@ -113,8 +113,9 @@
 
  @param payId 购买商品的id,购买多个不同的商品时id以逗号拼接传入
  @param payNum 买数量,多个商品的数量以逗号拼接传入,和payId对应
+ @param paymentType	支付方式, 0:支付宝 1:微信
  */
-+ (void)postOrderPayWithPayId:(NSString *)payId payNum:(NSString *)payNum successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure;
++ (void)postOrderPayWithPayId:(NSString *)payId payNum:(NSString *)payNum paymentType:(TDPayType)paymentType successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure;
 
 /********************
  资讯

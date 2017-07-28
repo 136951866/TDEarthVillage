@@ -14,5 +14,6 @@
 
 - (instancetype)initWithModel:(TDOrderPayModel *)model;
 - (instancetype)initWithOrderModel:(TDOrderModel *)model;
+@property (nonatomic, strong) kHankBasicBlock payBlock;
 
 @end

@@ -39,11 +39,17 @@ HankMustImplementedDataInit()
     self.title = @"支付状态";
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TDOrderPayStatuesCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([TDOrderPayStatuesCell class])];
     [_btnStatus setTitle:_model.payIsSucess?@"查看订单":@"重新支付" forState:UIControlStateNormal];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(popBackAction:) image:@"common_back" highImage:@"common_back"];
     kALI_PAY_RESULTWithSelector(alipaySuccess:)
     kWX_PAY_RESULTWithSelector(wechatSuccess:)
     // Do any additional setup after loading the view from its nib.
+    //回 购物车 TDOrderListVC TDTourDetalisVC
 }
 
+- (void)popBackAction:(UIButton *)btn{
+    [self.navigationController popViewControllerAnimated:YES];
+    kHankCallBlock(_popBlock);
+}
 #pragma mark - NSNotificationCenter
 
 - (void)wechatSuccess:(NSNotification *)noti{

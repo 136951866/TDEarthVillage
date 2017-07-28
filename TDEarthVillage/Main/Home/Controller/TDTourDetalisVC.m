@@ -200,13 +200,15 @@ HankMustImplementedDataInit()
 - (void)payAction:(NSString *)strNum{
     NSString *strPayId = _type == TDDetailsAgricultureType?_agricultureModel.TDID:_tourModel.TDID;
     NSString *strPayNum = strNum;
-    [TDPublicNetWorkTools postOrderPayWithPayId:strPayId payNum:strPayNum successBlock:^(ZLRequestResponse *responseObject) {
-        TDOrderPayModel *model = [TDOrderPayModel mj_objectWithKeyValues:responseObject.data];
-        TDOrderPayVC *payVC = [[TDOrderPayVC alloc]initWithModel:model];
-        [self.navigationController pushViewController:payVC animated:YES];
-    } failure:^(id object) {
-        
-    }];
+    
+    TDOrderPayModel *model = [TDOrderPayModel new];
+    model.subject = _type == TDDetailsAgricultureType?_agricultureModel.productName:_tourModel.travelName;
+    NSString *price = _type == TDDetailsAgricultureType?_agricultureModel.price:_tourModel.price;
+    model.amount = @([kHankUnNilStr(price) floatValue] * [strPayNum integerValue]).description;
+    model.numStr = strPayNum;
+    model.strPayId = strPayId;
+    TDOrderPayVC *payVC = [[TDOrderPayVC alloc]initWithModel:model];
+    [self.navigationController pushViewController:payVC animated:YES];
 }
 
 - (IBAction)toShopVCAction:(UIButton *)sender {

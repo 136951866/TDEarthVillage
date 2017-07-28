@@ -31,6 +31,7 @@
 
 @property (nonatomic, strong) NSMutableArray *arrProduct;
 
+@property (nonatomic, copy) NSString * strPayId;
 //支付类型
 @property (nonatomic, assign)TDPayType payType;
 @property (nonatomic, assign)BOOL payIsSucess;

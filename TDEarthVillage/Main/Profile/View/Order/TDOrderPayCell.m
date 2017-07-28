@@ -27,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnAli;
 
 
-@property (weak, nonatomic) IBOutlet UILabel *lblOrderNum;
+//@property (weak, nonatomic) IBOutlet UILabel *lblOrderNum;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblAddress;
 @property (weak, nonatomic) IBOutlet UILabel *lblTel;
@@ -54,7 +54,7 @@
     _consGoodViewHeight.constant = kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrProduct.count);
     _btnEditBac.hidden = _btnEdit.hidden = !model.isCanEdit;
     _payTypeBlock = payTypeBlock;
-    _lblOrderNum.text = kHankUnNilStr(_model.outTradeNo);
+//    _lblOrderNum.text = kHankUnNilStr(_model.outTradeNo);
     [_tableView reloadData];
     _lblName.text = kHankUnNilStr(model.receiptAddress).length?kHankUnNilStr(model.receiptAddress):kHankUnNilStr(kCurrentUser.acceptAddress);
     _lblAddress.text =  kHankUnNilStr(model.receiptName).length?kHankUnNilStr(model.receiptName):kHankUnNilStr(kCurrentUser.acceptName);
@@ -69,7 +69,7 @@
 
 + (CGFloat)getCellHeightWithModel:(TDOrderPayModel *)model{
     //除了Goods的view高度
-    CGFloat height = 60 +  145 + 157 + 40;
+    CGFloat height = 135 + 157 + 40;
     height +=  kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrProduct.count);
     return height;
 }
