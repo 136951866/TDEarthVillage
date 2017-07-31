@@ -195,15 +195,13 @@ const static CGFloat KTapMoreTag = 2000;
 + (CGFloat)getTDHomeFilterViewHeightWithFilterArrModel:(NSArray *)filterArrModel{
     __block CGFloat height = filterArrModel.count?50:0;
     __block CGRect _previousFrame = CGRectMake(0, KMargin, 0, 0);
-    __block NSInteger lastindex;
     [filterArrModel enumerateObjectsUsingBlock:^(TDHomeDvilllageModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:12]};
         CGSize Size_str=[kHankUnNilStr(obj.name) sizeWithAttributes:attrs];
         Size_str.width += KWdithFill;
         Size_str.width = Size_str.width > klblMaxWdith?klblMaxWdith:Size_str.width;
         Size_str.height += KHeightFill;
-        if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) > ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ) ){
-                       lastindex = idx -1;
+        if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) >= ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ) ){
             height +=40;
             *stop = YES;
         }else{
@@ -218,6 +216,10 @@ const static CGFloat KTapMoreTag = 2000;
                 newRect.size.width -= KMargin;
             }
             _previousFrame=newRect;
+            if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) >= ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ) ){
+                height +=40;
+                *stop = YES;
+            }
         }
     }];
 

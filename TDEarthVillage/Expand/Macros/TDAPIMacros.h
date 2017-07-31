@@ -13,7 +13,7 @@
 
 //域名
 #ifdef TestVersion
-#define BASEIP @"http://192.168.1.107:8080/"
+#define BASEIP @"http://120.25.0.202:8088/"
 #else
 #define BASEIP @""
 #endif

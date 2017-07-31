@@ -24,16 +24,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TDEarthVillage/Main/Home/Controller/TDTourDetalisVC.m"
-            timestampString = "522730661.921663"
+            filePath = "TDEarthVillage/Main/Agriculture/Controller/TDAgricultureHomeVC.m"
+            timestampString = "523172845.927559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-initWithAricultureModel:"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "-getMenuViewSelectSel:sels:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
