@@ -76,6 +76,7 @@
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         dispatch_async(dispatch_get_main_queue(), ^{
             HANKSTRONGSELF
+            strongSelf.headerView.height = [TDHomeHeaderView getTDHomeHeaderViewHeightWithFilterArrModel:_arrFilter];
             strongSelf.tableView.tableHeaderView = strongSelf.headerView;
             [strongSelf.headerView setUIWithTopManArrModel:_arrTopManage filterArrModel:_arrFilter selectFilterBlock:^(TDHomeDvilllageModel *model) {
                 _model = model;

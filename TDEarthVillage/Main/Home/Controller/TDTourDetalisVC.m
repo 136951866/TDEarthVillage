@@ -104,6 +104,8 @@ HankMustImplementedDataInit()
 }
 
 - (void)initSomeThing{
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     self.tableView.tableHeaderView = self.headerView;
     [[NSNotificationCenter defaultCenter]addObserver:self.tableView selector:@selector(reloadData) name:kTDWebViewCellDidFinishLoad object:nil];
     [self.tableView reloadData];
@@ -131,7 +133,7 @@ HankMustImplementedDataInit()
 }
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(!_webCell || _isPost){
+    if(!_webCell){
         _webCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TDWebViewCell class]) forIndexPath:indexPath];
         [_webCell.webView loadHTMLString:_type == TDDetailsAgricultureType?kHankUnNilStr(_agricultureModel.introduce):kHankUnNilStr(_tourModel.introduce)
  baseURL:nil];

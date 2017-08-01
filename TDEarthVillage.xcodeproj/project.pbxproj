@@ -1375,7 +1375,7 @@
 				TargetAttributes = {
 					30BE3DB41F09D80C00866F92 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6B7VB4TTSU;
+						DevelopmentTeam = 6TEH75V9CU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1705,7 +1705,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6B7VB4TTSU;
+				DEVELOPMENT_TEAM = 6TEH75V9CU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1737,7 +1737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TDEarthVillage/Vender/PayMentPlatForm/AilPay",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Hank.TDEarthVillage;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dvillage.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -1749,7 +1749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6B7VB4TTSU;
+				DEVELOPMENT_TEAM = 6TEH75V9CU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1781,7 +1781,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TDEarthVillage/Vender/PayMentPlatForm/AilPay",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Hank.TDEarthVillage;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dvillage.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

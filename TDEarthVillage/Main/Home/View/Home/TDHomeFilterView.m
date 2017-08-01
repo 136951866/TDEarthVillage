@@ -116,7 +116,6 @@ const static CGFloat KTapMoreTag = 2000;
              CGRect newRect = CGRectZero;
             if (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= self.width ){
                 newRect.origin = CGPointMake(KMargin, _previousFrame.origin.y + Size_str.height + KMargin);
-     
                 _totalHeight += Size_str.height + KMargin;
             }else {
                 newRect.origin = CGPointMake(_previousFrame.origin.x + _previousFrame.size.width + KMargin, _previousFrame.origin.y);
@@ -180,7 +179,6 @@ const static CGFloat KTapMoreTag = 2000;
             HANKSTRONGSELF
             strongSelf->_lblPre.textColor = kTitleThemeBlack;
             strongSelf->_lblPre.backgroundColor = kThemeGray;
-            
             strongSelf->_lblCurrent = (UILabel *)([self viewWithTag:KTapMoreTag]);
             strongSelf->_lblCurrent.textColor = [UIColor whiteColor];
             strongSelf->_lblCurrent.backgroundColor = kThemeBlue;
@@ -201,28 +199,20 @@ const static CGFloat KTapMoreTag = 2000;
         Size_str.width += KWdithFill;
         Size_str.width = Size_str.width > klblMaxWdith?klblMaxWdith:Size_str.width;
         Size_str.height += KHeightFill;
-        if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) >= ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ) ){
-            height +=40;
+        CGRect newRect = CGRectZero;
+        if (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ){
+            newRect.origin = CGPointMake(KMargin, _previousFrame.origin.y + Size_str.height + KMargin);
+            height+=40;
             *stop = YES;
-        }else{
-            CGRect newRect = CGRectZero;
-            if (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ){
-                newRect.origin = CGPointMake(KMargin, _previousFrame.origin.y + Size_str.height + KMargin);
-            }else {
-                newRect.origin = CGPointMake(_previousFrame.origin.x + _previousFrame.size.width + KMargin, _previousFrame.origin.y);
-            }
-            newRect.size = Size_str;
-            if (_previousFrame.origin.x + _previousFrame.size.width + KMargin*2 + Size_str.width>= SCREEN_WIDTH ){
-                newRect.size.width -= KMargin;
-            }
-            _previousFrame=newRect;
-            if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) >= ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= SCREEN_WIDTH ) ){
-                height +=40;
-                *stop = YES;
-            }
+        }else {
+            newRect.origin = CGPointMake(_previousFrame.origin.x + _previousFrame.size.width + KMargin, _previousFrame.origin.y);
         }
+        newRect.size = Size_str;
+        if (_previousFrame.origin.x + _previousFrame.size.width + KMargin*2 + Size_str.width>= SCREEN_WIDTH ){
+            newRect.size.width -= KMargin;
+        }
+        _previousFrame=newRect;
     }];
-
     return height;
 }
 @end

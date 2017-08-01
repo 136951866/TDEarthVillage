@@ -32,6 +32,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){
+        self.clipsToBounds = YES;
         self.backgroundColor = [UIColor whiteColor];
         [self addSubview:self.cycleScrollView];
         [self addSubview:self.filterView];
