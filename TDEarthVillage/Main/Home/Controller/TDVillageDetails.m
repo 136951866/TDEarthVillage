@@ -68,6 +68,8 @@ HankMustImplementedDataInit()
 
 - (void)initSomeThing{
     self.tableView.tableHeaderView = self.headerView;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     [[NSNotificationCenter defaultCenter]addObserver:self.tableView selector:@selector(reloadData) name:kTDWebViewCellDidFinishLoad object:nil];
 }
 

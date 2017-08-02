@@ -27,13 +27,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TDEarthVillage/Main/Agriculture/Controller/TDAgricultureHomeVC.m"
-            timestampString = "523172845.927559"
+            filePath = "TDEarthVillage/Vender/PayMentPlatForm/AilPay/TDAlipayTool.m"
+            timestampString = "523351668.094571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "-getMenuViewSelectSel:sels:"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "+payAliPayWithOrderId:totalMoney:payTitle:productDescription:notifyURL:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

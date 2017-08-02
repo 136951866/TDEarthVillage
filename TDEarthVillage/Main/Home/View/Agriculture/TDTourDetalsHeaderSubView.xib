@@ -35,7 +35,7 @@
                     <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="场地:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-o2-HWu">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="产地:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-o2-HWu">
                     <rect key="frame" x="10" y="66" width="30.5" height="16"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="31" id="5od-AH-wsw"/>
@@ -145,6 +145,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="lblCategroy" destination="8Up-Lf-3t0" id="fzp-Q1-PqZ"/>
+                <outlet property="lblCategroyName" destination="cpa-JX-dZU" id="Ahm-Mc-V3h"/>
                 <outlet property="lblFiely" destination="75c-BP-AsY" id="fQ6-an-OPV"/>
                 <outlet property="lblFielyName" destination="Znk-o2-HWu" id="vw0-eS-oeE"/>
                 <outlet property="lblMerchant" destination="KMC-wp-OFE" id="jUK-TC-5EP"/>

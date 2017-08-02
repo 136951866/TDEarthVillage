@@ -24,10 +24,6 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hia-gw-PMQ">
                     <rect key="frame" x="0.0" y="64" width="375" height="558"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="onE-oY-ED1"/>
-                        <outlet property="delegate" destination="-1" id="Edx-MY-Qpu"/>
-                    </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn7-r0-qaW">
                     <rect key="frame" x="0.0" y="622" width="186.5" height="45"/>
