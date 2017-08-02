@@ -14,25 +14,25 @@
  *  商户ID
  */
 //合作身份者id，以2088开头的16位纯数字（客户给）
-#define kAliPartnerID         @"2088021280217179"
+#define kAliPartnerID         @"2088721560527861"
 
 /**
  *  账户
  */
 //收款支付宝账号
-#define kAliSellerID          @"zhiliantianxia@163.com"
+#define kAliSellerID          @"qyf@dvillage.cn"
 
 /**
  *  私钥
  */
 //商户私钥，自助生成（这个私钥需要自己手动生成，具体生成方法可以看支付宝的官方文档，下面给出大体格式）
-#define kAliPartnerPrivKey   @"MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALqDaS78z/c/Hp0TIYO6uogtFL420j4zZxGlvZGSSmDIe82NTV1b2WjIjaHmOfNDoIDISD9zxu2eRIrNh9T2leGpjgg1VbVzU9KWKuijyCeDwbdLjYyleamshK4aSs1B5dh/IKGWEnQMY4BWLjF8MbQHZQUhYDVJSjJX8RwR/jO7AgMBAAECgYEAkT3iPAf9fyF1GoaaU7WmqoLIo3OXd36Z5cE2hVTxfLrCxggiVfA/tnxu5sOdHxXruD2/HUJwh/v2jkyNWUcI4VJDXMoipp5kIY5EYuqIJSIAUy2isolVwWrRcKceIXffXnQ9iGKantv8LnF88IIMFMPs1UvZs7TRUPY9dZoj7IECQQD287AgxL8WcQJM6cI+9c71M/wt6taKOpFkPPH0f385PUzd/kgY7RMjMDFhMdXDVh1KklhStMFHAYPbhLIU1kh7AkEAwVjVKnwUz41AzojHp2frbKbvriwIdOdolAew8uGUI8WFrV0Yg4bLkQ5glJaUj3JFNbbsq3DzrDiw76cZU3D9wQJAFvphvwrPhPUK88Ekc9tHYIVvx438XGxKrvsEwG1Elzze9CD+8GLOzw1i6tpKO5y9qPyo/zkWatb3P+u+7jVqFQJAUJryM4YLPwQKcpA/fCEs2t01qw0ccXBP/va95GP62HbuZfob0CmQEGdICGpGgQ8In34laMvsKm5wBVlKi6jdgQJBAMd0SGDzx93aqdfvpsaxugK/UC4EPF/k6iWw/auBLdMXgJF9NT2g2MdD7I/PiAUj9cSThmCl698D6tz5Y5Zy05c="
+#define kAliPartnerPrivKey   @"MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAKt/oSMe6IEXm1yCm8w2zbb+OEpGg/AwqiH6l7nLfph8ANHhGNsLU7QlfCHXGwg8lQGNGUy4GC+z1i7hOTRPgvhUSMOzx9cC0HJGDM+gzC29a0X6g3Fybx7VkI3JTyFfUDminUsvXyUuc32Ld7yQpB1NtBoL91GGXoEC7b4/4RqXAgMBAAECgYEAgWDSjm1F2AWYJi0+HcyGWvPkQVx7Mptz7hhfmEHFaoG6GJupJa6g4fmZcOoXMZqKitYIbRFA5dPU1B8DCcymLzELo7S3yYtg6Uh3cjogn8WYlXHtXE1w/U5MfZf2Z+KoSweA7sZ/iloYeQb/t8jppy5g72lu5e3e1OcoLMiPIYkCQQD/QF15PyS7V+7Ma9wTZLrOAIV8JhcC+IKFOetAHswgX8E+GbL1Cziwh+JEoEkIjb8ptX844JYvZxKinyxN662VAkEArABin3wWPh38MMGqt5rLHmOTPcwiDJmygTf/dgvQaso6X3iRyMkTBb4Q/luPokexGxKLwUfKWK/TylbdidzkewJBALlaHgZ7icrZEbkz4b3beaM50bTTXAZ2OyFPa7tGIeioYAUeWEuE+IeIRRCcbCxf8h7xgw7kV2rYqDma6Gs05vkCQHDz99BATuMQEfN62z+j2cvlHGayzZF0xbLyMUM2UvIuR9M2fJZc5a8ZuFMxkcvCRN5AeaK+IHXJUc5I6UeF1k0CQFzG+bAuDkiGVXF0FOlNCll5jLgDo2TmHsARYIw5Hn13akKIpapTbiojfxFPAa4QxdGIUKIh8cAQKlpK/4ndJnc="
 /**
  *  后台接口地址
  */
 //后台给的接口网址
 #define kAliNotifyURL          @"http://www.getoffer.cn/ls/api/client/order/alipay/notify"   //这里填写的后台给你的支付接口网址
-#define kAliPayURLScheme       @"alipay2016111602864559"  //AliPayURLScheme
+#define kAliPayURLScheme       @"alipay2017080107986946"  //AliPayURLScheme
                                        
 
 //通知的名字及参数
