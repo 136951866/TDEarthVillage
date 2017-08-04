@@ -11,6 +11,11 @@
 
 @interface TDPublicNetWorkTools : NSObject
 
+/********************
+ 全局参数
+ *******************/
++ (void)postInit;
+
 
 /********************
  用户

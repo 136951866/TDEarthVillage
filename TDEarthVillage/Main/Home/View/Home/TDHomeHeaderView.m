@@ -54,6 +54,7 @@
     self.cycleScrollView.imageURLStringsGroup = arrImg;
     [self.filterView setUIWithFilterArrModel:filterArrModel selectFilterBlock:selectFilterBlock];
     self.viewLine.backgroundColor = topManArrModel.count?kBackgroundGray:[UIColor whiteColor];
+    self.viewLine.frame = CGRectMake(0, self.height - 2, SCREEN_WIDTH, 2);
 }
 #pragma mark - SDCycleScrollViewDelegate
 

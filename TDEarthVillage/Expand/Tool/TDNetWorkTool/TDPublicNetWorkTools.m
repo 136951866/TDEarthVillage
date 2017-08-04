@@ -10,6 +10,17 @@
 
 @implementation TDPublicNetWorkTools
 
+#pragma mark - 全局参数
+
++ (void)postInit{
+    NSString *url = [BASEIP stringByAppendingString:COMMONINIT];
+    [THTTPManager postWithParameter:nil strUrl:url success:^(ZLRequestResponse *responseObject) {
+        [TDInitSaveModel saveWithDic:kHankUnDic(responseObject.data)];
+    } failure:^(id error) {
+        
+    }];
+}
+
 #pragma mark - 用户
 
 + (void)postSendCodeWithPhone:(NSString *)phone successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure{

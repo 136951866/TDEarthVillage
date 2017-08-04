@@ -106,6 +106,7 @@
 		304F954B1F0CE17C004A13DD /* TDLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F95491F0CE17C004A13DD /* TDLoginVC.m */; };
 		304F954C1F0CE17C004A13DD /* TDLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304F954A1F0CE17C004A13DD /* TDLoginVC.xib */; };
 		305732021F1F31CC00BF27A0 /* TDOrderPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 305732011F1F31CC00BF27A0 /* TDOrderPayModel.m */; };
+		30650DDE1F343CFD006D7ED7 /* TDInitSaveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30650DDD1F343CFD006D7ED7 /* TDInitSaveModel.m */; };
 		3076655B1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3076655A1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m */; };
 		307804EA1F0B46720040B515 /* TDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 307804E91F0B46720040B515 /* TDHomeVC.m */; };
 		307804FF1F0B91FC0040B515 /* TDShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 307804FE1F0B91FC0040B515 /* TDShopCell.m */; };
@@ -395,6 +396,8 @@
 		304F954A1F0CE17C004A13DD /* TDLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDLoginVC.xib; sourceTree = "<group>"; };
 		305732001F1F31CC00BF27A0 /* TDOrderPayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDOrderPayModel.h; sourceTree = "<group>"; };
 		305732011F1F31CC00BF27A0 /* TDOrderPayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDOrderPayModel.m; sourceTree = "<group>"; };
+		30650DDC1F343CFD006D7ED7 /* TDInitSaveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDInitSaveModel.h; sourceTree = "<group>"; };
+		30650DDD1F343CFD006D7ED7 /* TDInitSaveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDInitSaveModel.m; sourceTree = "<group>"; };
 		307665591F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAgricultureFilterOneMenuView.h; sourceTree = "<group>"; };
 		3076655A1F0F43BB00CF3EE1 /* TDAgricultureFilterOneMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAgricultureFilterOneMenuView.m; sourceTree = "<group>"; };
 		307804E81F0B46720040B515 /* TDHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeVC.h; sourceTree = "<group>"; };
@@ -1188,6 +1191,8 @@
 				30DC025F1F15BB4400C0793D /* TDDataBaseTool.m */,
 				30C6D9241F25D471002051F8 /* TDAgricultureFilterSaveModel.h */,
 				30C6D9251F25D471002051F8 /* TDAgricultureFilterSaveModel.m */,
+				30650DDC1F343CFD006D7ED7 /* TDInitSaveModel.h */,
+				30650DDD1F343CFD006D7ED7 /* TDInitSaveModel.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1510,6 +1515,7 @@
 				304146A01F13796000849B88 /* RSADataSigner.m in Sources */,
 				30BE3DBD1F09D80C00866F92 /* AppDelegate.m in Sources */,
 				30BE3DFA1F09ECB700866F92 /* TDNavigationVC.m in Sources */,
+				30650DDE1F343CFD006D7ED7 /* TDInitSaveModel.m in Sources */,
 				308C4D691F0F6E6100CC386F /* TDModifymyDataVC.m in Sources */,
 				301D5D711F21DBCB002620BB /* TDHomeDvilllageModel.m in Sources */,
 				307804FF1F0B91FC0040B515 /* TDShopCell.m in Sources */,

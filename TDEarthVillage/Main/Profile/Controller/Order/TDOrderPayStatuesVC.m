@@ -91,7 +91,7 @@ HankMustImplementedDataInit()
 - (IBAction)payStatusAction:(UIButton *)sender {
     if(_model.payIsSucess){
         //查看订单
-        _model.status = TDPayStatusWaitSendType;
+        _model.status = TDPayStatusSucessPayType;
         TDOrderDetailsVC *detailsVC = [[TDOrderDetailsVC alloc]initWithModel:_model];
         [self.navigationController pushViewController:detailsVC animated:YES];
     }else{

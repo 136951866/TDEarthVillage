@@ -15,6 +15,8 @@
  "imagesList": "1.jpg,2.jpg,3.jpg",
  "villageId": "1001",
  "price": 100
+ "merchantName": "4324",
+ "villageName": "测试村"
  */
 #import "TDBaseModel.h"
 
@@ -30,6 +32,7 @@
 @property (nonatomic, copy) NSString *price;
 @property (nonatomic, copy) NSString *productTypeName;
 @property (nonatomic, copy) NSString *merchantName;
+@property (nonatomic, copy) NSString *villageName;
 @property (nonatomic, strong) NSArray *arrImages;
 
 @end

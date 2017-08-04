@@ -59,7 +59,8 @@
     spbill_create_ip =[getIPhoneIP getIPAddress];
 
     //交易结果通知网站此处用于测试，随意填写，正式使用时填写正确网站
-    notify_url = kHankUnNilStr(notifyURL);//kWXPAY_NOTIFY_URL;//;//notifyURL
+    notify_url = kHankUnNilStr([TDInitSaveModel getSaveModel].wechatNotify);
+//    notify_url = kHankUnNilStr(notifyURL);//;//notifyURL
     
     //类型，iOS集成这个是固定的值
     trade_type = @"APP";

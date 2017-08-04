@@ -62,19 +62,13 @@
                     <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75c-BP-AsY">
-                    <rect key="frame" x="42.5" y="66" width="143" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdE-Co-y4B">
                     <rect key="frame" x="220" y="50" width="145" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMC-wp-OFE">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMC-wp-OFE">
                     <rect key="frame" x="220" y="66" width="145" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,10 +101,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75c-BP-AsY">
+                    <rect key="frame" x="42.5" y="66" width="322.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cpa-JX-dZU" firstAttribute="top" secondItem="ReO-PK-S9x" secondAttribute="bottom" constant="4" id="66R-6H-fmF"/>
+                <constraint firstItem="75c-BP-AsY" firstAttribute="trailing" secondItem="ReO-PK-S9x" secondAttribute="trailing" priority="900" id="89r-aI-g8h"/>
                 <constraint firstItem="KMC-wp-OFE" firstAttribute="trailing" secondItem="WdE-Co-y4B" secondAttribute="trailing" id="93r-Cy-fFN"/>
                 <constraint firstItem="ReO-PK-S9x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="9Sm-rR-KO2"/>
                 <constraint firstItem="Wl5-NN-HTM" firstAttribute="leading" secondItem="xFb-wh-XK6" secondAttribute="leading" id="9ii-DA-U2g"/>
@@ -125,7 +126,7 @@
                 <constraint firstItem="KMC-wp-OFE" firstAttribute="centerY" secondItem="Znk-o2-HWu" secondAttribute="centerY" id="VPm-GG-NeG"/>
                 <constraint firstItem="75c-BP-AsY" firstAttribute="centerY" secondItem="Znk-o2-HWu" secondAttribute="centerY" id="YH1-i8-QCR"/>
                 <constraint firstAttribute="trailing" secondItem="ReO-PK-S9x" secondAttribute="trailing" constant="10" id="ZE7-sK-3e9"/>
-                <constraint firstItem="75c-BP-AsY" firstAttribute="trailing" secondItem="8Up-Lf-3t0" secondAttribute="trailing" id="baw-WF-Hem"/>
+                <constraint firstItem="75c-BP-AsY" firstAttribute="trailing" secondItem="8Up-Lf-3t0" secondAttribute="trailing" priority="800" id="baw-WF-Hem"/>
                 <constraint firstItem="Wl5-NN-HTM" firstAttribute="top" secondItem="cpa-JX-dZU" secondAttribute="top" id="dSd-eq-Iyo"/>
                 <constraint firstItem="KNS-cD-0oj" firstAttribute="top" secondItem="YnE-np-mM9" secondAttribute="bottom" constant="10" id="ef8-dD-5AA"/>
                 <constraint firstItem="Wl5-NN-HTM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eoS-Jy-BSn"/>
@@ -144,6 +145,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="consPlacefooter" destination="baw-WF-Hem" id="ihT-eT-jRq"/>
                 <outlet property="lblCategroy" destination="8Up-Lf-3t0" id="fzp-Q1-PqZ"/>
                 <outlet property="lblCategroyName" destination="cpa-JX-dZU" id="Ahm-Mc-V3h"/>
                 <outlet property="lblFiely" destination="75c-BP-AsY" id="fQ6-an-OPV"/>
@@ -153,7 +155,7 @@
                 <outlet property="lblPrice" destination="WdE-Co-y4B" id="Fj6-XY-Vlm"/>
                 <outlet property="lbltitle" destination="ReO-PK-S9x" id="M34-3J-nvT"/>
             </connections>
-            <point key="canvasLocation" x="10.5" y="92"/>
+            <point key="canvasLocation" x="-120" y="86"/>
         </view>
     </objects>
 </document>

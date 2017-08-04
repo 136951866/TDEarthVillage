@@ -18,6 +18,7 @@
         [[self class] td_registerWeixinPay];
         [[self class] td_registeSMSSDK];
         [[self class] td_registeUmMobClick];
+        [[self class] td_initCommon];
     });
 }
 
@@ -40,6 +41,10 @@
     [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
+}
+
++ (void)td_initCommon{
+    [TDPublicNetWorkTools postInit];
 }
 
 @end

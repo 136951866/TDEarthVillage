@@ -35,7 +35,7 @@
     }
     //如果数据库打开成功 创建表
     //创建搜索历史记录表
-    NSString *sqlCar = @"create table if not exists td_car(carId integer primary key autoincrement,TDId text,strNum text,price text,title text,log text,userId text)";
+    NSString *sqlCar = @"create table if not exists td_car(carId integer primary key autoincrement,TDId text,strNum text,price text,title text,log text,userId text,type text)";
     if ([_database executeUpdate:sqlCar]) {
         NSLog(@"创建表成功！");
     }else{
@@ -83,8 +83,8 @@
         NSLog(@"-->model 已经存在插入失败");
         return NO;
     }
-    NSString *sql = @"insert into td_car(TDId,strNum,price,title,log,userId) values (?,?,?,?,?,?)";
-    BOOL isInsertOK = [_database executeUpdate:sql,model.TDId,model.strNum,model.price,model.title,model.log,model.userId];
+    NSString *sql = @"insert into td_car(TDId,strNum,price,title,log,userId,type) values (?,?,?,?,?,?,?)";
+    BOOL isInsertOK = [_database executeUpdate:sql,model.TDId,model.strNum,model.price,model.title,model.log,model.userId,model.type];
     if (isInsertOK) {
         NSLog(@"%@-->插入成功",model.TDId);
         return YES;
@@ -121,6 +121,7 @@
             model.title = [NSString stringWithFormat:@"%@",[results stringForColumn:@"title"]];
             model.log = [NSString stringWithFormat:@"%@",[results stringForColumn:@"log"]];
             model.userId = [NSString stringWithFormat:@"%@",[results stringForColumn:@"userId"]];
+            model.type = [NSString stringWithFormat:@"%@",[results stringForColumn:@"type"]];
             [arr addObject:model];
         }
     }
@@ -184,6 +185,7 @@
         model.title = [NSString stringWithFormat:@"%@",[results stringForColumn:@"title"]];
         model.log = [NSString stringWithFormat:@"%@",[results stringForColumn:@"log"]];
         model.userId = [NSString stringWithFormat:@"%@",[results stringForColumn:@"userId"]];
+        model.type = [NSString stringWithFormat:@"%@",[results stringForColumn:@"type"]];
         return model;
     }
     return nil;

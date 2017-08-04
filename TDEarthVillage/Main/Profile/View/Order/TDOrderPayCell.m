@@ -51,13 +51,20 @@
 
 - (void)setUIWithModel:(TDOrderPayModel *)model payTypeBlock:(kTDPayTypeBlock)payTypeBlock{
     _model = model;
-    _consGoodViewHeight.constant = kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrProduct.count);
+//    _consGoodViewHeight.constant = kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrProduct.count);
+    __block CGFloat subCellHeight = kGoodsViewOriHeight;
+    [model.arrProduct enumerateObjectsUsingBlock:^(TDOrderPayProctModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+        subCellHeight +=[TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
+    }];
+    _consGoodViewHeight.constant = subCellHeight;
+
+    
     _btnEditBac.hidden = _btnEdit.hidden = !model.isCanEdit;
     _payTypeBlock = payTypeBlock;
 //    _lblOrderNum.text = kHankUnNilStr(_model.outTradeNo);
     [_tableView reloadData];
-    _lblName.text = kHankUnNilStr(model.receiptAddress).length?kHankUnNilStr(model.receiptAddress):kHankUnNilStr(kCurrentUser.acceptAddress);
-    _lblAddress.text =  kHankUnNilStr(model.receiptName).length?kHankUnNilStr(model.receiptName):kHankUnNilStr(kCurrentUser.acceptName);
+    _lblName.text =kHankUnNilStr(model.receiptName).length?kHankUnNilStr(model.receiptName):kHankUnNilStr(kCurrentUser.acceptName);
+    _lblAddress.text = kHankUnNilStr(model.receiptAddress).length?kHankUnNilStr(model.receiptAddress):kHankUnNilStr(kCurrentUser.acceptAddress);
     _lblTel.text = kHankUnNilStr(model.receiptPhone).length?kHankUnNilStr(model.receiptPhone):kHankUnNilStr(kCurrentUser.acceptPhone);
     if( _model.isCanEdit == NO){
         _selectTYpe = _model.payType;
@@ -70,7 +77,13 @@
 + (CGFloat)getCellHeightWithModel:(TDOrderPayModel *)model{
     //除了Goods的view高度
     CGFloat height = 135 + 157 + 40;
-    height +=  kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrProduct.count);
+//    height +=  kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrProduct.count);
+    __block CGFloat subCellHeight = kGoodsViewOriHeight;
+    
+    [model.arrProduct enumerateObjectsUsingBlock:^(TDOrderPayProctModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+        subCellHeight +=[TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
+    }];
+    height += subCellHeight;
     return height;
 }
 
@@ -103,13 +116,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TDOrderSubCell *cell=[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TDOrderSubCell class]) forIndexPath:indexPath];
     TDOrderPayProctModel *model = _model.arrProduct[indexPath.row];
-    cell.lblTitle.text = kHankUnNilStr(model.name);
+//    cell.lblTitle.text = kHankUnNilStr(model.name);
+     [cell setWithTitle:kHankUnNilStr(model.name)];
     cell.lblNum.text= [NSString stringWithFormat:@"X%@",kHankUnNilStr(model.num)];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return kTDOrderSubCellHeight;
+//    return kTDOrderSubCellHeight;
+    TDOrderPayProctModel *model = _model.arrProduct[indexPath.row];
+    return [TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -20,4 +20,5 @@
 //初始化
 - (instancetype)initWithTourId:(NSString *)tourId;
 - (instancetype)initWithProductId:(NSString *)productId;
+
 @end

@@ -60,8 +60,9 @@ typedef enum{
 //详情类型
 typedef enum{
     TDPayStatusWaitPayType  = 0,//待付款
-    TDPayStatusWaitSendType  = 1,//付款成功(待发货)
-    TDPayStatusSendType = 2//已发货
+    TDPayStatusSucessPayType  = 1
+//    TDPayStatusWaitSendType  = 1,//付款成功(待发货)
+//    TDPayStatusSendType = 2//已发货
 }TDPayStatusType;
 
 

@@ -50,7 +50,13 @@
 
 - (void)setUIWithModel:(TDOrderPayModel *)model{
     _model = model;
-    _consGoodViewHeight.constant = kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrSubject.count);
+    
+    __block CGFloat subCellHeight = kGoodsViewOriHeight;
+    
+    [model.arrProduct enumerateObjectsUsingBlock:^(TDOrderPayProctModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+        subCellHeight +=[TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
+    }];
+    _consGoodViewHeight.constant = subCellHeight;//= kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrSubject.count);
     _lblPayStatus.text = model.payIsSucess?@"支付成功":@"支付失败";
     _lblPayStatus.textColor = model.payIsSucess?kThemeBlue:[UIColor redColor];
     _lblOrderNum.text = kHankUnNilStr(_model.outTradeNo);
@@ -69,7 +75,13 @@
 + (CGFloat)getCellHeightWithModel:(TDOrderPayModel *)model{
     //除了Goods的view高度
     CGFloat height = 60 +  120 + 145 + 40;
-    height +=   kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrSubject.count);
+    //height +=   kGoodsViewOriHeight +(kTDOrderSubCellHeight * model.arrSubject.count);
+    __block CGFloat subCellHeight = kGoodsViewOriHeight;
+    
+    [model.arrProduct enumerateObjectsUsingBlock:^(TDOrderPayProctModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+        subCellHeight +=[TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
+    }];
+    height += subCellHeight;
     return height;
 }
 
@@ -78,13 +90,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TDOrderSubCell *cell=[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TDOrderSubCell class]) forIndexPath:indexPath];
     TDOrderPayProctModel *model = _model.arrProduct[indexPath.row];
-    cell.lblTitle.text = kHankUnNilStr(model.name);
+//    cell.lblTitle.text = kHankUnNilStr(model.name);
+    [cell setWithTitle:kHankUnNilStr(model.name)];
     cell.lblNum.text= [NSString stringWithFormat:@"X%@",kHankUnNilStr(model.num)];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return kTDOrderSubCellHeight;
+    TDOrderPayProctModel *model = _model.arrProduct[indexPath.row];
+    return [TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

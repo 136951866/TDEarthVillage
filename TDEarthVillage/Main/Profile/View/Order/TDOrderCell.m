@@ -41,7 +41,14 @@
 
 - (void)setUIWithModel:(TDOrderModel *)model{
     _model = model;
-    _consTabViewHeight.constant = model.arrProduct.count * kTDOrderSubCellHeight;
+//    _consTabViewHeight.constant = model.arrProduct.count * kTDOrderSubCellHeight;
+    __block CGFloat subCellHeight = 0;
+    
+    [model.arrProduct enumerateObjectsUsingBlock:^(TDOrderProctModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+        subCellHeight +=[TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
+    }];
+    _consTabViewHeight.constant = subCellHeight;
+    
     _lblOrderNum.text = kHankUnNilStr(model.orderNo);
     _lblCreateTime.text = kHankUnNilStr(model.createDate);
     
@@ -51,17 +58,20 @@
             _lblStatus.textColor = [UIColor redColor];
         }
             break;
-        case TDPayStatusWaitSendType:{
-            _lblStatus.text = @"等待发货";
+        case TDPayStatusSucessPayType:{
+            _lblStatus.text = @"已付款";
             _lblStatus.textColor = kThemeBlue;
         }
             break;
-        case TDPayStatusSendType:{
-            _lblStatus.text = @"已发货";
-            _lblStatus.textColor = [UIColor colorWithHexString:@"858687"];
-        }
+//        case TDPayStatusSendType:{
+//            _lblStatus.text = @"已发货";
+//            _lblStatus.textColor = [UIColor colorWithHexString:@"858687"];
+//        }
             break;
-        default:
+        default:{
+            _lblStatus.text = @"待付款";
+            _lblStatus.textColor = [UIColor redColor];
+        }
             break;
     }
     [_tableView reloadData];
@@ -71,7 +81,13 @@
 + (CGFloat)getCellHeightWithModel:(TDOrderModel *)model{
     //cell的高度 - tableview的高度
     CGFloat height = 172 - 33.5;
-    height +=kTDOrderSubCellHeight * model.arrProduct.count;
+//    height +=kTDOrderSubCellHeight * model.arrProduct.count;
+    __block CGFloat subCellHeight = 0;
+    
+    [model.arrProduct enumerateObjectsUsingBlock:^(TDOrderProctModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+        subCellHeight +=[TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
+    }];
+    height += subCellHeight;
     return height;
 }
 
@@ -80,13 +96,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    TDOrderSubCell *cell=[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TDOrderSubCell class]) forIndexPath:indexPath];
     TDOrderProctModel *model = _model.arrProduct[indexPath.row];
-    cell.lblTitle.text = kHankUnNilStr(model.name);
+//    cell.lblTitle.text = kHankUnNilStr(model.name);
+    [cell setWithTitle:kHankUnNilStr(model.name)];
     cell.lblNum.text= [NSString stringWithFormat:@"X%@",kHankUnNilStr(model.num)];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return kTDOrderSubCellHeight;
+//    return kTDOrderSubCellHeight;
+    TDOrderProctModel *model = _model.arrProduct[indexPath.row];
+    return [TDOrderSubCell getCellHeightWithModel:kHankUnNilStr(model.name)];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

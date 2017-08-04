@@ -22,24 +22,27 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblFielyName;
 @property (weak, nonatomic) IBOutlet UILabel *lblMerchantName;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *consPlacefooter;
 @end
 
 @implementation TDTourDetalsHeaderSubView
 
 - (void)setUIWithAgricultureModel:(TDAgricultureModel *)agricultureModel{
+    _consPlacefooter.priority = 1000;
     _lbltitle.text = kHankUnNilStr(agricultureModel.productName);
     _lblPrice.text = [NSString stringWithFormat:@"￥%@/%@",kHankUnNilStr(agricultureModel.price),kHankUnNilStr(agricultureModel.unit)];
     _lblCategroy.text = kHankUnNilStr(agricultureModel.productTypeName);
     _lblFiely.text = kHankUnNilStr(agricultureModel.villageName);
     _lblMerchant.text = kHankUnNilStr(agricultureModel.merchantName);
+    _lblMerchant.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setUIWithTourModel:(TDTourModel *)tourModel{
+    _consPlacefooter.priority = 800;
     _lbltitle.text = kHankUnNilStr(tourModel.travelName);
     _lblPrice.text = [NSString stringWithFormat:@"￥%@",kHankUnNilStr(tourModel.price)];
-    _lblCategroyName.text = @"产地";
-#warning -- 没字段
-    _lblCategroy.text = kHankUnNilStr(tourModel.productTypeName);
+    _lblCategroyName.text = @"产地:";
+    _lblCategroy.text = kHankUnNilStr(tourModel.villageName);
     _lblMerchantName.hidden = _lblMerchant.hidden = YES;
     _lblFielyName.text = @"商户:";
     _lblFiely.text = kHankUnNilStr(tourModel.merchantName);

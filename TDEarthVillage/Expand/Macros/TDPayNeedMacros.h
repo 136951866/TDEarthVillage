@@ -31,9 +31,7 @@
  *  后台接口地址
  */
 //后台给的接口网址
-#define kAliNotifyURL          @"http://www.getoffer.cn/ls/api/client/order/alipay/notify"   //这里填写的后台给你的支付接口网址
 #define kAliPayURLScheme       @"alipay2017080107986946"  //AliPayURLScheme
-                                       
 
 //通知的名字及参数
 #define ALI_PAY_RESULT         @"Ali_pay_result_isSuccessed"
@@ -61,7 +59,6 @@
 #define kWXPAY_PARTNER_ID      @"zhiliantianxiawoyaoliuxue1304000"
 //支付结果回调页面（后台会给你）
 
-#define kWXPAY_NOTIFY_URL      @"http://www.getoffer.cn/ls/api/client/order/wechatpay/notify" 
 //获取服务器端支付数据地址（商户自定义）
 #define kWXPAY_SP_URL          @"https://api.mch.weixin.qq.com/pay/unifiedorder"
 

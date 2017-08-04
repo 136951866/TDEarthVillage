@@ -17,5 +17,9 @@
 @property (nonatomic, strong)NSString   *title;
 @property (nonatomic, strong)NSString   *log;
 @property (nonatomic, strong)NSString   *userId;
+/**
+ Agriculture 农产品 Tour 旅游线路 
+ */
+@property (nonatomic, strong)NSString   *type;
 
 @end

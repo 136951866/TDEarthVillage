@@ -117,13 +117,14 @@ const static CGFloat KTapMoreTag = 2000;
             if (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= self.width ){
                 newRect.origin = CGPointMake(KMargin, _previousFrame.origin.y + Size_str.height + KMargin);
                 _totalHeight += Size_str.height + KMargin;
-            }else {
+            }
+            else {
                 newRect.origin = CGPointMake(_previousFrame.origin.x + _previousFrame.size.width + KMargin, _previousFrame.origin.y);
             }
             newRect.size = Size_str;
-            if (_previousFrame.origin.x + _previousFrame.size.width + KMargin*2 + Size_str.width>= self.width ){
-                newRect.size.width -= KMargin;
-            }
+//            if (_previousFrame.origin.x + _previousFrame.size.width + KMargin*2 + Size_str.width>= self.width ){
+//                newRect.size.width -= KMargin;
+//            }
             [tagLabel setFrame:newRect];
             
             [strongSelf setHight:strongSelf andHight:_totalHeight+Size_str.height + KMargin];

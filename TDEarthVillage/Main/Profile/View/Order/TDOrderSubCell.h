@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-const static CGFloat kTDOrderSubCellHeight = 25.0f;
+//const static CGFloat kTDOrderSubCellHeight = 25.0f;
 
 @interface TDOrderSubCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblNum;
+
++ (CGFloat)getCellHeightWithModel:(NSString *)title;
+- (void)setWithTitle:(NSString *)title;
 
 @end

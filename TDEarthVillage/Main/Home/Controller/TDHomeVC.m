@@ -19,6 +19,8 @@
     NSMutableArray *_arrTopManage;
     NSMutableArray *_arrFilter;
     TDHomeDvilllageModel *_model;
+    //是否是点击刷新
+    BOOL _isClickSelect;
 }
 
 @property (nonatomic, strong)UITableView        *tableView;
@@ -32,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navBarHidden = YES;
+    _isClickSelect = NO;
     _arrTopManage = [NSMutableArray array];
     _arrFilter = [NSMutableArray array];
     [self.view addSubview:self.tableView];
@@ -79,6 +82,7 @@
             strongSelf.headerView.height = [TDHomeHeaderView getTDHomeHeaderViewHeightWithFilterArrModel:_arrFilter];
             strongSelf.tableView.tableHeaderView = strongSelf.headerView;
             [strongSelf.headerView setUIWithTopManArrModel:_arrTopManage filterArrModel:_arrFilter selectFilterBlock:^(TDHomeDvilllageModel *model) {
+                _isClickSelect = YES;
                 _model = model;
                 [_refresh reload];
             }];
@@ -90,7 +94,7 @@
 //数据链接地址
 - (NSDictionary *)requestParameter{
     if(self.refresh.pageIndex == 1){
-        if(!_arrTopManage.count || !_arrFilter.count){
+        if(!_arrTopManage.count || !_arrFilter.count || !_isClickSelect){
             [self requestNetWork];
         }
     }
@@ -98,6 +102,7 @@
 }
 //返回响应数据
 - (void)handleResponse:(id)data{
+    _isClickSelect = NO;
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }

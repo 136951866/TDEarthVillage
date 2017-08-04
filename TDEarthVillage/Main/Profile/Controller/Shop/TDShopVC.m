@@ -12,6 +12,7 @@
 #import "TDShopBottomView.h"
 #import "TDOrderPayVC.h"
 #import "TDOrderPayModel.h"
+#import "TDTourDetalisVC.h"
 
 #define kbtnFrame CGRectMake(-20, 0, 60, 25)
 
@@ -130,6 +131,17 @@
     [self setBottomData];
     return YES;
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    TDShopModel *model = _arrData[indexPath.row];
+//    if([model.type isEqualToString:@"Agriculture"]){
+//        TDTourDetalisVC *detailsVC = [[TDTourDetalisVC alloc]initWithProductId:kHankUnNilStr(model.TDId)];
+//        [self.navigationController pushViewController:detailsVC animated:YES];
+//    }else{
+//        TDTourDetalisVC *detailsVC = [[TDTourDetalisVC alloc]initWithTourId:kHankUnNilStr(model.TDId)];
+//         [self.navigationController pushViewController:detailsVC animated:YES];
+//    }
+//}
 
 #pragma mark - TDShopCellDelegate
 
