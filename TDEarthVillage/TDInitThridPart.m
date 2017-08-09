@@ -16,7 +16,7 @@
     dispatch_once(&onceToken, ^{
         [[self class] td_initIQKeyboardManager];
         [[self class] td_registerWeixinPay];
-        [[self class] td_registeSMSSDK];
+//        [[self class] td_registeSMSSDK];
         [[self class] td_registeUmMobClick];
         [[self class] td_initCommon];
     });
@@ -30,10 +30,10 @@
     [WXApi registerApp:UMWXAppId];
 }
 
-+ (void)td_registeSMSSDK{
-    [SMSSDK registerApp:SMSApp
-             withSecret:SMSSecret];
-}
+//+ (void)td_registeSMSSDK{
+//    [SMSSDK registerApp:SMSApp
+//             withSecret:SMSSecret];
+//}
 
 + (void)td_registeUmMobClick{
     UMConfigInstance.appKey = MobAppkey;

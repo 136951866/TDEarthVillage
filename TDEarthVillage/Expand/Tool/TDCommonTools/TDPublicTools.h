@@ -61,5 +61,9 @@
 + (NSString *)dateStringForFormat:(NSString *)format timeInterval:(double)interval;
 
 
+/**
+ md5
+ */
++ (NSString *)MD5:(NSString *)mdStr;
 + (void)setShopNumberWithShowView:(UIView *)view number:(NSString*)number;
 @end

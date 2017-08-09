@@ -46,7 +46,7 @@
 
 - (void)userLogin{
     _lblName.text = kHankUnNilStr(kCurrentUser.nickName);
-    _lblNumber.text = kHankUnNilStr(kCurrentUser.acceptPhone);
+    _lblNumber.text = kHankUnNilStr(kCurrentUser.phone);
     [_imgPic sd_setImageWithURL:[NSURL URLWithString:kHankUnNilStr(kCurrentUser.logo)] placeholderImage:[UIImage imageNamed:@"me_portrait_3"]];
 }
 

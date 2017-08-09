@@ -31,11 +31,7 @@
 
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
-    if (!result) {
-        
-    }
-    return result;
+    return [[UMSocialManager defaultManager] handleOpenURL:url];
     //用WXApi的方法调起微信客户端的支付页面
 }
 

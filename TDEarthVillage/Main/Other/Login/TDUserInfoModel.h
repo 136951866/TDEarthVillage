@@ -22,7 +22,7 @@
 @property (nonatomic, copy) NSString *acceptAddress;
 @property (nonatomic, copy) NSString *acceptPhone;
 @property (nonatomic, copy) NSString *logo;
-
+@property (nonatomic, copy) NSString *phone;
 //退出
 + (void)logout;
 //归档

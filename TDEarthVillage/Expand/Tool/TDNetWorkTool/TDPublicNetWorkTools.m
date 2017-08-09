@@ -25,32 +25,51 @@
 
 + (void)postSendCodeWithPhone:(NSString *)phone successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure{
     MBProgressHUD *HUD = [self commitWithHUD:@"发送验证码中"];
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS
-                            phoneNumber:phone
-                                   zone:@"86"
-                       customIdentifier:nil
-                                 result:^(NSError *error){
-                                     NSString *errStr = [error.userInfo objectForKey:@"getVerificationCode"];
-                                     if (!error){
-                                         [TDPublicTools SHOWHUDWITHHUD:HUD test:@"获取验证码成功"];
-                                         kHankCallBlock(successBlock,nil);
-                                     }else{
-                                         [TDPublicTools SHOWHUDWITHHUD:HUD test:errStr];
-                                         kHankCallBlock(failure,error);
-                                     }
-                                 }];
-}
-
-#define kTestNumber @"15083518280"
-
-+ (void)postLoginWithPhone:(NSString *)phone code:(NSString *)code successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure{
     NSDictionary *dic = @{@"phone":phone,
                           @"chanel":@"0",
                           };
+    NSString *url = [BASEIP stringByAppendingString:SENDCODEAPI];
+    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
+#ifdef TestVersion
+        [TDPublicTools SHOWHUDWITHHUD:HUD test:kHankUnNilStr(responseObject.data)];
+        kHankCallBlock(successBlock,nil);
+#else
+        [TDPublicTools SHOWHUDWITHHUD:HUD test:@"获取验证码成功"];
+        kHankCallBlock(successBlock,nil);
+#endif
+    } failure:^(id error) {
+        [TDPublicTools SHOWHUDWITHHUD:HUD test:@"获取验证码失败"];
+        kHankCallBlock(failure,error);
+    }];
+    
+//    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS
+//                            phoneNumber:phone
+//                                   zone:@"86"
+//                       customIdentifier:nil
+//                                 result:^(NSError *error){
+//                                     NSString *errStr = [error.userInfo objectForKey:@"getVerificationCode"];
+//                                     if (!error){
+//                                         [TDPublicTools SHOWHUDWITHHUD:HUD test:@"获取验证码成功"];
+//                                         kHankCallBlock(successBlock,nil);
+//                                     }else{
+//                                         [TDPublicTools SHOWHUDWITHHUD:HUD test:errStr];
+//                                         kHankCallBlock(failure,error);
+//                                     }
+//                                 }];
+}
+
+#define kTestNumber @"15083518280"
++ (void)postLoginWithPhone:(NSString *)phone code:(NSString *)code successBlock:(RequestResponse)successBlock failure:(kHankObjBlock)failure{
+    
+    NSString *md5 = [TDPublicTools MD5:[NSString stringWithFormat:@"village%@",phone]];
+    NSDictionary *dic = @{@"phone":phone,
+                          @"chanel":@"0",
+                          @"sign":md5,
+                          @"code":code
+                          };
     MBProgressHUD *HUD = [self commitWithHUD:@"登录中"];
     NSString *url = [BASEIP stringByAppendingString:LOGINAPI];
-    
-#ifdef TestVersion
+//#ifdef TestVersion
     [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
         [HUD hideAnimated:YES];
         kHankCallBlock(successBlock,responseObject);
@@ -58,33 +77,33 @@
         [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
         kHankCallBlock(failure,error);
     }];
-#else
-    if([phone isEqualToString:kTestNumber]){
-        [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-            [HUD hideAnimated:YES];
-            kHankCallBlock(successBlock,responseObject);
-        } failure:^(id error) {
-            [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
-            kHankCallBlock(failure,error);
-        }];
-    }else{
-        [SMSSDK commitVerificationCode:code phoneNumber:phone zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
-            if (error){
-                [TDPublicTools SHOWHUDWITHHUD:HUD test:@"验证失败"];
-                return;
-            }else{
-                //成功登录
-                [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-                    [HUD hideAnimated:YES];
-                    kHankCallBlock(successBlock,responseObject);
-                } failure:^(id error) {
-                    [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
-                    kHankCallBlock(failure,error);
-                }];
-            }
-        }];
-    }
-#endif
+//#else
+//    if([phone isEqualToString:kTestNumber]){
+//        [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
+//            [HUD hideAnimated:YES];
+//            kHankCallBlock(successBlock,responseObject);
+//        } failure:^(id error) {
+//            [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
+//            kHankCallBlock(failure,error);
+//        }];
+//    }else{
+//        [SMSSDK commitVerificationCode:code phoneNumber:phone zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+//            if (error){
+//                [TDPublicTools SHOWHUDWITHHUD:HUD test:@"验证失败"];
+//                return;
+//            }else{
+//                //成功登录
+//                [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
+//                    [HUD hideAnimated:YES];
+//                    kHankCallBlock(successBlock,responseObject);
+//                } failure:^(id error) {
+//                    [TDPublicTools SHOWHUDWITHHUD:HUD test:@"登录失败"];
+//                    kHankCallBlock(failure,error);
+//                }];
+//            }
+//        }];
+//    }
+//#endif
 
 }
 
