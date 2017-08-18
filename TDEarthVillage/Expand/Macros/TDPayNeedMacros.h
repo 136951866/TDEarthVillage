@@ -42,8 +42,8 @@
 /**************************** 微信支付 *****************************/
 
 //微信支付
-#define  UMWXAppId @"wx4b0bc4fecc3e1748"
-#define  UMWXAppSecret @"ecf87bac5d395be608c3040367aae098"
+#define  UMWXAppId @"wx03e862250163d79a"
+#define  UMWXAppSecret @"90bd947ae58ed202b8fdd690c60a36de"
 
 
 //通知的名字及参数
@@ -54,9 +54,9 @@
 #define kWX_PAY_RESULTWithSelector(sel) [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(sel) name:WX_PAY_RESULT object:nil];
 
 //商户号，填写商户对应参数（客户给）
-#define kWXPAY_MCH_ID          @"1407017702"
+#define kWXPAY_MCH_ID          @"1487306302"
 //商户API密钥，填写相应参数（客户给）
-#define kWXPAY_PARTNER_ID      @"zhiliantianxiawoyaoliuxue1304000"
+#define kWXPAY_PARTNER_ID      @"813F8CE580F276558CE9E5093468B1AB"
 //支付结果回调页面（后台会给你）
 
 //获取服务器端支付数据地址（商户自定义）

@@ -14,6 +14,7 @@
 }
 
 @property (nonatomic, strong)UIButton           *btnSelect;
+@property (nonatomic, strong)UIButton           *btnSelectBack;
 @property (nonatomic, strong)UIView             *viewLine;
 @property (nonatomic, strong)UIImageView        *imgPic;
 @property (nonatomic, strong)UILabel            *lblTitle;
@@ -33,6 +34,7 @@
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.btnSelect];
+        [self.contentView addSubview:self.btnSelectBack];
         [self.contentView addSubview:self.viewLine];
         [self.contentView addSubview:self.imgPic];
         [self.contentView addSubview:self.lblTitle];
@@ -51,6 +53,11 @@
         make.width.equalTo(@(20));
         make.height.equalTo(@(20));
         make.centerY.equalTo(self);
+    }];
+    [self.btnSelectBack mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(0);
+        make.width.equalTo(@(34));
+        make.height.equalTo(self.mas_height);
     }];
     [self.viewLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
@@ -161,6 +168,15 @@
         [_btnSelect addTarget:self action:@selector(selectedAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _btnSelect;
+}
+
+- (UIButton *)btnSelectBack{
+    if(!_btnSelectBack){
+        _btnSelectBack = [UIButton buttonWithType:UIButtonTypeCustom];
+        _btnSelectBack.backgroundColor = [UIColor clearColor];
+        [_btnSelectBack addTarget:self action:@selector(selectedAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _btnSelectBack;
 }
 
 - (UIView *)viewLine{

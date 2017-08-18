@@ -28,6 +28,6 @@ pod ‘UMengUShare/Social/Sina'
 pod ‘UMengUShare/Social/WeChat'
 pod ‘UMengUShare/Social/QQ'
 pod 'UMengAnalytics-NO-IDFA'
-pod 'SMSSDK'
+#pod 'SMSSDK'
 
 end

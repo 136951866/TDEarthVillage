@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"关于地球村";
+    self.title = @"关于D球村";
     // Do any additional setup after loading the view from its nib.
 }
 

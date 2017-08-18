@@ -62,9 +62,11 @@
             if(![responseObject.data isKindOfClass:[NSArray class]]){
                 return;
             }
+            [_arrSelectTypeModel removeAllObjects];
             [_arrSelectTypeModel addObjectsFromArray:[TDCodeAppModel mj_objectArrayWithKeyValuesArray:responseObject.data]];
             [TDAgricultureFilterSaveModel saveTypeModel:_arrSelectTypeModel];
         } failure:^(id object) {
+            [_arrSelectTypeModel removeAllObjects];
             _arrSelectTypeModel = [NSMutableArray arrayWithArray:[TDAgricultureFilterSaveModel getTypeModel]];
         }];
     }
@@ -73,9 +75,11 @@
             if(![responseObject.data isKindOfClass:[NSArray class]]){
                 return;
             }
+            [_arrSelectFieldModel removeAllObjects];
             [_arrSelectFieldModel addObjectsFromArray:[TDCodeAppModel mj_objectArrayWithKeyValuesArray:responseObject.data]];
             [TDAgricultureFilterSaveModel saveFieldModel:_arrSelectFieldModel];
         } failure:^(id object) {
+            [_arrSelectFieldModel removeAllObjects];
             _arrSelectFieldModel = [NSMutableArray arrayWithArray:[TDAgricultureFilterSaveModel getFieldModel]];
         }];
     }
@@ -84,9 +88,11 @@
             if(![responseObject.data isKindOfClass:[NSArray class]]){
                 return;
             }
+            [_arrSelectSortModel removeAllObjects];
             [_arrSelectSortModel addObjectsFromArray:[TDCodeAppModel mj_objectArrayWithKeyValuesArray:responseObject.data]];
             [TDAgricultureFilterSaveModel saveSortModel:_arrSelectSortModel];
         } failure:^(id object) {
+            [_arrSelectSortModel removeAllObjects];
             _arrSelectSortModel = [NSMutableArray arrayWithArray:[TDAgricultureFilterSaveModel getSortModel]];
         }];
     }

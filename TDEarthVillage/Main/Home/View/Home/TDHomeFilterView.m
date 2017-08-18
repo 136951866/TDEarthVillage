@@ -12,9 +12,12 @@
 #define klblMaxWdith (SCREEN_WIDTH/5)
 
 const static CGFloat KTapTag = 1000;
-const static CGFloat KWdithFill = 14;
+//const static CGFloat KWdithFill = 14;
 const static CGFloat KHeightFill = 6;
 const static CGFloat KMargin = 14;
+
+#define KWdithFill (kHankFrameScaleX()<1?(14*kHankFrameScaleX()):14)
+//#define KMargin (14*kHankFrameScaleX())
 
 const static CGFloat KTapMoreTag = 2000;
 
@@ -29,6 +32,7 @@ const static CGFloat KTapMoreTag = 2000;
     UILabel *_lblPre;
     UILabel *_lblCurrent;
     
+    UILabel *_lblMore;
     NSMutableArray *_filterTabArrModel;
 }
 
@@ -59,6 +63,8 @@ const static CGFloat KTapMoreTag = 2000;
 
 - (void)prepare{
      _totalHeight = 0;
+    [_lblMore removeFromSuperview];
+    _lblMore = nil;
     [_arrLabel enumerateObjectsUsingBlock:^(UILabel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj removeFromSuperview];
     }];
@@ -89,7 +95,6 @@ const static CGFloat KTapMoreTag = 2000;
         tagLabel.clipsToBounds=YES;
         NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:12]};
         CGSize Size_str=[kHankUnNilStr(obj.name) sizeWithAttributes:attrs];
-        
         Size_str.width += KWdithFill;
         Size_str.width = Size_str.width > klblMaxWdith?klblMaxWdith:Size_str.width;
         Size_str.height += KHeightFill;
@@ -97,6 +102,7 @@ const static CGFloat KTapMoreTag = 2000;
         if (((_previousFrame.origin.y+ _previousFrame.size.height+(KMargin) + Size_str.height) > ((Size_str.height * 2)+ (KMargin * 3))) && (_previousFrame.origin.x + _previousFrame.size.width + KMargin + Size_str.width>= self.width ) ){
             UILabel *lblPre = [self viewWithTag:KTapTag+ (idx -1)];
             UILabel*tagLabel=[[UILabel alloc]initWithFrame:_previousFrame];
+            _lblMore = tagLabel;
             tagLabel.textAlignment = NSTextAlignmentCenter;
             tagLabel.tag = KTapMoreTag;
             tagLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -109,7 +115,7 @@ const static CGFloat KTapMoreTag = 2000;
             tagLabel.userInteractionEnabled = YES;
             [tagLabel addGestureRecognizer:tap];
             [strongSelf addSubview:tagLabel];
-             [lblPre removeFromSuperview];
+            [lblPre removeFromSuperview];
             lastindex = idx -1;
             *stop = YES;
         }else{
@@ -180,10 +186,12 @@ const static CGFloat KTapMoreTag = 2000;
             HANKSTRONGSELF
             strongSelf->_lblPre.textColor = kTitleThemeBlack;
             strongSelf->_lblPre.backgroundColor = kThemeGray;
-            strongSelf->_lblCurrent = (UILabel *)([self viewWithTag:KTapMoreTag]);
+            strongSelf->_lblCurrent = (UILabel *)([strongSelf viewWithTag:KTapMoreTag]);
             strongSelf->_lblCurrent.textColor = [UIColor whiteColor];
             strongSelf->_lblCurrent.backgroundColor = kThemeBlue;
-            strongSelf->_lblPre = _lblCurrent;
+            strongSelf->_lblPre = strongSelf->_lblCurrent;
+            strongSelf->_lblMore.textColor = [UIColor whiteColor];
+            strongSelf->_lblMore.backgroundColor = kThemeBlue;
             kHankCallBlock(strongSelf->_selectFilterBlock,model);
         }];
         [_filterTabView setSubView];

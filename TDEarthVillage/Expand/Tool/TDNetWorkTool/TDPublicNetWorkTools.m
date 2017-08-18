@@ -30,13 +30,8 @@
                           };
     NSString *url = [BASEIP stringByAppendingString:SENDCODEAPI];
     [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-#ifdef TestVersion
-        [TDPublicTools SHOWHUDWITHHUD:HUD test:kHankUnNilStr(responseObject.data)];
-        kHankCallBlock(successBlock,nil);
-#else
         [TDPublicTools SHOWHUDWITHHUD:HUD test:@"获取验证码成功"];
         kHankCallBlock(successBlock,nil);
-#endif
     } failure:^(id error) {
         [TDPublicTools SHOWHUDWITHHUD:HUD test:@"获取验证码失败"];
         kHankCallBlock(failure,error);

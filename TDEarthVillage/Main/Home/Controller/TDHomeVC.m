@@ -95,6 +95,7 @@
 - (NSDictionary *)requestParameter{
     if(self.refresh.pageIndex == 1){
         if(!_arrTopManage.count || !_arrFilter.count || !_isClickSelect){
+            _model = nil;
             [self requestNetWork];
         }
     }
@@ -126,16 +127,6 @@
     return self.refresh.arrData.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 30;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView *view= [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-    view.backgroundColor = [UIColor whiteColor];
-    return view;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     TDHomeVillAgeModel *model = self.refresh.arrData[indexPath.row];
     TDVillageDetails *detail = [[TDVillageDetails alloc]initWithModel:model];
@@ -154,7 +145,7 @@
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - kHankTabBarHeight) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TDHomeCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([TDHomeCell class])];
         _tableView.tableHeaderView = [UIView new];
@@ -172,6 +163,7 @@
         NSString *url = [BASEIP stringByAppendingString:DVILLAGELIST];
         _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:url];
         _refresh.delegate = self;
+        _refresh.errViewNotRefresh = YES;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {
             failView.lblOfNodata.text = @"没有村落";
         }];

@@ -9,14 +9,14 @@
 #ifndef TDAPIMacros_h
 #define TDAPIMacros_h
 
-#define TestVersion
+//#define TestVersion
 
 //域名
 #ifdef TestVersion
 //#define BASEIP @"http://120.25.0.202:8088/"
 #define BASEIP @"http://120.25.0.202:8088/"
 #else
-#define BASEIP @""
+#define BASEIP @"http://112.74.32.18:80/"
 #endif
 
 /********************
