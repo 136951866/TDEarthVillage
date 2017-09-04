@@ -16,7 +16,7 @@
 //#define BASEIP @"http://120.25.0.202:8088/"
 #define BASEIP @"http://120.25.0.202:8088/"
 #else
-#define BASEIP @"http://112.74.32.18:80/"
+#define BASEIP @"http://m.dvillage.cn/"
 #endif
 
 /********************

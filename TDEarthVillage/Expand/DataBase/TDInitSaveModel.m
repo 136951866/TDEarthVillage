@@ -14,6 +14,8 @@
     TDInitSaveModel *saveModel = [TDInitSaveModel getObjctForKey:kTDInitSaveModelPath path:TDCodingPathDocument];
     if(!saveModel){
         saveModel = [TDInitSaveModel new];
+        saveModel.wechatNotify = @"http://112.74.32.18:80/web/app/wechatpay/notify";
+        saveModel.apliayNotify = @"http://112.74.32.18:80/web/app/apliay/notify";
     }
     return saveModel;
 }

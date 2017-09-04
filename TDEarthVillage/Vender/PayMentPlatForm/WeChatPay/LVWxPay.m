@@ -56,7 +56,7 @@
     total_fee = [NSString stringWithFormat:@"%@",price];
    // total_fee = @"1"; //支付测试数据
     //获取本机IP地址，请再wifi环境下测试，否则获取的ip地址为error，正确格式应该是8.8.8.8
-    spbill_create_ip =[getIPhoneIP getIPAddress];
+    spbill_create_ip =[getIPhoneIP getIPAddress:YES];
 
     //交易结果通知网站此处用于测试，随意填写，正式使用时填写正确网站
     notify_url = kHankUnNilStr([TDInitSaveModel getSaveModel].wechatNotify);

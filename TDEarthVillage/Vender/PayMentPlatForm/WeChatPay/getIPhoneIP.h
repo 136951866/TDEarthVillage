@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface getIPhoneIP : NSObject
-+(NSString *)getIPAddress;
++ (NSString *)getIPAddress:(BOOL)preferIPv4;
 @end
